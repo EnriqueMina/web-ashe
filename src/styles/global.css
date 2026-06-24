@@ -158,3 +158,17 @@ body {
   }
 
 }
+.btn-principal {
+  display: inline-block;
+  background: var(--dorado-ancestral);
+  color: #111 !important;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.btn-principal:hover {
+  transform: translateY(-2px);
+}
