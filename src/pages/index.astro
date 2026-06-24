@@ -1,39 +1,29 @@
 ---
-import Layout from '../layouts/LayoutBase.astro';
+import LayoutBase from '../layouts/LayoutBase.astro';
+
 import Header from '../components/Header.astro';
-import Memoria from '../components/Memoria.astro';
-import Comunidad from '../components/Comunidad.astro';
-import Cultura from '../components/Cultura.astro';
-import Oportunidades from '../components/Oportunidades.astro';
-import '../styles/global.css';
+import Hero from '../components/Hero.astro';
+import Proposito from '../components/Proposito.astro';
+import Pilares from '../components/Pilares.astro';
+import Agenda from '../components/Agenda.astro';
+import OportunidadesHome from '../components/OportunidadesHome.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="ASHÉ - Medio Comunitario Afro">
+<LayoutBase>
+
   <Header />
 
-  <!-- Hero y Propósito siguen aquí porque son la intro -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>"LA FUERZA CULTURAL QUE MUEVE EL TERRITORIO"</h1>
-      <p class="subtitle">
-        Somos un medio comunitario afro que busca visibilizar las culturas, tradiciones, saberes y procesos organizativos de las comunidades negras, afrocolombianas, raizales y palenqueras presentes en Bogotá.
-      </p>
-    </div>
-  </section>
+  <Hero />
 
-<section class="proposito">
-    <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-      <h2>Nuestro Propósito</h2>
-      <p style="text-align: center;">
-        Actuamos como un puente de comunicación, etnoeducación y relevo generacional, promoviendo el reconocimiento de las contribuciones afrodescendientes a la ciudad y fomentando la construcción colectiva desde principios como <strong>Ubuntu</strong>, la solidaridad y la memoria.
-      </p>
-    </div>
-  </section>
+  <Proposito />
 
-  <!-- Aquí cargamos tus 4 secciones modulares -->
-  <Memoria />
-  <Comunidad />
-  <Cultura />
-  <Oportunidades />
+  <Pilares />
 
-</Layout>
+  <Agenda />
+
+  <OportunidadesHome />
+
+  <Footer />
+
+</LayoutBase>
