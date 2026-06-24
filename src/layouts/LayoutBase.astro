@@ -1,52 +1,35 @@
 ---
 import Header from '../components/Header.astro';
-const { title } = Astro.props;
+import '../styles/global.css';
+
+const { title = 'Inicio' } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} | ASHÉ Medio Comunitario Afro</title>
-    <!-- Importación de la tipografía Montserrat del manual visual -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style is:global>
-        /* Paleta de colores oficial de ASHÉ */
-        :root {
-            --negro-ebano: #1B1B1B;
-            --dorado-ancestral: #C8A24A;
-            --terracota-pacifico: #A8572B;
-            --marfil: #F7F4ED;
-            --fuente-principal: 'Montserrat', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <title>{title} | ASHÉ Medio Comunitario Afro</title>
 
-        body {
-            background-color: var(--marfil);
-            color: var(--negro-ebano);
-            font-family: var(--fuente-principal);
-            line-height: 1.6;
-        }
+  <meta
+    name="description"
+    content="ASHÉ - Medio Comunitario Afro dedicado a la memoria, identidad, cultura y territorio afrodescendiente."
+  />
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-    </style>
+  <meta name="author" content="ASHÉ" />
+
+  <link rel="icon" type="image/jpeg" href="/images/logo.jpeg" />
 </head>
+
 <body>
-    <Header />
-    <main>
-        <slot />
-    </main>
+
+  <Header />
+
+  <main>
+    <slot />
+  </main>
+
 </body>
 </html>
