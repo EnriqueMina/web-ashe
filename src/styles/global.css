@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 :root {
   --negro-ebano: #1B1B1B;
@@ -7,23 +7,44 @@
   --marfil: #F7F4ED;
 }
 
+/* ==========================
+   RESET
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--negro-ebano);
   color: var(--marfil);
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
+
+/* ==========================
+   CONTENEDOR GENERAL
+========================== */
 
 .container {
-  max-width: 1000px; /* Reducimos un poco para mejor lectura */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
-  text-align: center; /* ESTO CENTRA TODO EL CONTENIDO DEL CONTENEDOR */
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
+/* ==========================
+   TITULOS DE SECCION
+========================== */
+
 .section-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--dorado-ancestral);
   text-transform: uppercase;
@@ -35,64 +56,28 @@ body {
 .section-title::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 90px;
   height: 4px;
   background-color: var(--terracota-pacifico);
-  margin: 1rem auto 0 auto;
+  margin: 1rem auto 0;
 }
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  text-align: center; /* CENTRA EL TEXTO DENTRO DE LAS TARJETAS */
-}
-
-.card {
-  background-color: #242424;
-  border-top: 4px solid var(--terracota-pacifico);
-  border-radius: 8px;
-  padding: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  color: var(--dorado-ancestral);
-  margin-top: 0;
-}
-
-/* ESTILO ESPECÍFICO PARA EL PROPÓSITO */
-.proposito {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.proposito p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
 /* ==========================
-   HEADER ASHÉ
+   HEADER
 ========================== */
 
 .header {
   background-color: #111;
-  border-bottom: 1px solid rgba(200,162,74,.2);
+  border-bottom: 1px solid rgba(200, 162, 74, .25);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .header-container {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: auto;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
 
   display: flex;
   justify-content: space-between;
@@ -107,43 +92,157 @@ body {
 }
 
 .logo {
-  width: 65px;
-  height: 65px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .logo-text h1 {
-  margin: 0;
   color: var(--marfil);
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1;
 }
 
 .logo-text p {
-  margin: 0;
   color: var(--dorado-ancestral);
-  font-size: .9rem;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-size: 0.95rem;
+  margin-top: 5px;
 }
 
 .nav {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .nav a {
-  text-decoration: none;
   color: var(--marfil);
+  text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .nav a:hover {
   color: var(--dorado-ancestral);
 }
 
-/* RESPONSIVE */
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+  min-height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 6rem;
+  color: var(--dorado-ancestral);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.btn-principal {
+  display: inline-block;
+  background: var(--dorado-ancestral);
+  color: #111 !important;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.btn-principal:hover {
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   PROPOSITO
+========================== */
+
+.proposito {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.proposito p {
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #242424;
+  border-top: 4px solid var(--terracota-pacifico);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: var(--dorado-ancestral);
+  margin-bottom: 1rem;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer h2 {
+  color: var(--dorado-ancestral);
+  margin-bottom: 1rem;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
 
 @media (max-width: 900px) {
 
@@ -155,20 +254,18 @@ body {
   .nav {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
   }
 
-}
-.btn-principal {
-  display: inline-block;
-  background: var(--dorado-ancestral);
-  color: #111 !important;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  margin-top: 1rem;
-}
+  .hero h1 {
+    font-size: 3.5rem;
+  }
 
-.btn-principal:hover {
-  transform: translateY(-2px);
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
 }
