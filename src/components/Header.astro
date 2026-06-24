@@ -1,0 +1,77 @@
+---
+---
+<header class="main-header">
+    <div class="header-container">
+        <!-- Logo y Eslogan -->
+        <div class="logo-area">
+            <a href="/" class="logo-title">ASHÉ</a>
+            <span class="logo-subtitle">Medio Comunitario Afro</span>
+        </div>
+
+        <!-- Menú de Navegación con los Pilares -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="/memoria">Memoria e Identidad</a></li>
+                <li><a href="/territorio">Comunidad y Territorio</a></li>
+                <li><a href="/cultura">Cultura y Estética</a></li>
+                <li><a href="/oportunidades">Oportunidades</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .main-header {
+        background-color: var(--negro-ebano);
+        color: var(--marfil);
+        padding: 1rem 2rem;
+        border-bottom: 4px solid var(--terracota-pacifico);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--dorado-ancestral);
+    }
+
+    .logo-subtitle {
+        font-size: 0.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    /* Efecto hover con el color Terracota del Pacífico */
+    .nav-menu a:hover {
+        color: var(--terracota-pacifico);
+    }
+</style>
