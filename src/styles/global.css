@@ -67,13 +67,9 @@ body {
 ========================== */
 
 .header {
-  background-color: rgba(17,17,17,.95);
-  backdrop-filter: blur(8px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #111;
+  border-bottom: 1px solid rgba(200,162,74,.25);
 }
-
 .header-container {
   max-width: 1400px;
   margin: auto;
@@ -268,4 +264,48 @@ body {
   .section-title {
     font-size: 2.2rem;
   }
+}
+/* ==========================
+   QUIENES SOMOS
+========================== */
+
+.descripcion-institucional {
+  max-width: 900px;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.frase-ashe {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.frase-ashe h2 {
+  color: var(--dorado-ancestral);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.frase-ashe p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--marfil);
+}
+/* ==========================
+   MISION Y VISION
+========================== */
+
+.grid-3 {
+  justify-content: center;
+}
+
+.grid-3 .card {
+  max-width: 500px;
+  margin: auto;
+}
+
+.card p {
+  line-height: 1.8;
 }
