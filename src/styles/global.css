@@ -67,8 +67,8 @@ body {
 ========================== */
 
 .header {
-  background-color: #111;
-  border-bottom: 1px solid rgba(200, 162, 74, .25);
+  background-color: rgba(17,17,17,.95);
+  backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 1000;
