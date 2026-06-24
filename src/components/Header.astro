@@ -1,77 +1,107 @@
 ---
+/* Componente de Navegación con Logo */
 ---
-<header class="main-header">
-    <div class="header-container">
-        <!-- Logo y Eslogan -->
-        <div class="logo-area">
-            <a href="/" class="logo-title">ASHÉ</a>
-            <span class="logo-subtitle">Medio Comunitario Afro</span>
-        </div>
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="logo-link">
+      <img src="/images/logo.jpg" alt="Logo ASHÉ" class="nav-logo" />
+      <div class="logo-text">
+        <span class="brand-name">ASHÉ</span>
+        <span class="brand-sub">Medio Comunitario Afro</span>
+      </div>
+    </a>
 
-        <!-- Menú de Navegación con los Pilares -->
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="/memoria">Memoria e Identidad</a></li>
-                <li><a href="/territorio">Comunidad y Territorio</a></li>
-                <li><a href="/cultura">Cultura y Estética</a></li>
-                <li><a href="/oportunidades">Oportunidades</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="main-navigation">
+      <a href="/memoria">Memoria e Identidad</a>
+      <a href="/comunidad">Comunidad y Territorio</a>
+      <a href="/cultura">Cultura y Estética</a>
+      <a href="/oportunidades">Oportunidades</a>
+    </nav>
+  </div>
 </header>
 
 <style>
-    .main-header {
-        background-color: var(--negro-ebano);
-        color: var(--marfil);
-        padding: 1rem 2rem;
-        border-bottom: 4px solid var(--terracota-pacifico);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
+  .site-header {
+    background-color: #121111; /* Mantenemos el fondo oscuro premium */
+    border-bottom: 1px solid rgba(196, 146, 77, 0.2); /* Línea dorada sutil */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.75rem 0;
+  }
 
+  .header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    width: 50px; /* Tamaño elegante para la barra */
+    height: 50px;
+    border-radius: 50%; /* Asegura que el círculo sea perfecto */
+    object-fit: cover;
+    border: 2px solid var(--gold-accent, #C4924D); /* Anillo dorado sutil alrededor */
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-name {
+    font-family: 'Prata', serif;
+    font-size: 1.4rem;
+    color: #FAF8F5;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+  }
+
+  .brand-sub {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    color: var(--gold-accent, #C4924D);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .main-navigation {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .main-navigation a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #CECBC6;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .main-navigation a:hover {
+    color: var(--gold-accent, #C4924D);
+  }
+
+  @media (max-width: 768px) {
     .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
+      flex-direction: column;
+      gap: 1rem;
     }
-
-    .logo-area {
-        display: flex;
-        flex-direction: column;
+    .main-navigation {
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-
-    .logo-title {
-        font-size: 1.8rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: var(--dorado-ancestral);
-    }
-
-    .logo-subtitle {
-        font-size: 0.8rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .nav-menu ul {
-        display: flex;
-        list-style: none;
-        gap: 1.5rem;
-    }
-
-    .nav-menu a {
-        font-size: 0.95rem;
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
-
-    /* Efecto hover con el color Terracota del Pacífico */
-    .nav-menu a:hover {
-        color: var(--terracota-pacifico);
-    }
+  }
 </style>
