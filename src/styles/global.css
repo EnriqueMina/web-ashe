@@ -1,64 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght=400;600;700&display=swap');
-
+/* --- Variables de Diseño --- */
 :root {
-  --negro-ebano: #1B1B1B;
-  --dorado-ancestral: #C8A24A;
-  --terracota-pacifico: #A8572B;
-  --marfil: #F7F4ED;
+  --negro-ebano: #0a0a0a;
+  --dorado-ancestral: #d4af37;
+  --marfil: #f5f5dc;
+  --terracota-pacifico: #b22222;
+  --blanco: #ffffff;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--negro-ebano);
-  color: var(--marfil);
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--dorado-ancestral);
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: var(--terracota-pacifico);
-  margin: 1rem auto 0 auto;
-}
-
+/* --- Estructura de Tarjetas (Cards) --- */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  padding: 2rem 0;
 }
 
 .card {
-  background-color: #242424;
-  border-top: 4px solid var(--terracota-pacifico);
-  border-radius: 8px;
+  background: var(--blanco);
   padding: 2rem;
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, border-top 0.3s ease;
+  border-top: 5px solid var(--dorado-ancestral);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .card h3 {
-  color: var(--dorado-ancestral);
-  margin-top: 0;
+  color: var(--negro-ebano);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- Títulos de Sección --- */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--negro-ebano);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- Ajuste de contenedores --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }

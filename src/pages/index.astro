@@ -1,13 +1,17 @@
 ---
 import Layout from '../layouts/LayoutBase.astro';
 import Header from '../components/Header.astro';
+import Memoria from '../components/Memoria.astro';
+import Comunidad from '../components/Comunidad.astro';
+import Cultura from '../components/Cultura.astro';
+import Oportunidades from '../components/Oportunidades.astro';
 import '../styles/global.css';
 ---
 
 <Layout title="ASHÉ - Medio Comunitario Afro">
   <Header />
 
-  <!-- SECCIÓN HERO -->
+  <!-- Hero y Propósito siguen aquí porque son la intro -->
   <section class="hero">
     <div class="hero-content">
       <h1>"LA FUERZA CULTURAL QUE MUEVE EL TERRITORIO"</h1>
@@ -17,7 +21,6 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- NUESTRO PROPÓSITO & UBUNTU -->
   <section class="proposito">
     <div class="container text-center">
       <h2>Nuestro Propósito</h2>
@@ -27,125 +30,10 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- SECCIÓN 1: MEMORIA E IDENTIDAD -->
-  <section id="memoria" class="bg-light">
-    <div class="container">
-      <h2 class="section-title">Memoria e Identidad</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Historia y Tradición Oral</h3>
-          <p>Preservamos los relatos y la ancestralidad transmitida por nuestras mayoras y mayores en el contexto urbano de Bogotá.</p>
-        </div>
-        <div class="card">
-          <h3>Filosofía Ubuntu</h3>
-          <p>Promovemos el reconocimiento de la identidad y la construcción colectiva: "Soy porque somos".</p>
-        </div>
-        <div class="card">
-          <h3>Relatos de Migración</h3>
-          <p>Documentamos las historias de vida de familias, jóvenes y niños que reconstruyen su herencia en la capital.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Aquí cargamos tus 4 secciones modulares -->
+  <Memoria />
+  <Comunidad />
+  <Cultura />
+  <Oportunidades />
 
-  <!-- SECCIÓN 2: COMUNIDAD Y TERRITORIO -->
-  <section id="comunidad">
-    <div class="container">
-      <h2 class="section-title">Comunidad y Territorio</h2>
-      <p class="intro-text">Visibilizamos los procesos organizativos y liderazgos que transforman las localidades, iniciando en Usme y proyectándonos a toda Bogotá.</p>
-      
-      <div class="grid-3">
-        <div class="card process-card">
-          <h3>Organizaciones Aliadas</h3>
-          <p>Espacio dedicado al tejido social de colectivos como <em>Cimarrón, Diáspora</em> y organizaciones de base.</p>
-        </div>
-        <div class="card process-card">
-          <h3>Procesos Comunitarios</h3>
-          <p>Acompañamiento a iniciativas locales: Escuela Yemayá, La Tonga, Sarakua, Swart Unie, Harambe Usawa y Colinos del Pacífico.</p>
-        </div>
-        <div class="card process-card">
-          <h3>Liderazgos Locales</h3>
-          <p>Reconocimiento a los creadores de emprendimientos, contenidos y gestores sociales que impulsan los Premios Sankofas y Benkos Biohó.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN 3: CULTURA Y ESTÉTICA -->
-  <section id="cultura" class="bg-light">
-    <div class="container">
-      <h2 class="section-title">Cultura, Arte y Estética</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Estética Afro</h3>
-          <p>Peinados tradicionales, turbantes y su significado cultural, cuidado del cabello y moda afrocentrada como identidad y autoestima.</p>
-        </div>
-        <div class="card">
-          <h3>Expresiones Artísticas</h3>
-          <p>Danza y músicas tradicionales y urbanas: King el pesado de la clave, Mr. Shompy, Revolú, Soy Babalú y agrupaciones del territorio.</p>
-        </div>
-        <div class="card">
-          <h3>Cocina Tradicional</h3>
-          <p>Salvaguardia de los saberes gastronómicos del Pacífico y el Caribe presentes en Bogotá: encocados, tapao y bebidas ancestrales.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN 4: OPORTUNIDADES Y FORMACIÓN -->
-  <section id="oportunidades">
-    <div class="container">
-      <h2 class="section-title">Oportunidades y Formación</h2>
-      <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));">
-        <div class="card feat-card">
-          <h3>Convocatorias y Becas</h3>
-          <p>Información actualizada sobre acceso a la educación superior, cursos de formación y etnoeducación para jóvenes de las localidades.</p>
-        </div>
-        <div class="card feat-card">
-          <h3>Incidencia y Empleabilidad</h3>
-          <p>Difusión de la Política Pública NARP, espacios de representation ciudadana y ofertas de empleo para el empoderamiento juvenil.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 </Layout>
-
-<style>
-  .hero {
-    background-color: var(--negro-ebano);
-    text-align: center;
-    padding: 6rem 2rem;
-    border-bottom: 2px solid var(--dorado-ancestral);
-  }
-  .hero h1 {
-    font-size: 3rem;
-    color: var(--dorado-ancestral);
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-  }
-  .subtitle {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #e0e0e0;
-  }
-  .proposito {
-    background-color: var(--marfil);
-    color: var(--negro-ebano);
-    text-align: center;
-  }
-  .proposito h2 {
-    color: var(--terracota-pacifico);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  .bg-light {
-    background-color: #1a1a1a;
-  }
-  .text-center { text-align: center; }
-  .intro-text { text-align: center; max-width: 700px; margin: -1.5rem auto 3rem auto; color: #ccc; }
-  
-  .process-card { border-top-color: var(--dorado-ancestral); }
-  .feat-card { border-top-color: var(--marfil); }
-</style>
