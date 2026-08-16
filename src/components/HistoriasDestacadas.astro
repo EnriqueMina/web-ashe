@@ -1,0 +1,556 @@
+<section id="historias" class="historias">
+
+  <div class="container">
+
+    <div class="historias-header">
+
+      <div>
+        <span class="section-label">
+          DESDE EL TERRITORIO
+        </span>
+
+        <h2>
+          Historias
+          <span>destacadas</span>
+        </h2>
+      </div>
+
+      <p>
+        Relatos, voces y experiencias que nos permiten conocer,
+        preservar y compartir la memoria de nuestras comunidades.
+      </p>
+
+    </div>
+
+
+    <article class="historia-destacada">
+
+      <div class="historia-visual">
+
+        <div class="historia-overlay"></div>
+
+        <div class="historia-brand">
+          <span>ASHÉ</span>
+          <small>
+            MEDIO COMUNITARIO AFRO
+          </small>
+        </div>
+
+        <div class="historia-number">
+          01
+        </div>
+
+      </div>
+
+
+      <div class="historia-content">
+
+        <div class="historia-meta">
+          <span>MEMORIA E IDENTIDAD</span>
+          <span>•</span>
+          <span>15 AGO 2026</span>
+        </div>
+
+        <h3>
+          ASHÉ: la fuerza cultural
+          que mueve el territorio
+        </h3>
+
+        <p>
+          Conoce la historia, propósito y visión de ASHÉ Medio Comunitario
+          Afro, una iniciativa que busca visibilizar las voces afrodescendientes,
+          fortalecer la identidad y rescatar la memoria histórica.
+        </p>
+
+        <div class="historia-footer">
+
+          <a href="/memoria" class="historia-button">
+            Leer historia
+            <span>→</span>
+          </a>
+
+          <span class="historia-category">
+            MEMORIA
+          </span>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <div class="historias-more">
+
+      <p>
+        Historias que nacen de nuestras voces.
+      </p>
+
+      <a href="/memoria">
+        Explorar Memoria e Identidad
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+  .historias {
+    padding: 110px 20px;
+
+    background: #F7F4ED;
+
+    color: #1B1B1B;
+  }
+
+
+  .container {
+    width: min(1000px, 100%);
+
+    margin: 0 auto;
+  }
+
+
+  /* ================================
+     ENCABEZADO
+  ================================= */
+
+  .historias-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 50px;
+
+    margin-bottom: 55px;
+  }
+
+
+  .section-label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #A8572B;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+  }
+
+
+  .historias-header h2 {
+    margin: 0;
+
+    font-size: clamp(2.6rem, 5vw, 4rem);
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .historias-header h2 span {
+    display: block;
+
+    color: #A8572B;
+  }
+
+
+  .historias-header > p {
+    max-width: 430px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* ================================
+     HISTORIA PRINCIPAL
+  ================================= */
+
+  .historia-destacada {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 480px;
+
+    overflow: hidden;
+
+    background: #1B1B1B;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 45px rgba(27, 27, 27, 0.12);
+  }
+
+
+  /* Visual */
+
+  .historia-visual {
+    position: relative;
+
+    min-height: 480px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+      radial-gradient(
+        circle at 50% 45%,
+        rgba(200, 162, 74, 0.22),
+        transparent 35%
+      ),
+      linear-gradient(
+        145deg,
+        #242424,
+        #A8572B
+      );
+  }
+
+
+  .historia-visual::before,
+  .historia-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border: 1px solid rgba(200, 162, 74, 0.2);
+
+    border-radius: 50%;
+  }
+
+
+  .historia-visual::after {
+    width: 500px;
+    height: 500px;
+  }
+
+
+  .historia-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+      linear-gradient(
+        135deg,
+        rgba(27,27,27,0.25),
+        transparent
+      );
+  }
+
+
+  .historia-brand {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+
+  .historia-brand span {
+    color: #C8A24A;
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    font-weight: 800;
+
+    line-height: 0.9;
+
+    letter-spacing: 4px;
+  }
+
+
+  .historia-brand small {
+    margin-top: 15px;
+
+    color: rgba(247, 244, 237, 0.7);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 3px;
+  }
+
+
+  .historia-number {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 25px;
+    left: 28px;
+
+    color: rgba(247, 244, 237, 0.5);
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* Contenido */
+
+  .historia-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 55px;
+  }
+
+
+  .historia-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #C8A24A;
+
+    font-size: 0.66rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .historia-content h3 {
+    max-width: 520px;
+
+    margin: 25px 0 20px;
+
+    color: #F7F4ED;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+  }
+
+
+  .historia-content > p {
+    max-width: 530px;
+
+    margin: 0;
+
+    color: rgba(247, 244, 237, 0.68);
+
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* Footer de historia */
+
+  .historia-footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(247, 244, 237, 0.1);
+  }
+
+
+  .historia-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #C8A24A;
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+  }
+
+
+  .historia-button span {
+    font-size: 1.1rem;
+
+    transition: transform 0.2s ease;
+  }
+
+
+  .historia-button:hover span {
+    transform: translateX(5px);
+  }
+
+
+  .historia-category {
+    color: rgba(247, 244, 237, 0.35);
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* ================================
+     PIE
+  ================================= */
+
+  .historias-more {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 28px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(27, 27, 27, 0.1);
+  }
+
+
+  .historias-more p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 0.9rem;
+
+    font-style: italic;
+  }
+
+
+  .historias-more a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #A8572B;
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+  }
+
+
+  .historias-more a span {
+    transition: transform 0.2s ease;
+  }
+
+
+  .historias-more a:hover span {
+    transform: translateX(5px);
+  }
+
+
+  /* ================================
+     RESPONSIVE
+  ================================= */
+
+  @media (max-width: 800px) {
+
+    .historias {
+      padding: 80px 20px;
+    }
+
+
+    .historias-header {
+      display: block;
+    }
+
+
+    .historias-header > p {
+      margin-top: 20px;
+    }
+
+
+    .historia-destacada {
+      grid-template-columns: 1fr;
+    }
+
+
+    .historia-visual {
+      min-height: 300px;
+    }
+
+
+    .historia-content {
+      padding: 35px 28px;
+    }
+
+
+    .historia-content h3 {
+      font-size: 2rem;
+    }
+
+  }
+
+
+  @media (max-width: 500px) {
+
+    .historia-footer,
+    .historias-more {
+      align-items: flex-start;
+
+      flex-direction: column;
+    }
+
+
+    .historia-category {
+      display: none;
+    }
+
+  }
+
+</style>

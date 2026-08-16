@@ -2,34 +2,169 @@
 import Header from '../components/Header.astro';
 import '../styles/global.css';
 
-const { title = 'Inicio' } = Astro.props;
+const {
+  title = 'Inicio',
+  description = 'ASHÉ Medio Comunitario Afro: historias, memoria, identidad, cultura y territorio de las comunidades afrodescendientes en Bogotá.',
+  image = '/images/logo.jpeg'
+} = Astro.props;
+
+const siteName = 'ASHÉ Medio Comunitario Afro';
+const fullTitle =
+  title === 'Inicio'
+    ? siteName
+    : `${title} | ${siteName}`;
+
+const canonicalURL = Astro.url.href;
 ---
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>{title} | ASHÉ Medio Comunitario Afro</title>
+<head>
+
+  <!-- =================================
+       CONFIGURACIÓN BÁSICA
+  ================================== -->
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="theme-color"
+    content="#1B1B1B"
+  />
+
+
+  <!-- =================================
+       SEO
+  ================================== -->
+
+  <title>{fullTitle}</title>
 
   <meta
     name="description"
-    content="ASHÉ - Medio Comunitario Afro dedicado a la memoria, identidad, cultura y territorio afrodescendiente."
+    content={description}
   />
 
-  <meta name="author" content="ASHÉ" />
+  <meta
+    name="author"
+    content="ASHÉ Medio Comunitario Afro"
+  />
 
-  <link rel="icon" type="image/jpeg" href="/images/logo.jpeg" />
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <link
+    rel="canonical"
+    href={canonicalURL}
+  />
+
+
+  <!-- =================================
+       FAVICON
+  ================================== -->
+
+  <link
+    rel="icon"
+    type="image/jpeg"
+    href="/images/logo.jpeg"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    href="/images/logo.jpeg"
+  />
+
+
+  <!-- =================================
+       OPEN GRAPH
+       Para compartir en Facebook,
+       WhatsApp y otras plataformas.
+  ================================== -->
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:title"
+    content={fullTitle}
+  />
+
+  <meta
+    property="og:description"
+    content={description}
+  />
+
+  <meta
+    property="og:image"
+    content={image}
+  />
+
+  <meta
+    property="og:site_name"
+    content={siteName}
+  />
+
+  <meta
+    property="og:locale"
+    content="es_CO"
+  />
+
+
+  <!-- =================================
+       TWITTER / X
+  ================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content={fullTitle}
+  />
+
+  <meta
+    name="twitter:description"
+    content={description}
+  />
+
+  <meta
+    name="twitter:image"
+    content={image}
+  />
+
 </head>
+
 
 <body>
 
+  <!-- =================================
+       ENCABEZADO
+  ================================== -->
+
   <Header />
 
+
+  <!-- =================================
+       CONTENIDO PRINCIPAL
+  ================================== -->
+
   <main>
+
     <slot />
+
   </main>
 
 </body>
+
 </html>

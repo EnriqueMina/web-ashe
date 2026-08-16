@@ -2,40 +2,664 @@
 const menuItems = [
   { name: "Inicio", href: "/" },
   { name: "Quiénes Somos", href: "/quienes-somos" },
-  { name: "Memoria e Identidad", href: "/memoria" },
-  { name: "Comunidad y Territorio", href: "/comunidad" },
-  { name: "Cultura y Estética", href: "/cultura" },
+  { name: "Actualidad Afro", href: "/actualidad" },
+  { name: "Memoria", href: "/memoria" },
+  { name: "Comunidad", href: "/comunidad" },
+  { name: "Cultura", href: "/cultura" },
   { name: "Oportunidades", href: "/oportunidades" }
 ];
+
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="header">
 
   <div class="header-container">
 
-    <a href="/" class="logo-container">
+    <!-- LOGO -->
+
+    <a
+      href="/"
+      class="logo-container"
+      aria-label="ASHÉ - Inicio"
+    >
 
       <img
         src="/images/logo.jpeg"
-        alt="Logo ASHÉ"
+        alt="Logo ASHÉ Medio Comunitario Afro"
         class="logo"
       />
 
       <div class="logo-text">
+
         <h1>ASHÉ</h1>
-        <p>MEDIO COMUNITARIO AFRO</p>
+
+        <p>
+          MEDIO COMUNITARIO AFRO
+        </p>
+
       </div>
 
     </a>
 
-    <nav class="nav">
+
+    <!-- BOTÓN MENÚ MÓVIL -->
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <!-- NAVEGACIÓN -->
+
+    <nav
+      class="nav"
+      id="main-navigation"
+      aria-label="Navegación principal"
+    >
+
       {
-        menuItems.map((item) => (
-          <a href={item.href}>{item.name}</a>
-        ))
+        menuItems.map((item) => {
+
+          const isActive =
+            item.href === "/"
+              ? currentPath === "/"
+              : currentPath.startsWith(item.href);
+
+          return (
+            <a
+              href={item.href}
+              class:list={{ active: isActive }}
+              aria-current={isActive ? "page" : undefined}
+            >
+              {item.name}
+            </a>
+          );
+
+        })
       }
+
     </nav>
 
   </div>
 
 </header>
+
+
+<script>
+
+  const menuToggle =
+    document.querySelector(".menu-toggle");
+
+  const navigation =
+    document.querySelector("#main-navigation");
+
+
+  if (menuToggle && navigation) {
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen =
+        navigation.classList.toggle("open");
+
+      menuToggle.classList.toggle(
+        "open",
+        isOpen
+      );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Cerrar menú"
+          : "Abrir menú"
+      );
+
+    });
+
+
+    navigation
+      .querySelectorAll("a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          navigation.classList.remove("open");
+
+          menuToggle.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.setAttribute(
+            "aria-label",
+            "Abrir menú"
+          );
+
+        });
+
+      });
+
+  }
+
+</script>
+
+
+<style>
+
+/* =================================
+   HEADER
+================================= */
+
+.header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  background:
+    rgba(247, 244, 237, 0.96);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom:
+    1px solid rgba(27, 27, 27, 0.08);
+}
+
+
+/* =================================
+   CONTENEDOR
+================================= */
+
+.header-container {
+
+  width:
+    min(1180px, calc(100% - 40px));
+
+  min-height: 88px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.logo-container {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #1B1B1B;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+}
+
+
+.logo {
+
+  width: 52px;
+
+  height: 52px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border:
+    2px solid #C8A24A;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.logo-container:hover .logo {
+
+  transform:
+    rotate(-3deg)
+    scale(1.04);
+}
+
+
+.logo-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.logo-text h1 {
+
+  margin: 0;
+
+  color: #1B1B1B;
+
+  font-size: 1.55rem;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.logo-text p {
+
+  margin: 5px 0 0;
+
+  color: #A8572B;
+
+  font-size: 0.52rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  white-space: nowrap;
+}
+
+
+/* =================================
+   NAVEGACIÓN
+================================= */
+
+.nav {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 4px;
+}
+
+
+.nav a {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 42px;
+
+  padding: 0 12px;
+
+  color: #4B4B4B;
+
+  font-size: 0.76rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Línea inferior */
+
+.nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 12px;
+
+  right: 12px;
+
+  bottom: 3px;
+
+  height: 2px;
+
+  background: #A8572B;
+
+  transform:
+    scaleX(0);
+
+  transform-origin: center;
+
+  transition:
+    transform 0.2s ease;
+}
+
+
+.nav a:hover {
+
+  color: #A8572B;
+
+  background:
+    rgba(168, 87, 43, 0.05);
+}
+
+
+.nav a:hover::after {
+
+  transform:
+    scaleX(1);
+}
+
+
+/* Página actual */
+
+.nav a.active {
+
+  color: #A8572B;
+
+  font-weight: 800;
+}
+
+
+.nav a.active::after {
+
+  transform:
+    scaleX(1);
+}
+
+
+/* =================================
+   BOTÓN HAMBURGUESA
+================================= */
+
+.menu-toggle {
+
+  display: none;
+
+  width: 44px;
+
+  height: 44px;
+
+  padding: 9px;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  position: relative;
+
+  z-index: 1002;
+}
+
+
+.menu-toggle span {
+
+  display: block;
+
+  width: 25px;
+
+  height: 2px;
+
+  margin: 5px auto;
+
+  background: #1B1B1B;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* Animación hamburguesa → X */
+
+.menu-toggle.open span:nth-child(1) {
+
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+
+.menu-toggle.open span:nth-child(2) {
+
+  opacity: 0;
+}
+
+
+.menu-toggle.open span:nth-child(3) {
+
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1100px) {
+
+  .header-container {
+
+    gap: 15px;
+  }
+
+
+  .nav {
+
+    gap: 0;
+  }
+
+
+  .nav a {
+
+    padding: 0 8px;
+
+    font-size: 0.7rem;
+  }
+
+
+  .nav a::after {
+
+    left: 8px;
+
+    right: 8px;
+  }
+
+}
+
+
+/* =================================
+   CELULAR
+================================= */
+
+@media (max-width: 850px) {
+
+  .header-container {
+
+    min-height: 76px;
+
+    width:
+      calc(100% - 30px);
+  }
+
+
+  .logo {
+
+    width: 46px;
+
+    height: 46px;
+  }
+
+
+  .logo-text h1 {
+
+    font-size: 1.35rem;
+  }
+
+
+  .logo-text p {
+
+    font-size: 0.46rem;
+
+    letter-spacing: 1.1px;
+  }
+
+
+  /* Mostrar hamburguesa */
+
+  .menu-toggle {
+
+    display: block;
+  }
+
+
+  /* Menú */
+
+  .nav {
+
+    position: absolute;
+
+    top: 76px;
+
+    left: 15px;
+
+    right: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 4px;
+
+    padding: 15px;
+
+    background:
+      rgba(247, 244, 237, 0.98);
+
+    border:
+      1px solid rgba(27, 27, 27, 0.08);
+
+    border-radius: 14px;
+
+    box-shadow:
+      0 15px 35px
+      rgba(27, 27, 27, 0.12);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+      translateY(-10px);
+
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      transform 0.2s ease;
+  }
+
+
+  /* Menú abierto */
+
+  .nav.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+      translateY(0);
+  }
+
+
+  .nav a {
+
+    min-height: 48px;
+
+    justify-content: flex-start;
+
+    padding: 0 15px;
+
+    font-size: 0.85rem;
+
+    border-radius: 9px;
+  }
+
+
+  .nav a::after {
+
+    display: none;
+  }
+
+
+  .nav a.active {
+
+    background:
+      rgba(168, 87, 43, 0.08);
+  }
+
+}
+
+
+/* =================================
+   CELULARES PEQUEÑOS
+================================= */
+
+@media (max-width: 400px) {
+
+  .header-container {
+
+    width:
+      calc(100% - 24px);
+  }
+
+
+  .logo-text p {
+
+    display: none;
+  }
+
+}
+
+</style>

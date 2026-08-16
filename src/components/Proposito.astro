@@ -2,16 +2,260 @@
 
   <div class="container">
 
-    <h2 class="section-title">
-      Nuestro Propósito
-    </h2>
+    <div class="proposito-header">
 
-    <p>
-      Somos un medio comunitario afro que busca visibilizar las culturas,
-      tradiciones, saberes y procesos organizativos de las comunidades
-      negras, afrocolombianas, raizales y palenqueras presentes en Bogotá.
-    </p>
+      <span class="section-label">
+        NUESTRO PROPÓSITO
+      </span>
+
+      <h2>
+        Contar el territorio
+        <span>desde nuestras propias voces.</span>
+      </h2>
+
+      <p class="proposito-description">
+        ASHÉ es un medio comunitario afro que busca visibilizar las culturas,
+        tradiciones, saberes y procesos organizativos de las comunidades
+        negras, afrocolombianas, raizales y palenqueras presentes en Bogotá.
+      </p>
+
+    </div>
+
+
+    <div class="proposito-grid">
+
+      <article class="proposito-card">
+
+        <span class="card-number">01</span>
+
+        <h3>Memoria</h3>
+
+        <p>
+          Rescatamos historias, saberes y experiencias que hacen parte
+          de nuestra memoria colectiva.
+        </p>
+
+      </article>
+
+
+      <article class="proposito-card">
+
+        <span class="card-number">02</span>
+
+        <h3>Identidad</h3>
+
+        <p>
+          Fortalecemos la identidad afro a través de la cultura,
+          las voces y las expresiones de nuestras comunidades.
+        </p>
+
+      </article>
+
+
+      <article class="proposito-card">
+
+        <span class="card-number">03</span>
+
+        <h3>Comunidad</h3>
+
+        <p>
+          Visibilizamos procesos, iniciativas y voces que construyen
+          territorio desde la participación comunitaria.
+        </p>
+
+      </article>
+
+    </div>
 
   </div>
 
 </section>
+
+
+<style>
+
+  .proposito {
+    position: relative;
+
+    padding: 110px 20px;
+
+    background: #F7F4ED;
+
+    overflow: hidden;
+  }
+
+
+  .container {
+    width: min(1000px, 100%);
+    margin: 0 auto;
+  }
+
+
+  /* Encabezado */
+
+  .proposito-header {
+    max-width: 850px;
+    margin: 0 auto 65px;
+
+    text-align: center;
+  }
+
+
+  .section-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #A8572B;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+  }
+
+
+  .proposito h2 {
+    margin: 0;
+
+    color: #1B1B1B;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .proposito h2 span {
+    display: block;
+
+    color: #A8572B;
+  }
+
+
+  .proposito-description {
+    max-width: 720px;
+
+    margin: 28px auto 0;
+
+    color: #555;
+
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+
+  /* Tarjetas */
+
+  .proposito-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+  }
+
+
+  .proposito-card {
+    position: relative;
+
+    padding: 35px 30px;
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(27, 27, 27, 0.08);
+
+    border-radius: 16px;
+
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+
+  .proposito-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(200, 162, 74, 0.5);
+
+    box-shadow: 0 18px 35px rgba(27, 27, 27, 0.08);
+  }
+
+
+  .card-number {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #C8A24A;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+  }
+
+
+  .proposito-card h3 {
+    margin: 0 0 14px;
+
+    color: #1B1B1B;
+
+    font-size: 1.45rem;
+  }
+
+
+  .proposito-card p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+
+  /* Línea decorativa */
+
+  .proposito-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+    bottom: 0;
+
+    width: 45px;
+    height: 3px;
+
+    background: #C8A24A;
+
+    border-radius: 3px;
+  }
+
+
+  /* Responsive */
+
+  @media (max-width: 750px) {
+
+    .proposito {
+      padding: 80px 20px;
+    }
+
+    .proposito-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .proposito-header {
+      margin-bottom: 45px;
+    }
+
+    .proposito-description {
+      font-size: 1rem;
+    }
+
+  }
+
+</style>
