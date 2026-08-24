@@ -9,9 +9,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   <main class="actualidad">
 
-    <!-- =================================
+    <!-- ==========================================
          HERO
-    ================================== -->
+    =========================================== -->
 
     <section class="actualidad-hero">
 
@@ -36,9 +36,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     </section>
 
 
-    <!-- =================================
+    <!-- ==========================================
          NOTICIA DESTACADA
-    ================================== -->
+    =========================================== -->
 
     <section class="featured-news">
 
@@ -47,6 +47,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
         <div class="section-top">
 
           <div>
+
             <span class="small-label">
               DESTACADA
             </span>
@@ -55,6 +56,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
               Historias que
               <span>merecen ser contadas.</span>
             </h2>
+
           </div>
 
           <p>
@@ -65,38 +67,46 @@ import LayoutBase from '../layouts/LayoutBase.astro';
         </div>
 
 
+        <!-- ======================================
+             TARJETA DE LA NOTICIA
+        ======================================= -->
+
         <article class="main-news">
 
-          <div class="news-image">
 
-            <div class="image-placeholder">
+          <!-- IMAGEN DE PORTADA -->
 
-              <span>
-                ASHÉ
-              </span>
+          <a
+            href="/actualidad/articulo-terremoto"
+            class="news-image"
+            aria-label="Leer artículo sobre el terremoto del 10 de agosto"
+          >
 
-              <small>
-                PRÓXIMAMENTE
-              </small>
-
-            </div>
+            <img
+              src="/images/imagen3.jpeg"
+              alt="Daños ocasionados por el terremoto en el Pacífico colombiano"
+            />
 
             <span class="news-number">
               01
             </span>
 
-          </div>
+          </a>
 
+
+          <!-- INFORMACIÓN DE LA NOTICIA -->
 
           <div class="main-news-content">
 
             <div class="news-meta">
 
               <span>
-                ACTUALIDAD
+                OPINIÓN / ANÁLISIS
               </span>
 
-              <span>•</span>
+              <span>
+                •
+              </span>
 
               <span>
                 ASHÉ
@@ -104,21 +114,35 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
             </div>
 
+
             <h3>
-              Próximamente encontrarás
-              aquí nuestras historias.
+              El terremoto del 10 de agosto:
+              la urgencia de mirar hacia el
+              Pacífico tras el sismo
             </h3>
 
+
             <p>
-              Estamos preparando este espacio para compartir
-              noticias, entrevistas, crónicas y contenidos sobre
-              las comunidades afrodescendientes y sus procesos
-              en Bogotá.
+              El impacto del terremoto de magnitud 7.4 dejó en
+              evidencia el racismo estructural, la brecha en la
+              infraestructura y la fuerza de la solidaridad
+              comunitaria en el Chocó y Buenaventura.
             </p>
 
-            <span class="coming">
-              CONTENIDO EN CONSTRUCCIÓN
+
+            <span class="author">
+              Por:
+              <strong>Maleja Banguera</strong>
             </span>
+
+
+            <a
+              href="/actualidad/articulo-terremoto"
+              class="read-button"
+            >
+              LEER ARTÍCULO
+              <span>→</span>
+            </a>
 
           </div>
 
@@ -129,9 +153,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     </section>
 
 
-    <!-- =================================
+    <!-- ==========================================
          CATEGORÍAS
-    ================================== -->
+    =========================================== -->
 
     <section class="news-categories">
 
@@ -152,6 +176,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 
         <div class="categories-grid">
+
+
+          <!-- NOTICIAS -->
 
           <article class="category-card">
 
@@ -175,6 +202,8 @@ import LayoutBase from '../layouts/LayoutBase.astro';
           </article>
 
 
+          <!-- ENTREVISTAS -->
+
           <article class="category-card dark">
 
             <span class="category-number">
@@ -196,6 +225,8 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
           </article>
 
+
+          <!-- CRÓNICAS -->
 
           <article class="category-card">
 
@@ -219,6 +250,8 @@ import LayoutBase from '../layouts/LayoutBase.astro';
           </article>
 
 
+          <!-- TERRITORIO -->
+
           <article class="category-card">
 
             <span class="category-number">
@@ -241,6 +274,8 @@ import LayoutBase from '../layouts/LayoutBase.astro';
           </article>
 
 
+          <!-- JUVENTUDES -->
+
           <article class="category-card dark">
 
             <span class="category-number">
@@ -262,6 +297,8 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
           </article>
 
+
+          <!-- CULTURA -->
 
           <article class="category-card">
 
@@ -291,9 +328,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     </section>
 
 
-    <!-- =================================
-         MENSAJE EDITORIAL
-    ================================== -->
+    <!-- ==========================================
+         EDITORIAL
+    =========================================== -->
 
     <section class="editorial">
 
@@ -318,9 +355,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     </section>
 
 
-    <!-- =================================
+    <!-- ==========================================
          PRÓXIMAMENTE
-    ================================== -->
+    =========================================== -->
 
     <section class="coming-section">
 
@@ -354,9 +391,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     </section>
 
 
-    <!-- =================================
+    <!-- ==========================================
          CIERRE
-    ================================== -->
+    =========================================== -->
 
     <section class="actualidad-ending">
 
@@ -386,9 +423,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 <style>
 
-/* =================================
-   GENERAL
-================================= */
+/* ==================================================
+   VARIABLES
+================================================== */
 
 .actualidad {
 
@@ -397,13 +434,17 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   --terracotta: #A8572B;
   --cream: #F7F4ED;
   --white: #FFFFFF;
-  --gray: #666;
+  --gray: #666666;
 
   background: var(--cream);
 
   color: var(--black);
 }
 
+
+/* ==================================================
+   CONTENEDOR
+================================================== */
 
 .container {
 
@@ -413,9 +454,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
-/* =================================
+/* ==================================================
    HERO
-================================= */
+================================================== */
 
 .actualidad-hero {
 
@@ -447,8 +488,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   right: -250px;
   top: -260px;
 
-  border:
-    1px solid rgba(200,162,74,0.2);
+  border: 1px solid rgba(200,162,74,0.2);
 
   border-radius: 50%;
 
@@ -470,8 +510,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   left: -130px;
   bottom: -130px;
 
-  border:
-    1px solid rgba(168,87,43,0.35);
+  border: 1px solid rgba(168,87,43,0.35);
 
   border-radius: 50%;
 }
@@ -509,8 +548,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size:
-    clamp(3.5rem, 8vw, 6.5rem);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
 
   line-height: 0.93;
 
@@ -532,8 +570,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 30px 0 0;
 
-  color:
-    rgba(247,244,237,0.7);
+  color: rgba(247,244,237,0.7);
 
   font-size: 1.08rem;
 
@@ -541,9 +578,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
-/* =================================
-   DESTACADA
-================================= */
+/* ==================================================
+   NOTICIA DESTACADA
+================================================== */
 
 .featured-news {
 
@@ -587,8 +624,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size:
-    clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
 
   line-height: 1;
 
@@ -616,9 +652,16 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
-/* =================================
-   NOTICIA PRINCIPAL
-================================= */
+/* ==================================================
+   TARJETA PRINCIPAL
+================================================== */
+
+/*
+   IMPORTANTE:
+   La tarjeta queda FIJA en 450px.
+   Esto evita que el texto haga crecer
+   toda la página.
+*/
 
 .main-news {
 
@@ -626,7 +669,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   grid-template-columns: 1fr 1fr;
 
+  width: 100%;
+
+  height: 450px;
+
   min-height: 450px;
+
+  max-height: 450px;
 
   overflow: hidden;
 
@@ -639,93 +688,47 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
+/* ==================================================
+   IMAGEN DE LA TARJETA
+================================================== */
+
 .news-image {
 
   position: relative;
 
-  display: flex;
+  display: block;
 
-  align-items: center;
+  width: 100%;
 
-  justify-content: center;
+  height: 450px;
+
+  min-height: 450px;
 
   overflow: hidden;
 
-  background:
-    radial-gradient(
-      circle at 50% 40%,
-      rgba(200,162,74,0.2),
-      transparent 35%
-    ),
-    linear-gradient(
-      145deg,
-      #242424,
-      #A8572B
-    );
+  background: #242424;
 }
 
 
-.news-image::before,
-.news-image::after {
+.news-image img {
 
-  content: "";
+  display: block;
 
-  position: absolute;
+  width: 100%;
 
-  width: 330px;
-  height: 330px;
+  height: 100%;
 
-  border:
-    1px solid rgba(200,162,74,0.2);
+  object-fit: cover;
 
-  border-radius: 50%;
+  object-position: center;
+
+  transition: transform 0.35s ease;
 }
 
 
-.news-image::after {
+.news-image:hover img {
 
-  width: 500px;
-  height: 500px;
-}
-
-
-.image-placeholder {
-
-  position: relative;
-
-  z-index: 2;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-}
-
-
-.image-placeholder span {
-
-  color: var(--gold);
-
-  font-size:
-    clamp(4rem, 8vw, 7rem);
-
-  font-weight: 800;
-
-  letter-spacing: 5px;
-}
-
-
-.image-placeholder small {
-
-  margin-top: 15px;
-
-  color:
-    rgba(247,244,237,0.6);
-
-  font-size: 0.58rem;
-
-  letter-spacing: 3px;
+  transform: scale(1.03);
 }
 
 
@@ -734,20 +737,27 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   position: absolute;
 
   top: 25px;
+
   left: 28px;
 
-  color:
-    rgba(247,244,237,0.4);
+  z-index: 3;
+
+  color: rgba(247,244,237,0.85);
 
   font-size: 0.75rem;
 
   font-weight: 800;
 
   letter-spacing: 2px;
+
+  text-shadow:
+    0 1px 4px rgba(0,0,0,0.4);
 }
 
 
-/* CONTENIDO */
+/* ==================================================
+   CONTENIDO DE LA NOTICIA
+================================================== */
 
 .main-news-content {
 
@@ -757,15 +767,33 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   justify-content: center;
 
-  padding: 55px;
+  align-items: flex-start;
+
+  width: 100%;
+
+  height: 450px;
+
+  min-height: 0;
+
+  box-sizing: border-box;
+
+  padding: 30px 42px;
+
+  overflow: hidden;
 }
 
+
+/* ==================================================
+   META
+================================================== */
 
 .news-meta {
 
   display: flex;
 
   gap: 10px;
+
+  flex-shrink: 0;
 
   color: var(--gold);
 
@@ -777,55 +805,136 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
+/* ==================================================
+   TÍTULO
+================================================== */
+
 .main-news-content h3 {
 
-  margin: 22px 0 20px;
+  margin: 16px 0 14px;
 
   color: var(--cream);
 
-  font-size:
-    clamp(2rem, 4vw, 3.1rem);
+  font-size: 2.35rem;
 
-  line-height: 1.08;
+  line-height: 1.05;
 
   letter-spacing: -1px;
 }
 
 
+/* ==================================================
+   DESCRIPCIÓN
+================================================== */
+
 .main-news-content p {
 
-  max-width: 530px;
+  max-width: 470px;
 
   margin: 0;
 
-  color:
-    rgba(247,244,237,0.65);
+  color: rgba(247,244,237,0.65);
 
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 
-  line-height: 1.75;
+  line-height: 1.55;
 }
 
 
-.coming {
+/* ==================================================
+   AUTOR
+================================================== */
 
-  display: inline-block;
+.author {
 
-  margin-top: 30px;
+  margin-top: 14px;
+
+  color: rgba(247,244,237,0.55);
+
+  font-size: 0.7rem;
+
+  line-height: 1.4;
+}
+
+
+.author strong {
 
   color: var(--gold);
 
-  font-size: 0.65rem;
-
   font-weight: 800;
-
-  letter-spacing: 2px;
 }
 
 
-/* =================================
+/* ==================================================
+   BOTÓN
+================================================== */
+
+.read-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: fit-content;
+
+  margin-top: 18px;
+
+  padding: 9px 16px;
+
+  border: 1px solid var(--gold);
+
+  border-radius: 30px;
+
+  color: var(--cream);
+
+  text-decoration: none;
+
+  font-size: 0.6rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.read-button span {
+
+  margin-left: 8px;
+
+  color: var(--gold);
+
+  font-size: 0.9rem;
+}
+
+
+.read-button:hover {
+
+  background: var(--gold);
+
+  color: var(--black);
+
+  transform: translateY(-2px);
+}
+
+
+.read-button:hover span {
+
+  color: var(--black);
+}
+
+
+/* ==================================================
    CATEGORÍAS
-================================= */
+================================================== */
 
 .news-categories {
 
@@ -845,8 +954,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size:
-    clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(2.6rem, 5vw, 4rem);
 
   line-height: 1;
 
@@ -864,8 +972,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 15px;
 }
@@ -881,8 +988,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   overflow: hidden;
 
-  border:
-    1px solid rgba(27,27,27,0.07);
+  border: 1px solid rgba(27,27,27,0.07);
 
   border-radius: 15px;
 
@@ -899,8 +1005,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   transform: translateY(-5px);
 
-  border-color:
-    rgba(200,162,74,0.5);
+  border-color: rgba(200,162,74,0.5);
 
   box-shadow:
     0 15px 30px rgba(27,27,27,0.08);
@@ -920,10 +1025,10 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   position: absolute;
 
   top: 20px;
+
   right: 22px;
 
-  color:
-    rgba(27,27,27,0.25);
+  color: rgba(27,27,27,0.25);
 
   font-size: 0.7rem;
 
@@ -935,8 +1040,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .dark .category-number {
 
-  color:
-    rgba(247,244,237,0.25);
+  color: rgba(247,244,237,0.25);
 }
 
 
@@ -949,12 +1053,12 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   justify-content: center;
 
   width: 48px;
+
   height: 48px;
 
   margin-bottom: 28px;
 
-  border:
-    1px solid rgba(200,162,74,0.45);
+  border: 1px solid rgba(200,162,74,0.45);
 
   border-radius: 50%;
 
@@ -988,14 +1092,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .category-card.dark p {
 
-  color:
-    rgba(247,244,237,0.65);
+  color: rgba(247,244,237,0.65);
 }
 
 
-/* =================================
+/* ==================================================
    EDITORIAL
-================================= */
+================================================== */
 
 .editorial {
 
@@ -1033,8 +1136,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 20px 0;
 
-  font-size:
-    clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
 
   line-height: 1.05;
 
@@ -1054,8 +1156,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  color:
-    rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.8);
 
   font-size: 1.05rem;
 
@@ -1063,9 +1164,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
-/* =================================
+/* ==================================================
    PRÓXIMAMENTE
-================================= */
+================================================== */
 
 .coming-section {
 
@@ -1087,8 +1188,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   background: white;
 
-  border-left:
-    4px solid var(--gold);
+  border-left: 4px solid var(--gold);
 
   border-radius: 15px;
 
@@ -1106,12 +1206,12 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   justify-content: center;
 
   width: 55px;
+
   height: 55px;
 
   border-radius: 50%;
 
-  background:
-    rgba(200,162,74,0.12);
+  background: rgba(200,162,74,0.12);
 
   color: var(--terracotta);
 
@@ -1137,8 +1237,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 12px 0;
 
-  font-size:
-    clamp(1.8rem, 4vw, 2.7rem);
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
 
   line-height: 1.1;
 }
@@ -1156,9 +1255,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
-/* =================================
+/* ==================================================
    CIERRE
-================================= */
+================================================== */
 
 .actualidad-ending {
 
@@ -1190,8 +1289,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 25px auto;
 
-  font-size:
-    clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
 
   line-height: 1.1;
 
@@ -1211,8 +1309,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  color:
-    rgba(247,244,237,0.45);
+  color: rgba(247,244,237,0.45);
 
   font-size: 0.68rem;
 
@@ -1220,9 +1317,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
-/* =================================
-   RESPONSIVE
-================================= */
+/* ==================================================
+   TABLET
+================================================== */
 
 @media (max-width: 800px) {
 
@@ -1247,10 +1344,18 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   .main-news {
 
     grid-template-columns: 1fr;
+
+    height: auto;
+
+    min-height: 0;
+
+    max-height: none;
   }
 
 
   .news-image {
+
+    height: 300px;
 
     min-height: 300px;
   }
@@ -1258,24 +1363,41 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .main-news-content {
 
+    height: auto;
+
+    min-height: 400px;
+
     padding: 35px 28px;
+
+    overflow: visible;
   }
 
 
   .categories-grid {
 
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
 
+
+/* ==================================================
+   CELULAR
+================================================== */
 
 @media (max-width: 550px) {
 
   .actualidad-hero .container {
 
     padding: 60px 0;
+  }
+
+
+  .actualidad-hero h1 {
+
+    font-size: 3.4rem;
+
+    letter-spacing: -2px;
   }
 
 
@@ -1318,6 +1440,12 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   .actualidad-ending {
 
     padding: 90px 20px;
+  }
+
+
+  .main-news-content h3 {
+
+    font-size: 2rem;
   }
 
 }
