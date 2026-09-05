@@ -303,12 +303,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
       </div>
 
 
-      <!-- ======================================
-           TARJETA
-      ======================================= -->
-
       <article class="convocatoria-card">
-
 
         <!-- LADO IZQUIERDO -->
 
@@ -1048,7 +1043,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 /* ==================================================
    TARJETA
-   MISMO TAMAÑO DE REFERENCIA DE ACTUALIDAD
 ================================================== */
 
 .convocatoria-card {
@@ -1707,6 +1701,10 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 @media (max-width: 550px) {
 
+  /* ==============================================
+     ESTRUCTURA GENERAL
+  ============================================== */
+
   .oportunidades-hero .container {
 
     padding: 60px 0;
@@ -1714,14 +1712,16 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 
   /* ==============================================
-     CORRECCIÓN MÓVIL
-     Evita que "Oportunidades" se salga
-     del ancho de la pantalla.
+     HERO
   ============================================== */
 
   .oportunidades-hero {
 
     overflow: hidden;
+
+    background: #1B1B1B !important;
+
+    color: #F7F4ED !important;
   }
 
 
@@ -1744,16 +1744,80 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   .oportunidades-hero p {
 
     max-width: 100%;
+
+    color: rgba(247,244,237,0.72) !important;
   }
 
 
-  .oportunidades-intro,
-  .categorias,
-  .oportunidades-aviso,
-  .oportunidades-cierre,
-  .convocatoria-destacada {
+  /* ==============================================
+     INTRODUCCIÓN
+     Mantiene el fondo crema de PC
+  ============================================== */
+
+  .oportunidades-intro {
+
+    background: #F7F4ED !important;
+
+    color: #1B1B1B !important;
 
     padding: 80px 20px;
+  }
+
+
+  .oportunidades-intro .small-label {
+
+    color: #A8572B !important;
+  }
+
+
+  .intro-grid h2 {
+
+    color: #1B1B1B !important;
+  }
+
+
+  .intro-grid h2 span {
+
+    color: #A8572B !important;
+  }
+
+
+  .intro-text {
+
+    color: #666 !important;
+  }
+
+
+  /* ==============================================
+     CATEGORÍAS
+     Mantiene fondo blanco de PC
+  ============================================== */
+
+  .categorias {
+
+    background: #FFFFFF !important;
+
+    color: #1B1B1B !important;
+
+    padding: 80px 20px;
+  }
+
+
+  .section-header h2 {
+
+    color: #1B1B1B !important;
+  }
+
+
+  .section-header h2 span {
+
+    color: #A8572B !important;
+  }
+
+
+  .section-header > p {
+
+    color: #777 !important;
   }
 
 
@@ -1768,26 +1832,69 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     min-height: auto;
 
     padding: 28px;
+
+    background: #F7F4ED !important;
+
+    color: #1B1B1B !important;
   }
 
 
-  .aviso-box {
+  .opportunity-card.featured {
 
-    grid-template-columns: 1fr;
+    background: #1B1B1B !important;
 
-    padding: 30px;
+    color: #F7F4ED !important;
   }
 
 
-  .oportunidades-frase {
+  .opportunity-card p {
 
-    padding: 90px 20px;
+    color: #777 !important;
   }
 
 
-  .oportunidades-frase h2 {
+  .opportunity-card.featured p {
 
-    font-size: 2rem;
+    color: rgba(247,244,237,0.65) !important;
+  }
+
+
+  /* ==============================================
+     CONVOCATORIA
+     Mantiene fondo crema de PC
+  ============================================== */
+
+  .convocatoria-destacada {
+
+    background: #F7F4ED !important;
+
+    color: #1B1B1B !important;
+
+    padding: 80px 20px;
+  }
+
+
+  .convocatoria-header h2 {
+
+    color: #1B1B1B !important;
+  }
+
+
+  .convocatoria-header h2 span {
+
+    color: #A8572B !important;
+  }
+
+
+  .convocatoria-header > p {
+
+    color: #777 !important;
+  }
+
+
+  .convocatoria-card {
+
+    background: #FFFFFF !important;
   }
 
 
@@ -1796,6 +1903,10 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     min-height: 350px;
 
     padding: 25px;
+
+    background: #1B1B1B !important;
+
+    color: #F7F4ED !important;
   }
 
 
@@ -1808,6 +1919,22 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   .convocatoria-content {
 
     padding: 30px 22px;
+
+    background: #FFFFFF !important;
+
+    color: #1B1B1B !important;
+  }
+
+
+  .convocatoria-content h3 {
+
+    color: #1B1B1B !important;
+  }
+
+
+  .convocatoria-content > p {
+
+    color: #555 !important;
   }
 
 
@@ -1830,6 +1957,102 @@ import LayoutBase from '../layouts/LayoutBase.astro';
     text-align: left;
   }
 
-}
 
+  /* ==============================================
+     AVISO
+     Mantiene fondo crema de PC
+  ============================================== */
+
+  .oportunidades-aviso {
+
+    background: #F7F4ED !important;
+
+    padding: 80px 20px;
+  }
+
+
+  .aviso-box {
+
+    grid-template-columns: 1fr;
+
+    padding: 30px;
+
+    background: #FFFFFF !important;
+  }
+
+
+  .aviso-box h2 {
+
+    color: #1B1B1B !important;
+  }
+
+
+  .aviso-box p {
+
+    color: #666 !important;
+  }
+
+
+  /* ==============================================
+     FRASE
+     Mantiene fondo negro de PC
+  ============================================== */
+
+  .oportunidades-frase {
+
+    background: #1B1B1B !important;
+
+    color: #F7F4ED !important;
+
+    padding: 90px 20px;
+  }
+
+
+  .oportunidades-frase h2 {
+
+    color: #F7F4ED !important;
+
+    font-size: 2rem;
+  }
+
+
+  .oportunidades-frase strong {
+
+    color: #C8A24A !important;
+  }
+
+
+  /* ==============================================
+     CIERRE
+     Mantiene fondo crema de PC
+  ============================================== */
+
+  .oportunidades-cierre {
+
+    background: #F7F4ED !important;
+
+    color: #1B1B1B !important;
+
+    padding: 80px 20px;
+  }
+
+
+  .cierre-grid h2 {
+
+    color: #1B1B1B !important;
+  }
+
+
+  .cierre-grid h2 span {
+
+    color: #A8572B !important;
+  }
+
+
+  .cierre-grid p {
+
+    color: #666 !important;
+  }
+
+}
 </style>
