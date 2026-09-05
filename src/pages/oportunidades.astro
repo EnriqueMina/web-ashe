@@ -1713,6 +1713,40 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   }
 
 
+  /* ==============================================
+     CORRECCIÓN MÓVIL
+     Evita que "Oportunidades" se salga
+     del ancho de la pantalla.
+  ============================================== */
+
+  .oportunidades-hero {
+
+    overflow: hidden;
+  }
+
+
+  .oportunidades-hero h1 {
+
+    max-width: 100%;
+
+    font-size: clamp(3rem, 11vw, 4rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+
+    overflow-wrap: break-word;
+
+    word-break: normal;
+  }
+
+
+  .oportunidades-hero p {
+
+    max-width: 100%;
+  }
+
+
   .oportunidades-intro,
   .categorias,
   .oportunidades-aviso,
