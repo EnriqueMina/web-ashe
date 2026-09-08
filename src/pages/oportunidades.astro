@@ -305,8 +305,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
       <article class="convocatoria-card">
 
-        <!-- LADO IZQUIERDO -->
-
         <div class="convocatoria-visual">
 
           <div class="visual-top">
@@ -354,8 +352,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
         </div>
 
-
-        <!-- LADO DERECHO -->
 
         <div class="convocatoria-content">
 
@@ -579,13 +575,25 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
+/* ==================================================
+   ETIQUETAS
+================================================== */
+
 .section-label {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   color: #C8A24A;
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 3px;
+  letter-spacing: 2.3px;
+}
+
+
+.small-label {
+  color: #A8572B;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2.3px;
 }
 
 
@@ -597,7 +605,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: relative;
 
-  min-height: 520px;
+  min-height: 450px;
 
   display: flex;
 
@@ -617,19 +625,24 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: absolute;
 
-  width: 600px;
-  height: 600px;
+  width: 520px;
+  height: 520px;
 
-  right: -250px;
-  top: -250px;
+  right: -230px;
+  top: -230px;
 
-  border: 1px solid rgba(200,162,74,0.18);
+  border:
+    1px solid
+    rgba(200,162,74,0.18);
 
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 80px rgba(200,162,74,0.025),
-    0 0 0 160px rgba(200,162,74,0.015);
+    0 0 0 70px
+    rgba(200,162,74,0.025),
+
+    0 0 0 140px
+    rgba(200,162,74,0.015);
 }
 
 
@@ -637,13 +650,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: absolute;
 
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
 
-  left: -160px;
-  bottom: -160px;
+  left: -140px;
+  bottom: -140px;
 
-  border: 1px solid rgba(168,87,43,0.35);
+  border:
+    1px solid
+    rgba(168,87,43,0.3);
 
   border-radius: 50%;
 }
@@ -655,21 +670,22 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   z-index: 2;
 
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 
 .oportunidades-hero h1 {
 
-  max-width: 850px;
+  max-width: 760px;
 
   margin: 0;
 
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-size:
+    clamp(3.2rem, 7vw, 5.8rem);
 
   line-height: 0.92;
 
-  letter-spacing: -4px;
+  letter-spacing: -3px;
 }
 
 
@@ -683,15 +699,16 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .oportunidades-hero p {
 
-  max-width: 650px;
+  max-width: 590px;
 
-  margin: 35px 0 0;
+  margin: 24px 0 0;
 
-  color: rgba(247,244,237,0.72);
+  color:
+    rgba(247,244,237,0.72);
 
-  font-size: 1.08rem;
+  font-size: 0.92rem;
 
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 
@@ -701,7 +718,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .oportunidades-intro {
 
-  padding: 110px 20px;
+  padding: 65px 20px;
 
   background: #F7F4ED;
 
@@ -715,33 +732,22 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 80px;
+  gap: 55px;
 
   align-items: center;
 }
 
 
-.small-label {
-
-  color: #A8572B;
-
-  font-size: 0.72rem;
-
-  font-weight: 800;
-
-  letter-spacing: 3px;
-}
-
-
 .intro-grid h2 {
 
-  margin: 18px 0 0;
+  margin: 12px 0 0;
 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size:
+    clamp(2.1rem, 4vw, 3.3rem);
 
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -757,15 +763,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #666;
 
-  font-size: 1rem;
+  font-size: 0.86rem;
 
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 
 .intro-text p {
 
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
 
@@ -775,7 +781,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .categorias {
 
-  padding: 110px 20px;
+  padding: 65px 20px;
 
   background: #FFFFFF;
 
@@ -791,9 +797,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   align-items: flex-end;
 
-  gap: 50px;
+  gap: 35px;
 
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
 
@@ -801,11 +807,12 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size:
+    clamp(2.1rem, 4vw, 3.3rem);
 
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -817,13 +824,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .section-header > p {
 
-  max-width: 400px;
+  max-width: 370px;
 
   margin: 0;
 
   color: #777;
 
-  line-height: 1.7;
+  font-size: 0.84rem;
+
+  line-height: 1.6;
 }
 
 
@@ -831,9 +840,10 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 15px;
+  gap: 12px;
 }
 
 
@@ -845,17 +855,19 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: relative;
 
-  min-height: 320px;
+  min-height: 285px;
 
-  padding: 32px;
+  padding: 25px;
 
   overflow: hidden;
 
   background: #F7F4ED;
 
-  border: 1px solid rgba(27,27,27,0.07);
+  border:
+    1px solid
+    rgba(27,27,27,0.07);
 
-  border-radius: 16px;
+  border-radius: 14px;
 
   transition:
     transform 0.25s ease,
@@ -866,12 +878,14 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .opportunity-card:hover {
 
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 
-  border-color: rgba(200,162,74,0.5);
+  border-color:
+    rgba(200,162,74,0.5);
 
   box-shadow:
-    0 18px 35px rgba(27,27,27,0.08);
+    0 15px 30px
+    rgba(27,27,27,0.08);
 }
 
 
@@ -887,23 +901,25 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: absolute;
 
-  top: 22px;
+  top: 18px;
 
-  right: 25px;
+  right: 20px;
 
-  color: rgba(27,27,27,0.25);
+  color:
+    rgba(27,27,27,0.25);
 
-  font-size: 0.7rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 
 .featured .card-number {
 
-  color: rgba(247,244,237,0.25);
+  color:
+    rgba(247,244,237,0.25);
 }
 
 
@@ -915,19 +931,20 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   justify-content: center;
 
-  width: 48px;
+  width: 42px;
+  height: 42px;
 
-  height: 48px;
-
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
   color: #C8A24A;
 
-  border: 1px solid rgba(200,162,74,0.45);
+  border:
+    1px solid
+    rgba(200,162,74,0.45);
 
   border-radius: 50%;
 
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 
 
@@ -935,15 +952,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
   color: #A8572B;
 
-  font-size: 0.6rem;
+  font-size: 0.57rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
 }
 
 
@@ -955,9 +972,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .opportunity-card h3 {
 
-  margin: 0 0 15px;
+  margin: 0 0 11px;
 
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
   line-height: 1.1;
 }
@@ -969,15 +986,16 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #777;
 
-  font-size: 0.9rem;
+  font-size: 0.79rem;
 
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 
 .featured p {
 
-  color: rgba(247,244,237,0.65);
+  color:
+    rgba(247,244,237,0.65);
 }
 
 
@@ -987,7 +1005,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .convocatoria-destacada {
 
-  padding: 110px 20px;
+  padding: 65px 20px;
 
   background: #F7F4ED;
 
@@ -1003,9 +1021,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   align-items: flex-end;
 
-  gap: 50px;
+  gap: 35px;
 
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
 
@@ -1013,11 +1031,12 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size:
+    clamp(2.1rem, 4vw, 3.3rem);
 
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -1031,18 +1050,20 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .convocatoria-header > p {
 
-  max-width: 400px;
+  max-width: 370px;
 
   margin: 0;
 
   color: #777;
 
-  line-height: 1.7;
+  font-size: 0.84rem;
+
+  line-height: 1.6;
 }
 
 
 /* ==================================================
-   TARJETA
+   TARJETA CONVOCATORIA
 ================================================== */
 
 .convocatoria-card {
@@ -1066,12 +1087,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   border-radius: 18px;
 
   box-shadow:
-    0 20px 45px rgba(27,27,27,0.12);
+    0 18px 38px
+    rgba(27,27,27,0.1);
 }
 
 
 /* ==================================================
-   LADO IZQUIERDO
+   VISUAL
 ================================================== */
 
 .convocatoria-visual {
@@ -1082,7 +1104,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   justify-content: space-between;
 
-  padding: 35px;
+  padding: 30px;
 
   overflow: hidden;
 
@@ -1099,13 +1121,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   justify-content: space-between;
 
-  gap: 20px;
+  gap: 15px;
 
-  font-size: 0.68rem;
+  font-size: 0.6rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
 }
 
 
@@ -1118,7 +1140,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .visual-center {
 
-  max-width: 430px;
+  max-width: 390px;
 }
 
 
@@ -1126,15 +1148,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: block;
 
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 
   color: #C8A24A;
 
-  font-size: 0.85rem;
+  font-size: 0.7rem;
 
   font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
 }
 
 
@@ -1142,11 +1164,12 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size: clamp(2rem, 3.5vw, 2.7rem);
+  font-size:
+    clamp(1.9rem, 3vw, 2.4rem);
 
   line-height: 1.05;
 
-  letter-spacing: -1px;
+  letter-spacing: -0.8px;
 }
 
 
@@ -1160,18 +1183,18 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .visual-center p {
 
-  margin: 18px 0 0;
+  margin: 15px 0 0;
 
   color: #D9D4C8;
 
-  font-size: 0.88rem;
+  font-size: 0.78rem;
 
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 
 /* ==================================================
-   LADO DERECHO
+   CONTENIDO
 ================================================== */
 
 .convocatoria-content {
@@ -1182,7 +1205,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   justify-content: center;
 
-  padding: 28px 40px;
+  padding: 28px 35px;
 
   overflow: hidden;
 }
@@ -1192,41 +1215,42 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: flex;
 
-  gap: 10px;
+  gap: 8px;
 
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   color: #A8572B;
 
-  font-size: 0.65rem;
+  font-size: 0.57rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 
 .convocatoria-content h3 {
 
-  margin: 0 0 14px;
+  margin: 0 0 12px;
 
-  font-size: clamp(1.65rem, 2.5vw, 2.15rem);
+  font-size:
+    clamp(1.55rem, 2.3vw, 2rem);
 
   line-height: 1.06;
 
-  letter-spacing: -1px;
+  letter-spacing: -0.7px;
 }
 
 
 .convocatoria-content > p {
 
-  max-width: 500px;
+  max-width: 450px;
 
   margin: 0;
 
   color: #555;
 
-  font-size: 0.86rem;
+  font-size: 0.78rem;
 
   line-height: 1.5;
 }
@@ -1240,15 +1264,18 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 12px;
+  gap: 10px;
 
-  margin-top: 20px;
+  margin-top: 17px;
 
-  padding-top: 17px;
+  padding-top: 15px;
 
-  border-top: 1px solid #E5E0D7;
+  border-top:
+    1px solid
+    #E5E0D7;
 }
 
 
@@ -1258,7 +1285,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   flex-direction: column;
 
-  gap: 4px;
+  gap: 3px;
 }
 
 
@@ -1266,11 +1293,11 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #A8572B;
 
-  font-size: 0.57rem;
+  font-size: 0.52rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
 }
 
 
@@ -1278,7 +1305,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #1B1B1B;
 
-  font-size: 0.68rem;
+  font-size: 0.63rem;
 
   line-height: 1.25;
 }
@@ -1296,9 +1323,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   justify-content: space-between;
 
-  gap: 15px;
+  gap: 12px;
 
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 
@@ -1308,9 +1335,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   align-items: center;
 
-  gap: 12px;
+  gap: 10px;
 
-  padding: 11px 17px;
+  padding: 9px 15px;
 
   background: #A8572B;
 
@@ -1318,15 +1345,16 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   text-decoration: none;
 
-  font-size: 0.64rem;
+  font-size: 0.58rem;
 
   font-weight: 800;
 
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
 
   text-transform: uppercase;
 
-  transition: 0.25s ease;
+  transition:
+    0.25s ease;
 }
 
 
@@ -1338,7 +1366,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .convocatoria-button span {
 
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 
@@ -1346,13 +1374,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #888;
 
-  font-size: 0.58rem;
+  font-size: 0.52rem;
 
   font-weight: 800;
 
-  line-height: 1.4;
+  line-height: 1.35;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
 
   text-align: right;
 }
@@ -1364,7 +1392,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .oportunidades-aviso {
 
-  padding: 90px 20px;
+  padding: 65px 20px;
 
   background: #F7F4ED;
 }
@@ -1374,21 +1402,25 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 55px 1fr;
 
-  gap: 30px;
+  gap: 22px;
 
   align-items: start;
 
-  padding: 45px;
+  padding: 32px;
 
   background: #FFFFFF;
 
-  border: 1px solid rgba(27,27,27,0.08);
+  border:
+    1px solid
+    rgba(27,27,27,0.08);
 
-  border-left: 4px solid #C8A24A;
+  border-left:
+    3px solid
+    #C8A24A;
 
-  border-radius: 15px;
+  border-radius: 14px;
 }
 
 
@@ -1400,17 +1432,18 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   justify-content: center;
 
-  width: 55px;
+  width: 45px;
 
-  height: 55px;
+  height: 45px;
 
-  background: rgba(200,162,74,0.12);
+  background:
+    rgba(200,162,74,0.12);
 
   color: #A8572B;
 
   border-radius: 50%;
 
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 
   font-weight: 800;
 }
@@ -1420,23 +1453,24 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #A8572B;
 
-  font-size: 0.68rem;
+  font-size: 0.58rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
 }
 
 
 .aviso-box h2 {
 
-  max-width: 700px;
+  max-width: 650px;
 
-  margin: 12px 0;
+  margin: 9px 0;
 
   color: #1B1B1B;
 
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-size:
+    clamp(1.6rem, 3vw, 2.3rem);
 
   line-height: 1.1;
 }
@@ -1444,13 +1478,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .aviso-box p {
 
-  max-width: 700px;
+  max-width: 650px;
 
   margin: 0;
 
   color: #666;
 
-  line-height: 1.75;
+  font-size: 0.82rem;
+
+  line-height: 1.6;
 }
 
 
@@ -1460,7 +1496,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .oportunidades-frase {
 
-  padding: 120px 20px;
+  padding: 80px 20px;
 
   background: #1B1B1B;
 
@@ -1474,29 +1510,30 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: block;
 
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
   color: #C8A24A;
 
-  font-size: 0.8rem;
+  font-size: 0.65rem;
 
   font-weight: 800;
 
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
 
 
 .oportunidades-frase h2 {
 
-  max-width: 850px;
+  max-width: 700px;
 
   margin: 0 auto;
 
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size:
+    clamp(1.9rem, 4vw, 2.9rem);
 
-  line-height: 1.15;
+  line-height: 1.1;
 
-  letter-spacing: -1px;
+  letter-spacing: -0.8px;
 }
 
 
@@ -1510,13 +1547,14 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .oportunidades-frase p {
 
-  margin: 30px 0 0;
+  margin: 22px 0 0;
 
-  color: rgba(247,244,237,0.45);
+  color:
+    rgba(247,244,237,0.45);
 
-  font-size: 0.68rem;
+  font-size: 0.58rem;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.3px;
 }
 
 
@@ -1526,7 +1564,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .oportunidades-cierre {
 
-  padding: 110px 20px;
+  padding: 65px 20px;
 
   background: #F7F4ED;
 
@@ -1540,7 +1578,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 80px;
+  gap: 55px;
 
   align-items: center;
 }
@@ -1550,11 +1588,12 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size:
+    clamp(2.1rem, 4vw, 3.3rem);
 
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -1572,9 +1611,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #666;
 
-  font-size: 1rem;
+  font-size: 0.86rem;
 
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 
@@ -1584,19 +1623,19 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   align-items: center;
 
-  gap: 10px;
+  gap: 8px;
 
-  margin-top: 25px;
+  margin-top: 20px;
 
-  padding: 14px 22px;
+  padding: 11px 18px;
 
   background: #C8A24A;
 
   color: #1B1B1B;
 
-  border-radius: 25px;
+  border-radius: 22px;
 
-  font-size: 0.82rem;
+  font-size: 0.72rem;
 
   font-weight: 800;
 
@@ -1610,7 +1649,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .button:hover {
 
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
   background: #D8B65F;
 }
@@ -1618,7 +1657,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .button span {
 
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 
@@ -1630,7 +1669,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .oportunidades-hero {
 
-    min-height: 450px;
+    min-height: 420px;
   }
 
 
@@ -1645,7 +1684,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
     grid-template-columns: 1fr;
 
-    gap: 40px;
+    gap: 35px;
   }
 
 
@@ -1659,13 +1698,14 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   .section-header > p,
   .convocatoria-header > p {
 
-    margin-top: 20px;
+    margin-top: 16px;
   }
 
 
   .opportunities-grid {
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
 
@@ -1683,13 +1723,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .convocatoria-visual {
 
-    min-height: 390px;
+    min-height: 350px;
   }
 
 
   .convocatoria-content {
 
-    padding: 40px;
+    padding: 35px;
   }
 
 }
@@ -1701,21 +1741,18 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 @media (max-width: 550px) {
 
-  /* ==============================================
-     ESTRUCTURA GENERAL
-  ============================================== */
+  .container {
 
-  .oportunidades-hero .container {
-
-    padding: 60px 0;
+    width:
+      calc(100% - 32px);
   }
 
 
-  /* ==============================================
-     HERO
-  ============================================== */
+  /* HERO */
 
   .oportunidades-hero {
+
+    min-height: 390px;
 
     overflow: hidden;
 
@@ -1725,19 +1762,22 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   }
 
 
+  .oportunidades-hero .container {
+
+    padding: 50px 0;
+  }
+
+
   .oportunidades-hero h1 {
 
     max-width: 100%;
 
-    font-size: clamp(3rem, 11vw, 4rem);
+    font-size:
+      clamp(3rem, 11vw, 4rem);
 
     line-height: 0.98;
 
     letter-spacing: -2px;
-
-    overflow-wrap: break-word;
-
-    word-break: normal;
   }
 
 
@@ -1745,79 +1785,60 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
     max-width: 100%;
 
-    color: rgba(247,244,237,0.72) !important;
+    margin-top: 20px;
+
+    color:
+      rgba(247,244,237,0.72) !important;
+
+    font-size: 0.82rem;
   }
 
 
-  /* ==============================================
-     INTRODUCCIÓN
-     Mantiene el fondo crema de PC
-  ============================================== */
+  /* INTRO */
 
   .oportunidades-intro {
+
+    padding: 55px 16px;
 
     background: #F7F4ED !important;
 
     color: #1B1B1B !important;
-
-    padding: 80px 20px;
-  }
-
-
-  .oportunidades-intro .small-label {
-
-    color: #A8572B !important;
   }
 
 
   .intro-grid h2 {
 
-    color: #1B1B1B !important;
-  }
-
-
-  .intro-grid h2 span {
-
-    color: #A8572B !important;
+    font-size: 2.1rem;
   }
 
 
   .intro-text {
 
+    font-size: 0.82rem;
+
     color: #666 !important;
   }
 
 
-  /* ==============================================
-     CATEGORÍAS
-     Mantiene fondo blanco de PC
-  ============================================== */
+  /* CATEGORÍAS */
 
   .categorias {
 
+    padding: 55px 16px;
+
     background: #FFFFFF !important;
-
-    color: #1B1B1B !important;
-
-    padding: 80px 20px;
   }
 
 
   .section-header h2 {
 
-    color: #1B1B1B !important;
-  }
-
-
-  .section-header h2 span {
-
-    color: #A8572B !important;
+    font-size: 2.1rem;
   }
 
 
   .section-header > p {
 
-    color: #777 !important;
+    font-size: 0.82rem;
   }
 
 
@@ -1829,9 +1850,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .opportunity-card {
 
-    min-height: auto;
+    min-height: 250px;
 
-    padding: 28px;
+    padding: 24px;
 
     background: #F7F4ED !important;
 
@@ -1847,48 +1868,19 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   }
 
 
-  .opportunity-card p {
-
-    color: #777 !important;
-  }
-
-
-  .opportunity-card.featured p {
-
-    color: rgba(247,244,237,0.65) !important;
-  }
-
-
-  /* ==============================================
-     CONVOCATORIA
-     Mantiene fondo crema de PC
-  ============================================== */
+  /* CONVOCATORIA */
 
   .convocatoria-destacada {
 
+    padding: 55px 16px;
+
     background: #F7F4ED !important;
-
-    color: #1B1B1B !important;
-
-    padding: 80px 20px;
   }
 
 
   .convocatoria-header h2 {
 
-    color: #1B1B1B !important;
-  }
-
-
-  .convocatoria-header h2 span {
-
-    color: #A8572B !important;
-  }
-
-
-  .convocatoria-header > p {
-
-    color: #777 !important;
+    font-size: 2.1rem;
   }
 
 
@@ -1900,39 +1892,39 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .convocatoria-visual {
 
-    min-height: 350px;
+    min-height: 320px;
 
-    padding: 25px;
+    padding: 24px;
 
     background: #1B1B1B !important;
-
-    color: #F7F4ED !important;
   }
 
 
   .visual-center h3 {
 
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
 
   .convocatoria-content {
 
-    padding: 30px 22px;
+    padding: 28px 21px;
 
     background: #FFFFFF !important;
-
-    color: #1B1B1B !important;
   }
 
 
   .convocatoria-content h3 {
+
+    font-size: 1.6rem;
 
     color: #1B1B1B !important;
   }
 
 
   .convocatoria-content > p {
+
+    font-size: 0.76rem;
 
     color: #555 !important;
   }
@@ -1958,16 +1950,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   }
 
 
-  /* ==============================================
-     AVISO
-     Mantiene fondo crema de PC
-  ============================================== */
+  /* AVISO */
 
   .oportunidades-aviso {
 
-    background: #F7F4ED !important;
+    padding: 55px 16px;
 
-    padding: 80px 20px;
+    background: #F7F4ED !important;
   }
 
 
@@ -1975,84 +1964,41 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
     grid-template-columns: 1fr;
 
-    padding: 30px;
+    padding: 28px;
 
     background: #FFFFFF !important;
   }
 
 
-  .aviso-box h2 {
-
-    color: #1B1B1B !important;
-  }
-
-
-  .aviso-box p {
-
-    color: #666 !important;
-  }
-
-
-  /* ==============================================
-     FRASE
-     Mantiene fondo negro de PC
-  ============================================== */
+  /* FRASE */
 
   .oportunidades-frase {
 
+    padding: 65px 16px;
+
     background: #1B1B1B !important;
-
-    color: #F7F4ED !important;
-
-    padding: 90px 20px;
   }
 
 
   .oportunidades-frase h2 {
 
-    color: #F7F4ED !important;
-
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
 
-  .oportunidades-frase strong {
-
-    color: #C8A24A !important;
-  }
-
-
-  /* ==============================================
-     CIERRE
-     Mantiene fondo crema de PC
-  ============================================== */
+  /* CIERRE */
 
   .oportunidades-cierre {
 
+    padding: 55px 16px;
+
     background: #F7F4ED !important;
-
-    color: #1B1B1B !important;
-
-    padding: 80px 20px;
   }
 
 
   .cierre-grid h2 {
 
-    color: #1B1B1B !important;
-  }
-
-
-  .cierre-grid h2 span {
-
-    color: #A8572B !important;
-  }
-
-
-  .cierre-grid p {
-
-    color: #666 !important;
+    font-size: 2.1rem;
   }
 
 }
-</style>

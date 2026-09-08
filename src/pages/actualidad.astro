@@ -67,14 +67,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
         </div>
 
 
-        <!-- ======================================
-             TARJETA DE LA NOTICIA
-        ======================================= -->
-
         <article class="main-news">
-
-
-          <!-- IMAGEN DE PORTADA -->
 
           <a
             href="/actualidad/articulo-terremoto"
@@ -93,8 +86,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
           </a>
 
-
-          <!-- INFORMACIÓN DE LA NOTICIA -->
 
           <div class="main-news-content">
 
@@ -177,9 +168,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
         <div class="categories-grid">
 
-
-          <!-- NOTICIAS -->
-
           <article class="category-card">
 
             <span class="category-number">
@@ -201,8 +189,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
           </article>
 
-
-          <!-- ENTREVISTAS -->
 
           <article class="category-card dark">
 
@@ -226,8 +212,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
           </article>
 
 
-          <!-- CRÓNICAS -->
-
           <article class="category-card">
 
             <span class="category-number">
@@ -249,8 +233,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
           </article>
 
-
-          <!-- TERRITORIO -->
 
           <article class="category-card">
 
@@ -274,8 +256,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
           </article>
 
 
-          <!-- JUVENTUDES -->
-
           <article class="category-card dark">
 
             <span class="category-number">
@@ -297,8 +277,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
           </article>
 
-
-          <!-- CULTURA -->
 
           <article class="category-card">
 
@@ -460,7 +438,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .actualidad-hero {
 
-  min-height: 470px;
+  min-height: 420px;
 
   display: flex;
 
@@ -482,19 +460,24 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: absolute;
 
-  width: 600px;
-  height: 600px;
+  width: 520px;
+  height: 520px;
 
-  right: -250px;
-  top: -260px;
+  right: -230px;
+  top: -230px;
 
-  border: 1px solid rgba(200,162,74,0.2);
+  border:
+    1px solid
+    rgba(200,162,74,0.18);
 
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 80px rgba(200,162,74,0.025),
-    0 0 0 160px rgba(200,162,74,0.015);
+    0 0 0 70px
+    rgba(200,162,74,0.025),
+
+    0 0 0 140px
+    rgba(200,162,74,0.015);
 }
 
 
@@ -504,13 +487,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: absolute;
 
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
 
-  left: -130px;
-  bottom: -130px;
+  left: -120px;
+  bottom: -120px;
 
-  border: 1px solid rgba(168,87,43,0.35);
+  border:
+    1px solid
+    rgba(168,87,43,0.3);
 
   border-radius: 50%;
 }
@@ -522,7 +507,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   z-index: 2;
 
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 
@@ -530,29 +515,33 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: block;
 
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 
   color: var(--gold);
 
-  font-size: 0.72rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.3px;
 }
 
 
 .actualidad-hero h1 {
 
-  max-width: 850px;
+  max-width: 760px;
 
   margin: 0;
 
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-size: clamp(
+    3.2rem,
+    7vw,
+    5.8rem
+  );
 
-  line-height: 0.93;
+  line-height: 0.92;
 
-  letter-spacing: -4px;
+  letter-spacing: -3px;
 }
 
 
@@ -566,15 +555,21 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .actualidad-hero p {
 
-  max-width: 650px;
+  max-width: 590px;
 
-  margin: 30px 0 0;
+  margin: 24px 0 0;
 
-  color: rgba(247,244,237,0.7);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.7
+    );
 
-  font-size: 1.08rem;
+  font-size: 0.92rem;
 
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 
@@ -584,7 +579,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .featured-news {
 
-  padding: 110px 20px;
+  padding: 65px 20px;
 
   background: var(--cream);
 }
@@ -598,9 +593,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   align-items: flex-end;
 
-  gap: 50px;
+  gap: 35px;
 
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 
@@ -608,15 +603,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: block;
 
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   color: var(--terracotta);
 
-  font-size: 0.7rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.3px;
 }
 
 
@@ -624,11 +619,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(
+    2.1rem,
+    4vw,
+    3.3rem
+  );
 
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -642,26 +641,21 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .section-top > p {
 
-  max-width: 400px;
+  max-width: 370px;
 
   margin: 0;
 
   color: var(--gray);
 
-  line-height: 1.7;
+  font-size: 0.84rem;
+
+  line-height: 1.6;
 }
 
 
 /* ==================================================
    TARJETA PRINCIPAL
 ================================================== */
-
-/*
-   IMPORTANTE:
-   La tarjeta queda FIJA en 450px.
-   Esto evita que el texto haga crecer
-   toda la página.
-*/
 
 .main-news {
 
@@ -684,13 +678,10 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   background: var(--black);
 
   box-shadow:
-    0 20px 45px rgba(27,27,27,0.12);
+    0 18px 38px
+    rgba(27,27,27,0.1);
 }
 
-
-/* ==================================================
-   IMAGEN DE LA TARJETA
-================================================== */
 
 .news-image {
 
@@ -701,8 +692,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   width: 100%;
 
   height: 450px;
-
-  min-height: 450px;
 
   overflow: hidden;
 
@@ -715,14 +704,14 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   display: block;
 
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
 
   object-position: center;
 
-  transition: transform 0.35s ease;
+  transition:
+    transform 0.35s ease;
 }
 
 
@@ -736,27 +725,29 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: absolute;
 
-  top: 25px;
-
-  left: 28px;
+  top: 22px;
+  left: 24px;
 
   z-index: 3;
 
-  color: rgba(247,244,237,0.85);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.85
+    );
 
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
-
-  text-shadow:
-    0 1px 4px rgba(0,0,0,0.4);
+  letter-spacing: 1.7px;
 }
 
 
 /* ==================================================
-   CONTENIDO DE LA NOTICIA
+   CONTENIDO NOTICIA
 ================================================== */
 
 .main-news-content {
@@ -769,91 +760,81 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   align-items: flex-start;
 
+  box-sizing: border-box;
+
   width: 100%;
 
   height: 450px;
 
-  min-height: 0;
-
-  box-sizing: border-box;
-
-  padding: 30px 42px;
+  padding: 28px 35px;
 
   overflow: hidden;
 }
 
 
-/* ==================================================
-   META
-================================================== */
-
 .news-meta {
 
   display: flex;
 
-  gap: 10px;
-
-  flex-shrink: 0;
+  gap: 8px;
 
   color: var(--gold);
 
-  font-size: 0.65rem;
+  font-size: 0.57rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
 }
 
-
-/* ==================================================
-   TÍTULO
-================================================== */
 
 .main-news-content h3 {
 
-  margin: 16px 0 14px;
+  margin: 13px 0 12px;
 
   color: var(--cream);
 
-  font-size: 2.35rem;
+  font-size: 1.9rem;
 
-  line-height: 1.05;
+  line-height: 1.06;
 
-  letter-spacing: -1px;
+  letter-spacing: -0.7px;
 }
 
-
-/* ==================================================
-   DESCRIPCIÓN
-================================================== */
 
 .main-news-content p {
 
-  max-width: 470px;
+  max-width: 450px;
 
   margin: 0;
 
-  color: rgba(247,244,237,0.65);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.65
+    );
 
-  font-size: 0.85rem;
+  font-size: 0.78rem;
 
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 
-/* ==================================================
-   AUTOR
-================================================== */
-
 .author {
 
-  margin-top: 14px;
+  margin-top: 12px;
 
-  color: rgba(247,244,237,0.55);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.5
+    );
 
-  font-size: 0.7rem;
-
-  line-height: 1.4;
+  font-size: 0.65rem;
 }
 
 
@@ -865,10 +846,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 }
 
 
-/* ==================================================
-   BOTÓN
-================================================== */
-
 .read-button {
 
   display: inline-flex;
@@ -877,27 +854,25 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   justify-content: center;
 
-  flex-shrink: 0;
+  margin-top: 15px;
 
-  width: fit-content;
+  padding: 8px 14px;
 
-  margin-top: 18px;
+  border:
+    1px solid
+    var(--gold);
 
-  padding: 9px 16px;
-
-  border: 1px solid var(--gold);
-
-  border-radius: 30px;
+  border-radius: 25px;
 
   color: var(--cream);
 
   text-decoration: none;
 
-  font-size: 0.6rem;
+  font-size: 0.55rem;
 
   font-weight: 800;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
 
   transition:
     background 0.25s ease,
@@ -908,11 +883,11 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .read-button span {
 
-  margin-left: 8px;
+  margin-left: 7px;
 
   color: var(--gold);
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 
@@ -938,7 +913,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .news-categories {
 
-  padding: 110px 20px;
+  padding: 65px 20px;
 
   background: var(--white);
 }
@@ -946,7 +921,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .section-heading {
 
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 
@@ -954,11 +929,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(
+    2.1rem,
+    4vw,
+    3.3rem
+  );
 
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -972,9 +951,10 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 15px;
+  gap: 12px;
 }
 
 
@@ -982,15 +962,17 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: relative;
 
-  min-height: 290px;
+  min-height: 270px;
 
-  padding: 30px;
+  padding: 25px;
 
   overflow: hidden;
 
-  border: 1px solid rgba(27,27,27,0.07);
+  border:
+    1px solid
+    rgba(27,27,27,0.07);
 
-  border-radius: 15px;
+  border-radius: 14px;
 
   background: var(--cream);
 
@@ -1003,12 +985,14 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .category-card:hover {
 
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 
-  border-color: rgba(200,162,74,0.5);
+  border-color:
+    rgba(200,162,74,0.5);
 
   box-shadow:
-    0 15px 30px rgba(27,27,27,0.08);
+    0 15px 30px
+    rgba(27,27,27,0.08);
 }
 
 
@@ -1024,23 +1008,29 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: absolute;
 
-  top: 20px;
+  top: 18px;
+  right: 20px;
 
-  right: 22px;
+  color:
+    rgba(27,27,27,0.25);
 
-  color: rgba(27,27,27,0.25);
-
-  font-size: 0.7rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 
 .dark .category-number {
 
-  color: rgba(247,244,237,0.25);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.25
+    );
 }
 
 
@@ -1049,22 +1039,22 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  width: 48px;
+  width: 42px;
+  height: 42px;
 
-  height: 48px;
+  margin-bottom: 20px;
 
-  margin-bottom: 28px;
-
-  border: 1px solid rgba(200,162,74,0.45);
+  border:
+    1px solid
+    rgba(200,162,74,0.45);
 
   border-radius: 50%;
 
   color: var(--gold);
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 
   font-weight: 800;
 }
@@ -1072,9 +1062,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .category-card h3 {
 
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 
-  font-size: 1.45rem;
+  font-size: 1.2rem;
 }
 
 
@@ -1084,15 +1074,21 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #777;
 
-  font-size: 0.9rem;
+  font-size: 0.79rem;
 
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 
 .category-card.dark p {
 
-  color: rgba(247,244,237,0.65);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.65
+    );
 }
 
 
@@ -1102,7 +1098,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .editorial {
 
-  padding: 120px 20px;
+  padding: 80px 20px;
 
   background: var(--terracotta);
 
@@ -1114,7 +1110,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .editorial-content {
 
-  max-width: 850px;
+  max-width: 760px;
 
   margin: 0 auto;
 }
@@ -1124,23 +1120,27 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #F2D58B;
 
-  font-size: 0.72rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.3px;
 }
 
 
 .editorial h2 {
 
-  margin: 20px 0;
+  margin: 16px 0;
 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(
+    2.1rem,
+    4vw,
+    3.2rem
+  );
 
   line-height: 1.05;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -1156,11 +1156,17 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  color: rgba(255,255,255,0.8);
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
 
-  font-size: 1.05rem;
+  font-size: 0.86rem;
 
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 
@@ -1170,7 +1176,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .coming-section {
 
-  padding: 90px 20px;
+  padding: 65px 20px;
 
   background: var(--cream);
 }
@@ -1180,20 +1186,23 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns: 65px 1fr;
+  grid-template-columns: 55px 1fr;
 
-  gap: 30px;
+  gap: 22px;
 
-  padding: 45px;
+  padding: 32px;
 
   background: white;
 
-  border-left: 4px solid var(--gold);
+  border-left:
+    3px solid
+    var(--gold);
 
-  border-radius: 15px;
+  border-radius: 14px;
 
   box-shadow:
-    0 10px 30px rgba(27,27,27,0.05);
+    0 8px 25px
+    rgba(27,27,27,0.05);
 }
 
 
@@ -1202,20 +1211,19 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  width: 55px;
-
-  height: 55px;
+  width: 45px;
+  height: 45px;
 
   border-radius: 50%;
 
-  background: rgba(200,162,74,0.12);
+  background:
+    rgba(200,162,74,0.12);
 
   color: var(--terracotta);
 
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
   font-weight: 800;
 }
@@ -1225,19 +1233,23 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: var(--terracotta);
 
-  font-size: 0.68rem;
+  font-size: 0.58rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
 }
 
 
 .coming-box h2 {
 
-  margin: 12px 0;
+  margin: 9px 0;
 
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-size: clamp(
+    1.6rem,
+    3vw,
+    2.3rem
+  );
 
   line-height: 1.1;
 }
@@ -1245,13 +1257,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .coming-box p {
 
-  max-width: 700px;
+  max-width: 650px;
 
   margin: 0;
 
   color: var(--gray);
 
-  line-height: 1.75;
+  font-size: 0.82rem;
+
+  line-height: 1.6;
 }
 
 
@@ -1261,7 +1275,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .actualidad-ending {
 
-  padding: 110px 20px;
+  padding: 80px 20px;
 
   background: var(--black);
 
@@ -1275,25 +1289,29 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: var(--gold);
 
-  font-size: 0.8rem;
+  font-size: 0.65rem;
 
   font-weight: 800;
 
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
 
 
 .actualidad-ending h2 {
 
-  max-width: 800px;
+  max-width: 750px;
 
-  margin: 25px auto;
+  margin: 20px auto;
 
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(
+    2rem,
+    4vw,
+    3rem
+  );
 
   line-height: 1.1;
 
-  letter-spacing: -1px;
+  letter-spacing: -0.8px;
 }
 
 
@@ -1309,11 +1327,17 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  color: rgba(247,244,237,0.45);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.45
+    );
 
-  font-size: 0.68rem;
+  font-size: 0.56rem;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.3px;
 }
 
 
@@ -1325,7 +1349,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .actualidad-hero {
 
-    min-height: 420px;
+    min-height: 400px;
   }
 
 
@@ -1337,7 +1361,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .section-top > p {
 
-    margin-top: 20px;
+    margin-top: 16px;
   }
 
 
@@ -1365,9 +1389,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
     height: auto;
 
-    min-height: 400px;
+    min-height: 350px;
 
-    padding: 35px 28px;
+    padding: 30px 25px;
 
     overflow: visible;
   }
@@ -1375,7 +1399,8 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .categories-grid {
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
 }
@@ -1387,17 +1412,44 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 @media (max-width: 550px) {
 
+  .container {
+
+    width:
+      calc(
+        100% - 32px
+      );
+  }
+
+
+  .actualidad-hero {
+
+    min-height: 390px;
+  }
+
+
   .actualidad-hero .container {
 
-    padding: 60px 0;
+    padding: 50px 0;
   }
 
 
   .actualidad-hero h1 {
 
-    font-size: 3.4rem;
+    font-size: clamp(
+      3rem,
+      15vw,
+      4.5rem
+    );
 
     letter-spacing: -2px;
+  }
+
+
+  .actualidad-hero p {
+
+    margin-top: 20px;
+
+    font-size: 0.82rem;
   }
 
 
@@ -1405,7 +1457,32 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   .news-categories,
   .coming-section {
 
-    padding: 80px 20px;
+    padding: 55px 16px;
+  }
+
+
+  .section-top h2,
+  .section-heading h2 {
+
+    font-size: 2.1rem;
+  }
+
+
+  .main-news-content {
+
+    padding: 28px 22px;
+  }
+
+
+  .main-news-content h3 {
+
+    font-size: 1.65rem;
+  }
+
+
+  .main-news-content p {
+
+    font-size: 0.76rem;
   }
 
 
@@ -1417,15 +1494,21 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .category-card {
 
-    min-height: auto;
+    min-height: 250px;
 
-    padding: 28px;
+    padding: 24px;
   }
 
 
   .editorial {
 
-    padding: 90px 20px;
+    padding: 65px 16px;
+  }
+
+
+  .editorial h2 {
+
+    font-size: 2rem;
   }
 
 
@@ -1433,19 +1516,19 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
     grid-template-columns: 1fr;
 
-    padding: 30px;
+    padding: 28px;
   }
 
 
   .actualidad-ending {
 
-    padding: 90px 20px;
+    padding: 65px 16px;
   }
 
 
-  .main-news-content h3 {
+  .actualidad-ending h2 {
 
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
 }

@@ -100,18 +100,19 @@
 
 <style>
 
+  /* ================================
+     SECCIÓN
+  ================================= */
+
   .historias {
-    padding: 110px 20px;
-
+    padding: 70px 20px;
     background: #F7F4ED;
-
     color: #1B1B1B;
   }
 
 
   .container {
     width: min(1000px, 100%);
-
     margin: 0 auto;
   }
 
@@ -122,58 +123,49 @@
 
   .historias-header {
     display: flex;
-
     justify-content: space-between;
     align-items: flex-end;
-
-    gap: 50px;
-
-    margin-bottom: 55px;
+    gap: 40px;
+    margin-bottom: 32px;
   }
 
 
   .section-label {
     display: block;
-
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
     color: #A8572B;
 
-    font-size: 0.72rem;
+    font-size: 0.62rem;
     font-weight: 800;
-
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
   }
 
 
   .historias-header h2 {
     margin: 0;
 
-    font-size: clamp(2.6rem, 5vw, 4rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.3rem);
 
-    line-height: 1;
-
+    line-height: 0.98;
     letter-spacing: -1.5px;
   }
 
 
   .historias-header h2 span {
     display: block;
-
     color: #A8572B;
   }
 
 
   .historias-header > p {
-    max-width: 430px;
-
+    max-width: 390px;
     margin: 0;
 
     color: #666;
 
-    font-size: 1rem;
-
-    line-height: 1.7;
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 
 
@@ -186,7 +178,11 @@
 
     grid-template-columns: 1fr 1fr;
 
-    min-height: 480px;
+    width: 100%;
+
+    height: 450px;
+    min-height: 450px;
+    max-height: 450px;
 
     overflow: hidden;
 
@@ -194,16 +190,18 @@
 
     border-radius: 18px;
 
-    box-shadow: 0 20px 45px rgba(27, 27, 27, 0.12);
+    box-shadow: 0 18px 38px rgba(27, 27, 27, 0.11);
   }
 
 
-  /* Visual */
+  /* ================================
+     VISUAL
+  ================================= */
 
   .historia-visual {
     position: relative;
 
-    min-height: 480px;
+    min-height: 450px;
 
     display: flex;
 
@@ -232,8 +230,8 @@
 
     position: absolute;
 
-    width: 330px;
-    height: 330px;
+    width: 300px;
+    height: 300px;
 
     border: 1px solid rgba(200, 162, 74, 0.2);
 
@@ -242,8 +240,8 @@
 
 
   .historia-visual::after {
-    width: 500px;
-    height: 500px;
+    width: 440px;
+    height: 440px;
   }
 
 
@@ -277,24 +275,24 @@
   .historia-brand span {
     color: #C8A24A;
 
-    font-size: clamp(4rem, 8vw, 7rem);
+    font-size: clamp(3.5rem, 7vw, 5.8rem);
 
     font-weight: 800;
 
     line-height: 0.9;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
   }
 
 
   .historia-brand small {
-    margin-top: 15px;
+    margin-top: 12px;
 
     color: rgba(247, 244, 237, 0.7);
 
-    font-size: 0.58rem;
+    font-size: 0.5rem;
 
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
   }
 
 
@@ -303,12 +301,12 @@
 
     z-index: 2;
 
-    top: 25px;
-    left: 28px;
+    top: 20px;
+    left: 22px;
 
     color: rgba(247, 244, 237, 0.5);
 
-    font-size: 0.75rem;
+    font-size: 0.65rem;
 
     font-weight: 800;
 
@@ -316,7 +314,9 @@
   }
 
 
-  /* Contenido */
+  /* ================================
+     CONTENIDO
+  ================================= */
 
   .historia-content {
     display: flex;
@@ -325,7 +325,7 @@
 
     justify-content: center;
 
-    padding: 55px;
+    padding: 38px 40px;
   }
 
 
@@ -334,47 +334,49 @@
 
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
     color: #C8A24A;
 
-    font-size: 0.66rem;
+    font-size: 0.58rem;
 
     font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
   }
 
 
   .historia-content h3 {
-    max-width: 520px;
+    max-width: 470px;
 
-    margin: 25px 0 20px;
+    margin: 18px 0 15px;
 
     color: #F7F4ED;
 
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size: clamp(1.7rem, 3vw, 2.45rem);
 
     line-height: 1.08;
 
-    letter-spacing: -1px;
+    letter-spacing: -0.8px;
   }
 
 
   .historia-content > p {
-    max-width: 530px;
+    max-width: 480px;
 
     margin: 0;
 
     color: rgba(247, 244, 237, 0.68);
 
-    font-size: 0.98rem;
+    font-size: 0.86rem;
 
-    line-height: 1.75;
+    line-height: 1.65;
   }
 
 
-  /* Footer de historia */
+  /* ================================
+     FOOTER DE HISTORIA
+  ================================= */
 
   .historia-footer {
     display: flex;
@@ -384,9 +386,9 @@
 
     gap: 20px;
 
-    margin-top: 40px;
+    margin-top: 25px;
 
-    padding-top: 25px;
+    padding-top: 18px;
 
     border-top: 1px solid rgba(247, 244, 237, 0.1);
   }
@@ -397,11 +399,11 @@
 
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
     color: #C8A24A;
 
-    font-size: 0.82rem;
+    font-size: 0.72rem;
 
     font-weight: 800;
 
@@ -414,7 +416,7 @@
 
 
   .historia-button span {
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     transition: transform 0.2s ease;
   }
@@ -428,7 +430,7 @@
   .historia-category {
     color: rgba(247, 244, 237, 0.35);
 
-    font-size: 0.65rem;
+    font-size: 0.58rem;
 
     font-weight: 700;
 
@@ -448,9 +450,9 @@
 
     gap: 25px;
 
-    margin-top: 28px;
+    margin-top: 18px;
 
-    padding-top: 22px;
+    padding-top: 15px;
 
     border-top: 1px solid rgba(27, 27, 27, 0.1);
   }
@@ -461,7 +463,7 @@
 
     color: #777;
 
-    font-size: 0.9rem;
+    font-size: 0.78rem;
 
     font-style: italic;
   }
@@ -472,11 +474,11 @@
 
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
     color: #A8572B;
 
-    font-size: 0.82rem;
+    font-size: 0.72rem;
 
     font-weight: 800;
 
@@ -495,28 +497,35 @@
 
 
   /* ================================
-     RESPONSIVE
+     TABLET / MÓVIL
   ================================= */
 
   @media (max-width: 800px) {
 
     .historias {
-      padding: 80px 20px;
+      padding: 55px 20px;
     }
 
 
     .historias-header {
       display: block;
+      margin-bottom: 25px;
     }
 
 
     .historias-header > p {
-      margin-top: 20px;
+      max-width: 600px;
+      margin-top: 15px;
+      font-size: 0.84rem;
     }
 
 
     .historia-destacada {
       grid-template-columns: 1fr;
+
+      height: auto;
+      min-height: 0;
+      max-height: none;
     }
 
 
@@ -526,18 +535,57 @@
 
 
     .historia-content {
-      padding: 35px 28px;
+      padding: 30px 28px;
     }
 
 
     .historia-content h3 {
-      font-size: 2rem;
+      font-size: 1.9rem;
     }
 
   }
 
 
+  /* ================================
+     CELULAR
+  ================================= */
+
   @media (max-width: 500px) {
+
+    .historias {
+      padding: 45px 16px;
+    }
+
+
+    .historias-header h2 {
+      font-size: 2.1rem;
+    }
+
+
+    .historia-visual {
+      min-height: 270px;
+    }
+
+
+    .historia-brand span {
+      font-size: 4rem;
+    }
+
+
+    .historia-content {
+      padding: 28px 22px;
+    }
+
+
+    .historia-content h3 {
+      font-size: 1.7rem;
+    }
+
+
+    .historia-content > p {
+      font-size: 0.84rem;
+    }
+
 
     .historia-footer,
     .historias-more {

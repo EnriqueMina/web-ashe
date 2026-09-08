@@ -1,27 +1,280 @@
 <footer class="footer">
 
-  <h2>ASHÉ</h2>
+  <div class="footer-container">
 
-  <p>
-    La Fuerza Cultural que mueve el Territorio
-  </p>
+    <div class="footer-brand">
+      <h2>ASHÉ</h2>
 
-  <br>
+      <p>
+        La Fuerza Cultural que mueve el Territorio
+      </p>
+    </div>
 
-  <p>
-    📷 Instagram:
-    @conexion.ashe
-  </p>
 
-  <p>
-    ✉️ Correo:
-    ashemedioafro@gmail.com
-  </p>
+    <div class="footer-contact">
 
-  <br>
+      <p>
+        📷 Instagram:
+        @conexion.ashe
+      </p>
 
-  <p>
-    © 2026 ASHÉ Medio Comunitario Afro
-  </p>
+      <p>
+        ✉️ Correo:
+        ashemedioafro@gmail.com
+      </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 ASHÉ Medio Comunitario Afro
+      </p>
+
+    </div>
+
+  </div>
 
 </footer>
+
+
+<style>
+
+  /* ================================
+     FOOTER
+  ================================= */
+
+  .footer {
+    background: #1B1B1B;
+
+    color: #F7F4ED;
+
+    padding: 55px 20px 25px;
+
+    text-align: center;
+  }
+
+
+  .footer-container {
+    width: min(1000px, 100%);
+
+    margin: 0 auto;
+  }
+
+
+  /* ================================
+     MARCA
+  ================================= */
+
+  .footer-brand {
+    margin-bottom: 30px;
+  }
+
+
+  .footer-brand h2 {
+    margin: 0 0 8px;
+
+    color: #C8A24A;
+
+    font-size: 2.2rem;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+  }
+
+
+  .footer-brand p {
+    margin: 0;
+
+    color:
+      rgba(
+        247,
+        244,
+        237,
+        0.65
+      );
+
+    font-size: 0.82rem;
+
+    line-height: 1.5;
+  }
+
+
+  /* ================================
+     REDES Y CONTACTO
+  ================================= */
+
+  .footer-contact {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px 45px;
+
+    padding: 20px 0;
+
+    border-top:
+      1px solid
+      rgba(
+        247,
+        244,
+        237,
+        0.12
+      );
+
+    border-bottom:
+      1px solid
+      rgba(
+        247,
+        244,
+        237,
+        0.12
+      );
+  }
+
+
+  .footer-contact p {
+    margin: 0;
+
+    color:
+      rgba(
+        247,
+        244,
+        237,
+        0.65
+      );
+
+    font-size: 0.75rem;
+
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+
+  /* ================================
+     PARTE INFERIOR
+  ================================= */
+
+  .footer-bottom {
+    padding-top: 20px;
+  }
+
+
+  .footer-bottom p {
+    margin: 0;
+
+    color:
+      rgba(
+        247,
+        244,
+        237,
+        0.4
+      );
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.3px;
+  }
+
+
+  /* ================================
+     CELULAR
+  ================================= */
+
+  @media (max-width: 600px) {
+
+    .footer {
+      padding: 45px 20px 22px;
+    }
+
+
+    .footer-brand {
+      margin-bottom: 25px;
+    }
+
+
+    .footer-brand h2 {
+      font-size: 1.9rem;
+    }
+
+
+    .footer-brand p {
+      font-size: 0.78rem;
+    }
+
+
+    .footer-contact {
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 17px 0;
+
+      text-align: center;
+    }
+
+
+    .footer-contact p {
+      font-size: 0.7rem;
+
+      text-align: center;
+    }
+
+
+    .footer-bottom {
+      padding-top: 17px;
+    }
+
+
+    .footer-bottom p {
+      font-size: 0.62rem;
+
+      text-align: center;
+    }
+
+  }
+
+
+  /* ================================
+     CELULAR PEQUEÑO
+  ================================= */
+
+  @media (max-width: 400px) {
+
+    .footer {
+      padding:
+        40px 16px 20px;
+    }
+
+
+    .footer-brand h2 {
+      font-size: 1.8rem;
+    }
+
+
+    .footer-brand p {
+      font-size: 0.74rem;
+    }
+
+
+    .footer-contact p {
+      font-size: 0.68rem;
+    }
+
+
+    .footer-bottom p {
+      font-size: 0.6rem;
+    }
+
+  }
+
+</style>

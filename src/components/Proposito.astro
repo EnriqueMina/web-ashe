@@ -74,10 +74,14 @@
 
 <style>
 
+  /* ================================
+     SECCIÓN
+  ================================= */
+
   .proposito {
     position: relative;
 
-    padding: 110px 20px;
+    padding: 65px 20px;
 
     background: #F7F4ED;
 
@@ -87,15 +91,21 @@
 
   .container {
     width: min(1000px, 100%);
+
     margin: 0 auto;
+
+    padding: 0;
   }
 
 
-  /* Encabezado */
+  /* ================================
+     ENCABEZADO
+  ================================= */
 
   .proposito-header {
-    max-width: 850px;
-    margin: 0 auto 65px;
+    max-width: 800px;
+
+    margin: 0 auto 38px;
 
     text-align: center;
   }
@@ -104,14 +114,15 @@
   .section-label {
     display: inline-block;
 
-    margin-bottom: 20px;
+    margin-bottom: 11px;
 
     color: #A8572B;
 
-    font-size: 0.75rem;
+    font-size: 0.62rem;
+
     font-weight: 800;
 
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
   }
 
 
@@ -120,8 +131,13 @@
 
     color: #1B1B1B;
 
-    font-size: clamp(2.3rem, 5vw, 4rem);
-    line-height: 1.08;
+    font-size: clamp(
+      2.2rem,
+      4.5vw,
+      3.3rem
+    );
+
+    line-height: 1.02;
 
     letter-spacing: -1.5px;
   }
@@ -135,38 +151,47 @@
 
 
   .proposito-description {
-    max-width: 720px;
+    max-width: 680px;
 
-    margin: 28px auto 0;
+    margin: 20px auto 0;
 
     color: #555;
 
-    font-size: 1.08rem;
-    line-height: 1.8;
+    font-size: 0.9rem;
+
+    line-height: 1.65;
   }
 
 
-  /* Tarjetas */
+  /* ================================
+     TARJETAS
+  ================================= */
 
   .proposito-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+      repeat(3, 1fr);
 
-    gap: 22px;
+    gap: 18px;
   }
 
 
   .proposito-card {
     position: relative;
 
-    padding: 35px 30px;
+    padding: 27px 24px 30px;
 
     background: #FFFFFF;
 
-    border: 1px solid rgba(27, 27, 27, 0.08);
+    border: 1px solid rgba(
+      27,
+      27,
+      27,
+      0.08
+    );
 
-    border-radius: 16px;
+    border-radius: 15px;
 
     transition:
       transform 0.25s ease,
@@ -176,34 +201,50 @@
 
 
   .proposito-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
 
-    border-color: rgba(200, 162, 74, 0.5);
+    border-color:
+      rgba(
+        200,
+        162,
+        74,
+        0.5
+      );
 
-    box-shadow: 0 18px 35px rgba(27, 27, 27, 0.08);
+    box-shadow:
+      0 16px 30px
+      rgba(
+        27,
+        27,
+        27,
+        0.08
+      );
   }
 
 
   .card-number {
     display: block;
 
-    margin-bottom: 25px;
+    margin-bottom: 17px;
 
     color: #C8A24A;
 
-    font-size: 0.8rem;
+    font-size: 0.65rem;
+
     font-weight: 800;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
   }
 
 
   .proposito-card h3 {
-    margin: 0 0 14px;
+    margin: 0 0 10px;
 
     color: #1B1B1B;
 
-    font-size: 1.45rem;
+    font-size: 1.2rem;
+
+    line-height: 1.2;
   }
 
 
@@ -212,22 +253,27 @@
 
     color: #666;
 
-    font-size: 0.96rem;
-    line-height: 1.7;
+    font-size: 0.82rem;
+
+    line-height: 1.6;
   }
 
 
-  /* Línea decorativa */
+  /* ================================
+     LÍNEA DECORATIVA
+  ================================= */
 
   .proposito-card::after {
     content: "";
 
     position: absolute;
 
-    left: 30px;
+    left: 24px;
+
     bottom: 0;
 
-    width: 45px;
+    width: 40px;
+
     height: 3px;
 
     background: #C8A24A;
@@ -236,24 +282,85 @@
   }
 
 
-  /* Responsive */
+  /* ================================
+     TABLET / MÓVIL
+  ================================= */
 
   @media (max-width: 750px) {
 
     .proposito {
-      padding: 80px 20px;
+      padding: 55px 20px;
     }
+
 
     .proposito-grid {
       grid-template-columns: 1fr;
+
+      gap: 14px;
     }
+
 
     .proposito-header {
-      margin-bottom: 45px;
+      margin-bottom: 30px;
     }
 
+
+    .proposito h2 {
+      font-size: 2.3rem;
+    }
+
+
     .proposito-description {
-      font-size: 1rem;
+      font-size: 0.86rem;
+
+      line-height: 1.6;
+    }
+
+
+    .proposito-card {
+      padding: 24px 22px 28px;
+    }
+
+  }
+
+
+  /* ================================
+     CELULAR
+  ================================= */
+
+  @media (max-width: 500px) {
+
+    .proposito {
+      padding: 48px 16px;
+    }
+
+
+    .proposito h2 {
+      font-size: 2rem;
+
+      letter-spacing: -1px;
+    }
+
+
+    .section-label {
+      font-size: 0.58rem;
+
+      letter-spacing: 2px;
+    }
+
+
+    .proposito-description {
+      font-size: 0.82rem;
+    }
+
+
+    .proposito-card h3 {
+      font-size: 1.1rem;
+    }
+
+
+    .proposito-card p {
+      font-size: 0.8rem;
     }
 
   }

@@ -1,0 +1,683 @@
+---
+const noticias = [
+  {
+    numero: "01",
+    categoria: "ACTUALIDAD",
+    etiquetas: "ACTUALIDAD · ASHÉ",
+    titulo: "Terremoto: información y contexto para nuestra comunidad",
+    resumen:
+      "Una mirada informativa sobre los acontecimientos y la importancia de mantenerse informados como comunidad.",
+    imagen: "/images/imagen3.jpeg",
+    enlace: "/actualidad/articulo-terremoto",
+    tieneImagen: true
+  },
+
+  {
+    numero: "02",
+    categoria: "CULTURA",
+    etiquetas: "USME · JUVENTUD · CULTURA",
+    titulo:
+      "Danza, participación y bienestar: jóvenes de Usme fortalecen sus capacidades a través del arte",
+    resumen:
+      "En Usme, el arte y la participación comunitaria se convirtieron en escenarios para hablar de salud, bienestar y derechos con jóvenes de la comunidad negra y afrocolombiana.",
+    imagen: "/images/imagen9.jpeg",
+    enlace: "/cultura/danza-participacion-bienestar-usme",
+    tieneImagen: true
+  },
+
+  {
+    numero: "03",
+    categoria: "OPORTUNIDADES",
+    etiquetas: "USME · PARTICIPACIÓN · COMUNIDAD",
+    titulo:
+      "Mesa de Concertación para los Diálogos Diferenciales Afro en Usme",
+    resumen:
+      "Un espacio de participación y diálogo para fortalecer las voces de la comunidad negra y afrocolombiana en Usme.",
+    imagen: "",
+    enlace: "/oportunidades/mesa-concertacion-afro-usme",
+    tieneImagen: false
+  }
+];
+---
+
+<section id="noticias" class="noticias-home">
+
+  <div class="container">
+
+    <!-- =========================================
+         ENCABEZADO
+    ========================================== -->
+
+    <div class="noticias-header">
+
+      <div>
+
+        <span class="section-label">
+          ASHÉ · INFORMACIÓN
+        </span>
+
+        <h2>
+          Noticias
+        </h2>
+
+      </div>
+
+      <p>
+        Historias, acontecimientos y oportunidades
+        que hacen parte de nuestro territorio y nuestra
+        comunidad.
+      </p>
+
+    </div>
+
+
+    <!-- =========================================
+         TARJETAS
+    ========================================== -->
+
+    <div class="noticias-grid">
+
+      {
+        noticias.map((noticia) => (
+
+          <article class="noticia-card">
+
+            <div
+              class:list={{
+                "noticia-visual": true,
+                "sin-imagen": !noticia.tieneImagen
+              }}
+            >
+
+              {
+                noticia.tieneImagen ? (
+
+                  <img
+                    src={noticia.imagen}
+                    alt={noticia.titulo}
+                    loading="lazy"
+                  />
+
+                ) : (
+
+                  <div class="visual-ashe">
+
+                    <span>
+                      ASHÉ
+                    </span>
+
+                    <small>
+                      MEDIO COMUNITARIO AFRO
+                    </small>
+
+                  </div>
+
+                )
+              }
+
+              <span class="noticia-number">
+                {noticia.numero}
+              </span>
+
+              <div class="visual-overlay"></div>
+
+            </div>
+
+
+            <div class="noticia-content">
+
+              <div class="noticia-meta">
+
+                <span class="noticia-category">
+                  {noticia.categoria}
+                </span>
+
+                <span class="noticia-tags">
+                  {noticia.etiquetas}
+                </span>
+
+              </div>
+
+
+              <h3>
+                {noticia.titulo}
+              </h3>
+
+
+              <p>
+                {noticia.resumen}
+              </p>
+
+
+              <a
+                href={noticia.enlace}
+                class="noticia-link"
+              >
+
+                LEER ARTÍCULO
+
+                <span>
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </article>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+/* ==================================================
+   SECCIÓN NOTICIAS
+================================================== */
+
+.noticias-home {
+  padding: 55px 20px 65px;
+  background: #F7F4ED;
+  color: #1B1B1B;
+}
+
+
+/* ==================================================
+   CONTENEDOR
+================================================== */
+
+.container {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+
+  /* Importante:
+     evita que el padding del global.css
+     vuelva a generar espacio extra */
+  padding: 0;
+}
+
+
+/* ==================================================
+   ENCABEZADO
+================================================== */
+
+.noticias-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 30px;
+}
+
+
+.section-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #A8572B;
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+
+.noticias-header h2 {
+  margin: 0;
+
+  color: #1B1B1B;
+
+  font-size: clamp(2.3rem, 4.5vw, 3.4rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -1.8px;
+}
+
+
+.noticias-header > p {
+  max-width: 370px;
+
+  margin: 0;
+
+  color: #666;
+
+  font-size: 0.84rem;
+
+  line-height: 1.55;
+}
+
+
+/* ==================================================
+   GRID
+================================================== */
+
+.noticias-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+/* ==================================================
+   TARJETA
+================================================== */
+
+.noticia-card {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #FFFFFF;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 14px 30px
+    rgba(27, 27, 27, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.noticia-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 38px
+    rgba(27, 27, 27, 0.12);
+}
+
+
+/* ==================================================
+   PARTE VISUAL
+================================================== */
+
+.noticia-visual {
+  position: relative;
+
+  height: 180px;
+
+  overflow: hidden;
+
+  background: #1B1B1B;
+}
+
+
+.noticia-visual img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.noticia-card:hover
+.noticia-visual img {
+  transform: scale(1.04);
+}
+
+
+/* ==================================================
+   VISUAL SIN IMAGEN
+================================================== */
+
+.noticia-visual.sin-imagen {
+  background: #1B1B1B;
+}
+
+
+.visual-ashe {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1;
+}
+
+
+.visual-ashe span {
+  color: #F7F4ED;
+
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  letter-spacing: 5px;
+}
+
+
+.visual-ashe small {
+  margin-top: 6px;
+
+  color: #C8A24A;
+
+  font-size: 0.45rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* ==================================================
+   DEGRADADO
+================================================== */
+
+.visual-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(27, 27, 27, 0.04),
+      rgba(27, 27, 27, 0.6)
+    );
+
+  pointer-events: none;
+}
+
+
+/* ==================================================
+   NÚMERO
+================================================== */
+
+.noticia-number {
+  position: absolute;
+
+  left: 16px;
+  bottom: 12px;
+
+  z-index: 3;
+
+  color: #F7F4ED;
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   CONTENIDO
+================================================== */
+
+.noticia-content {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  padding: 21px 21px 20px;
+}
+
+
+/* ==================================================
+   META
+================================================== */
+
+.noticia-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 10px;
+}
+
+
+.noticia-category {
+  color: #A8572B;
+
+  font-size: 0.58rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+.noticia-tags {
+  color: #999;
+
+  font-size: 0.5rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.noticia-content h3 {
+  margin: 0 0 11px;
+
+  color: #1B1B1B;
+
+  font-size: clamp(
+    1.08rem,
+    1.6vw,
+    1.3rem
+  );
+
+  line-height: 1.1;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* ==================================================
+   RESUMEN
+================================================== */
+
+.noticia-content p {
+  margin: 0;
+
+  color: #707070;
+
+  font-size: 0.78rem;
+
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   ENLACE
+================================================== */
+
+.noticia-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  padding-top: 18px;
+
+  color: #1B1B1B;
+
+  font-size: 0.58rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+}
+
+
+.noticia-link span {
+  font-size: 0.95rem;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.noticia-link:hover {
+  color: #A8572B;
+}
+
+
+.noticia-link:hover span {
+  transform: translateX(5px);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 850px) {
+
+  .noticias-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .noticia-card:last-child {
+    grid-column: 1 / -1;
+
+    max-width:
+      calc(50% - 9px);
+  }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+  .noticias-home {
+    padding: 50px 18px 55px;
+  }
+
+
+  .noticias-header {
+    display: block;
+
+    margin-bottom: 25px;
+  }
+
+
+  .noticias-header h2 {
+    font-size: 2.6rem;
+  }
+
+
+  .noticias-header > p {
+    margin-top: 15px;
+
+    max-width: 100%;
+
+    font-size: 0.82rem;
+  }
+
+
+  .noticias-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .noticia-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+
+  .noticia-visual {
+    height: 190px;
+  }
+
+
+  .noticia-content {
+    padding: 20px 19px 21px;
+  }
+
+
+  .noticia-content h3 {
+    font-size: 1.2rem;
+  }
+
+}
+
+
+/* ==================================================
+   CELULAR PEQUEÑO
+================================================== */
+
+@media (max-width: 400px) {
+
+  .noticia-visual {
+    height: 175px;
+  }
+
+
+  .noticia-content h3 {
+    font-size: 1.15rem;
+  }
+
+
+  .noticia-content p {
+    font-size: 0.77rem;
+  }
+
+}
+
+</style>

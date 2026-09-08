@@ -130,8 +130,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
         <div class="mission-grid">
 
-          <!-- MISIÓN -->
-
           <article class="mission-card">
 
             <div class="mission-number">
@@ -156,8 +154,6 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
           </article>
 
-
-          <!-- VISIÓN -->
 
           <article class="mission-card mission-card-dark">
 
@@ -349,11 +345,11 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #A8572B;
 
-  font-size: 0.72rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 3px;
+  letter-spacing: 2.3px;
 }
 
 
@@ -363,7 +359,13 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .about-hero {
 
-  padding: 100px 20px 90px;
+  min-height: 390px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 60px 20px;
 
   background: #1B1B1B;
 
@@ -375,13 +377,14 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .about-hero h1 {
 
-  margin: 20px 0 15px;
+  margin: 15px 0 12px;
 
-  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-size:
+    clamp(3.2rem, 7vw, 5.8rem);
 
-  line-height: 0.9;
+  line-height: 0.92;
 
-  letter-spacing: -4px;
+  letter-spacing: -3px;
 }
 
 
@@ -395,23 +398,31 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .about-hero p {
 
-  margin: 30px 0 0;
+  margin: 22px 0 0;
 
-  color: rgba(247,244,237,0.7);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.7
+    );
 
-  font-size: 1.1rem;
+  font-size: 0.92rem;
 
   font-style: italic;
+
+  line-height: 1.6;
 }
 
 
 /* ================================
-   SECCIÓN
+   SECCIÓN HISTORIA
 ================================= */
 
 .about-section {
 
-  padding: 100px 20px;
+  padding: 65px 20px;
 }
 
 
@@ -419,29 +430,33 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns:
+    0.8fr 1.2fr;
 
-  gap: 80px;
+  gap: 55px;
+
+  align-items: center;
 }
 
 
 .about-intro h2 {
 
-  margin: 18px 0 0;
+  margin: 12px 0 0;
 
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size:
+    clamp(2rem, 4vw, 3.3rem);
 
-  line-height: 1.1;
+  line-height: 1.05;
 
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 
 .about-text {
 
-  font-size: 1.05rem;
+  font-size: 0.86rem;
 
-  line-height: 1.85;
+  line-height: 1.65;
 
   color: #444;
 }
@@ -449,7 +464,8 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .about-text p {
 
-  margin: 0 0 25px;
+  margin:
+    0 0 18px;
 }
 
 
@@ -459,7 +475,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .about-quote {
 
-  padding: 80px 20px;
+  padding: 65px 20px;
 
   background: #A8572B;
 
@@ -471,11 +487,12 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .quote-line {
 
-  width: 60px;
+  width: 55px;
 
-  height: 3px;
+  height: 2px;
 
-  margin: 0 auto 25px;
+  margin:
+    0 auto 20px;
 
   background: #C8A24A;
 }
@@ -485,19 +502,31 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   margin: 0;
 
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size:
+    clamp(2.8rem, 6vw, 4.5rem);
 
-  letter-spacing: 4px;
+  line-height: 1;
+
+  letter-spacing: 3px;
 }
 
 
 .about-quote p {
 
-  margin: 15px 0 0;
+  margin:
+    12px 0 0;
 
-  color: rgba(247,244,237,0.8);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.8
+    );
 
-  font-size: 1.05rem;
+  font-size: 0.86rem;
+
+  line-height: 1.5;
 }
 
 
@@ -513,17 +542,21 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .section-heading {
 
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 
 .section-heading h2 {
 
-  margin: 15px 0 0;
+  margin:
+    10px 0 0;
 
-  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  font-size:
+    clamp(2.1rem, 4vw, 3.3rem);
 
   line-height: 1;
+
+  letter-spacing: -1.5px;
 }
 
 
@@ -531,9 +564,10 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:
+    repeat(2, 1fr);
 
-  gap: 25px;
+  gap: 15px;
 }
 
 
@@ -541,20 +575,23 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: relative;
 
+  min-height: 285px;
+
+  padding: 28px;
+
   overflow: hidden;
 
-  padding: 40px;
+  border-radius: 15px;
 
-  min-height: 350px;
+  background: #FFFFFF;
 
-  border-radius: 18px;
-
-  background: white;
-
-  border: 1px solid rgba(27,27,27,0.07);
+  border:
+    1px solid
+    rgba(27,27,27,0.07);
 
   box-shadow:
-    0 10px 30px rgba(27,27,27,0.05);
+    0 8px 25px
+    rgba(27,27,27,0.05);
 }
 
 
@@ -570,17 +607,17 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   position: absolute;
 
-  top: 25px;
+  top: 20px;
 
-  right: 30px;
+  right: 23px;
 
   color: #C8A24A;
 
-  font-size: 0.75rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
 }
 
 
@@ -588,15 +625,15 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: inline-block;
 
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 
   color: #A8572B;
 
-  font-size: 0.7rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
 }
 
 
@@ -608,9 +645,10 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .mission-card h3 {
 
-  margin: 0 0 20px;
+  margin:
+    0 0 14px;
 
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 
   line-height: 1.15;
 }
@@ -622,15 +660,21 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #666;
 
-  font-size: 0.97rem;
+  font-size: 0.8rem;
 
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 
 .mission-card-dark p {
 
-  color: rgba(247,244,237,0.7);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.7
+    );
 }
 
 
@@ -640,17 +684,18 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .principles-section {
 
-  padding: 100px 20px;
+  padding: 65px 20px;
 
-  background: white;
+  background: #FFFFFF;
 }
 
 
 .section-heading.center {
 
-  max-width: 700px;
+  max-width: 680px;
 
-  margin: 0 auto 55px;
+  margin:
+    0 auto 35px;
 
   text-align: center;
 }
@@ -658,11 +703,14 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .section-heading.center p {
 
-  margin: 22px auto 0;
+  margin:
+    16px auto 0;
 
   color: #666;
 
-  line-height: 1.7;
+  font-size: 0.84rem;
+
+  line-height: 1.6;
 }
 
 
@@ -670,19 +718,22 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:
+    repeat(4, 1fr);
 
-  gap: 15px;
+  gap: 12px;
 }
 
 
 .principle-card {
 
-  padding: 30px;
+  padding: 24px;
 
-  border: 1px solid rgba(27,27,27,0.08);
+  border:
+    1px solid
+    rgba(27,27,27,0.08);
 
-  border-radius: 14px;
+  border-radius: 12px;
 
   transition:
     transform 0.25s ease,
@@ -692,10 +743,11 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .principle-card:hover {
 
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 
   box-shadow:
-    0 12px 30px rgba(27,27,27,0.07);
+    0 12px 25px
+    rgba(27,27,27,0.07);
 }
 
 
@@ -703,19 +755,20 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #A8572B;
 
-  font-size: 0.72rem;
+  font-size: 0.62rem;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.7px;
 }
 
 
 .principle-card h3 {
 
-  margin: 15px 0 10px;
+  margin:
+    12px 0 8px;
 
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 
@@ -725,9 +778,9 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   color: #666;
 
-  font-size: 0.9rem;
+  font-size: 0.79rem;
 
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 
@@ -737,7 +790,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .about-ending {
 
-  padding: 100px 20px;
+  padding: 75px 20px;
 
   background: #1B1B1B;
 
@@ -749,15 +802,16 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .about-ending h2 {
 
-  max-width: 750px;
+  max-width: 650px;
 
   margin: 0 auto;
 
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size:
+    clamp(2.2rem, 5vw, 3.4rem);
 
   line-height: 1;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 }
 
 
@@ -771,13 +825,22 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .about-ending p {
 
-  max-width: 600px;
+  max-width: 550px;
 
-  margin: 25px auto 0;
+  margin:
+    20px auto 0;
 
-  color: rgba(247,244,237,0.65);
+  color:
+    rgba(
+      247,
+      244,
+      237,
+      0.65
+    );
 
-  line-height: 1.7;
+  font-size: 0.84rem;
+
+  line-height: 1.6;
 }
 
 
@@ -787,19 +850,26 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   align-items: center;
 
-  gap: 10px;
+  gap: 8px;
 
-  margin-top: 35px;
+  margin-top: 25px;
 
-  padding: 14px 22px;
+  padding: 11px 18px;
 
-  border: 1px solid rgba(247,244,237,0.25);
+  border:
+    1px solid
+    rgba(
+      247,
+      244,
+      237,
+      0.25
+    );
 
-  border-radius: 30px;
+  border-radius: 25px;
 
   color: #F7F4ED;
 
-  font-size: 0.85rem;
+  font-size: 0.72rem;
 
   font-weight: 700;
 
@@ -814,7 +884,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 .back-button:hover {
 
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
   border-color: #C8A24A;
 
@@ -823,20 +893,22 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
 
 /* ================================
-   RESPONSIVE
+   TABLET
 ================================= */
 
 @media (max-width: 800px) {
 
   .about-hero {
 
-    padding: 75px 20px;
+    min-height: 380px;
+
+    padding: 55px 20px;
   }
 
 
   .about-section {
 
-    padding: 75px 20px;
+    padding: 55px 20px;
   }
 
 
@@ -844,7 +916,7 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
     grid-template-columns: 1fr;
 
-    gap: 35px;
+    gap: 30px;
   }
 
 
@@ -856,23 +928,98 @@ import LayoutBase from '../layouts/LayoutBase.astro';
 
   .principles-grid {
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
 }
 
 
-@media (max-width: 500px) {
+/* ================================
+   CELULAR
+================================= */
+
+@media (max-width: 550px) {
 
   .container {
 
-    width: min(100% - 30px, 1000px);
+    width:
+      calc(100% - 32px);
+  }
+
+
+  .about-hero {
+
+    min-height: 350px;
+
+    padding: 50px 16px;
   }
 
 
   .about-hero h1 {
 
+    font-size:
+      clamp(3rem, 14vw, 4rem);
+
     letter-spacing: -2px;
+  }
+
+
+  .about-hero p {
+
+    font-size: 0.82rem;
+  }
+
+
+  .about-section {
+
+    padding: 55px 16px;
+  }
+
+
+  .about-grid {
+
+    gap: 25px;
+  }
+
+
+  .about-intro h2 {
+
+    font-size: 2.1rem;
+  }
+
+
+  .about-text {
+
+    font-size: 0.82rem;
+
+    line-height: 1.65;
+  }
+
+
+  .about-quote {
+
+    padding: 55px 16px;
+  }
+
+
+  .about-quote h2 {
+
+    font-size: 3.2rem;
+  }
+
+
+  .mission-card {
+
+    min-height: auto;
+
+    padding: 25px;
+  }
+
+
+  .principles-section {
+
+    padding: 55px 16px;
   }
 
 
@@ -882,11 +1029,21 @@ import LayoutBase from '../layouts/LayoutBase.astro';
   }
 
 
-  .mission-card {
+  .principle-card {
 
-    padding: 30px;
+    padding: 22px;
+  }
 
-    min-height: auto;
+
+  .about-ending {
+
+    padding: 65px 16px;
+  }
+
+
+  .about-ending h2 {
+
+    font-size: 2.1rem;
   }
 
 }

@@ -19,8 +19,13 @@ import LayoutBase from '../../layouts/LayoutBase.astro';
         </span>
 
         <h1>
-          Mesa de Concertación para los
-          <span>Diálogos Diferenciales Afro en Usme</span>
+          <span class="title-main">
+            Mesa de Concertación para los
+          </span>
+
+          <span>
+            Diálogos Diferenciales Afro en Usme
+          </span>
         </h1>
 
         <p class="lead">
@@ -133,6 +138,8 @@ import LayoutBase from '../../layouts/LayoutBase.astro';
           </p>
 
 
+          <!-- DESTACADO -->
+
           <div class="highlight">
 
             <span>
@@ -193,6 +200,8 @@ import LayoutBase from '../../layouts/LayoutBase.astro';
           </p>
 
 
+          <!-- CIERRE -->
+
           <div class="closing-message">
 
             <span>ASHÉ</span>
@@ -234,407 +243,190 @@ import LayoutBase from '../../layouts/LayoutBase.astro';
 
 <style>
 
-.container {
-
-  width: min(900px, calc(100% - 40px));
-
-  margin: 0 auto;
-}
-
-
-/* =================================
-   HERO
-================================= */
-
-.article-hero {
-
-  padding: 120px 20px 90px;
-
-  background: #1B1B1B;
-
-  color: #F7F4ED;
-}
-
-
-.section-label {
-
-  display: block;
-
-  margin-bottom: 25px;
-
-  color: #C8A24A;
-
-  font-size: 0.72rem;
-
-  font-weight: 800;
-
-  letter-spacing: 3px;
-}
-
-
-.article-hero h1 {
-
-  max-width: 900px;
-
-  margin: 0;
-
-  font-size: clamp(2.8rem, 6vw, 5.2rem);
-
-  line-height: 0.98;
-
-  letter-spacing: -2px;
-}
-
-
-.article-hero h1 span {
-
-  display: block;
-
-  color: #C8A24A;
-}
-
-
-.lead {
-
-  max-width: 760px;
-
-  margin: 35px 0 0;
-
-  color: #D9D4C8;
-
-  font-size: 1.2rem;
-
-  line-height: 1.8;
-}
-
-
-.article-meta {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 10px;
-
-  margin-top: 35px;
-
-  color: #C8A24A;
-
-  font-size: 0.68rem;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-/* =================================
-   CONTENIDO
-================================= */
-
-.article-content {
-
-  padding: 90px 20px;
-
-  background: #F7F4ED;
-
-  color: #1B1B1B;
-}
-
-
-/* DATOS DEL EVENTO */
-
-.event-data {
-
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 1px;
-
-  margin-bottom: 70px;
-
-  background: #DCD6CA;
-
-  border: 1px solid #DCD6CA;
-}
-
-
-.event-item {
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 10px;
-
-  min-height: 120px;
-
-  padding: 25px;
-
-  background: #FFFFFF;
-}
-
-
-.event-item span {
-
-  color: #A8572B;
-
-  font-size: 0.65rem;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-.event-item strong {
-
-  color: #1B1B1B;
-
-  font-size: 0.95rem;
-
-  line-height: 1.5;
-}
-
-
-/* =================================
-   TEXTO
-================================= */
-
-.article-text {
-
-  max-width: 780px;
-
-  margin: 0 auto;
-}
-
-
-.article-text p {
-
-  margin: 0 0 28px;
-
-  color: #383838;
-
-  font-size: 1rem;
-
-  line-height: 1.9;
-
-  text-align: justify;
-
-  text-justify: inter-word;
-}
-
-
-.article-lead {
-
-  color: #1B1B1B !important;
-
-  font-size: 1.25rem !important;
-
-  line-height: 1.8 !important;
-
-  font-weight: 500;
-}
-
-
-/* =================================
-   DESTACADO
-================================= */
-
-.highlight {
-
-  margin: 55px 0;
-
-  padding: 45px;
-
-  background: #1B1B1B;
-
-  color: #F7F4ED;
-}
-
-
-.highlight span {
-
-  display: block;
-
-  margin-bottom: 18px;
-
-  color: #C8A24A;
-
-  font-size: 0.68rem;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-
-.highlight h2 {
-
-  margin: 0;
-
-  max-width: 650px;
-
-  font-size: clamp(1.8rem, 4vw, 3rem);
-
-  line-height: 1.05;
-}
-
-
-/* =================================
-   TÍTULO INTERNO
-================================= */
-
-.section-title {
-
-  margin: 65px 0 25px;
-
-  color: #1B1B1B;
-
-  font-size: 2.1rem;
-
-  line-height: 1.1;
-}
-
-
-/* =================================
-   CIERRE
-================================= */
-
-.closing-message {
-
-  margin-top: 60px;
-
-  padding: 45px;
-
-  border-top: 2px solid #C8A24A;
-
-  border-bottom: 1px solid #D8D1C5;
-
-  text-align: center;
-}
-
-
-.closing-message span {
-
-  display: block;
-
-  margin-bottom: 15px;
-
-  color: #A8572B;
-
-  font-size: 0.75rem;
-
-  font-weight: 900;
-
-  letter-spacing: 4px;
-}
-
-
-.closing-message p {
-
-  margin: 0;
-
-  color: #1B1B1B;
-
-  font-size: 1.3rem;
-
-  line-height: 1.5;
-
-  font-weight: 600;
-
-  text-align: center;
-}
-
-
-/* =================================
-   VOLVER
-================================= */
-
-.article-back {
-
-  padding: 55px 20px;
-
-  background: #FFFFFF;
-}
-
-
-.article-back a {
-
-  color: #1B1B1B;
-
-  text-decoration: none;
-
-  font-size: 0.8rem;
-
-  font-weight: 800;
-
-  letter-spacing: 1px;
-
-  text-transform: uppercase;
-
-  transition: 0.2s ease;
-}
-
-
-.article-back a:hover {
-
-  color: #A8572B;
-}
-
-
-/* =================================
-   RESPONSIVE
-================================= */
-
-@media (max-width: 650px) {
+  /* =================================
+     CONTENEDOR
+  ================================= */
+
+  .container {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+
+  /* =================================
+     HERO
+  ================================= */
 
   .article-hero {
+    min-height: 510px;
 
-    padding: 90px 20px 70px;
+    display: flex;
+    align-items: center;
 
+    padding: 75px 20px 80px;
+
+    background: #1B1B1B;
+    color: #F7F4ED;
+  }
+
+
+  .section-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #C8A24A;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 3px;
   }
 
 
   .article-hero h1 {
+    max-width: 850px;
 
-    font-size: 2.7rem;
+    margin: 0;
 
-    letter-spacing: -1px;
+    font-size: clamp(2.7rem, 5vw, 4rem);
 
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+
+    font-weight: 700;
+  }
+
+
+  .article-hero h1 span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #C8A24A;
+  }
+
+
+  .article-hero h1 .title-main {
+    margin-top: 0;
+
+    color: #F7F4ED;
   }
 
 
   .lead {
+    max-width: 680px;
+
+    margin: 30px 0 0;
+
+    color: rgba(247, 244, 237, 0.72);
 
     font-size: 1rem;
 
+    line-height: 1.75;
   }
 
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    color: #C8A24A;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* =================================
+     CONTENIDO
+  ================================= */
 
   .article-content {
+    padding: 75px 20px 100px;
 
-    padding: 65px 20px;
+    background: #F7F4ED;
 
+    color: #1B1B1B;
   }
 
 
+  /* =================================
+     DATOS DEL EVENTO
+  ================================= */
+
   .event-data {
+    display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
 
+    gap: 1px;
+
+    margin: 0 auto 65px;
+
+    background: #DCD6CA;
+
+    border: 1px solid #DCD6CA;
   }
 
 
   .event-item {
+    display: flex;
+    flex-direction: column;
 
-    min-height: auto;
+    gap: 10px;
 
+    min-height: 115px;
+
+    padding: 24px;
+
+    background: #FFFFFF;
+  }
+
+
+  .event-item span {
+    color: #A8572B;
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+  }
+
+
+  .event-item strong {
+    color: #1B1B1B;
+
+    font-size: 0.68rem;
+
+    line-height: 1.35;
+  }
+
+
+  /* =================================
+     TEXTO
+  ================================= */
+
+  .article-text {
+    max-width: 680px;
+
+    margin: 0 auto;
   }
 
 
   .article-text p {
+    margin: 0 0 28px;
+
+    color: #383838;
 
     font-size: 1rem;
 
@@ -642,24 +434,359 @@ import LayoutBase from '../../layouts/LayoutBase.astro';
 
     text-align: justify;
 
+    text-justify: inter-word;
   }
 
+
+  .article-text .article-lead {
+    margin-bottom: 45px;
+
+    color: #1B1B1B;
+
+    font-size: 1.12rem;
+
+    font-weight: 500;
+
+    line-height: 1.75;
+
+    text-align: justify;
+
+    text-justify: inter-word;
+  }
+
+
+  /* =================================
+     DESTACADO
+  ================================= */
 
   .highlight {
+    margin: 55px 0;
 
-    padding: 30px 25px;
+    padding: 45px 35px;
 
-    margin: 45px 0;
+    background: #1B1B1B;
 
+    color: #F7F4ED;
   }
 
+
+  .highlight span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #C8A24A;
+
+    font-size: 0.66rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+  }
+
+
+  .highlight h2 {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+
+    font-weight: 700;
+  }
+
+
+  /* =================================
+     TÍTULO INTERNO
+  ================================= */
+
+  .section-title {
+    margin: 65px 0 25px;
+
+    color: #1B1B1B;
+
+    font-size: 2.2rem;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+  }
+
+
+  /* =================================
+     CIERRE
+  ================================= */
 
   .closing-message {
+    margin-top: 55px;
 
-    padding: 35px 20px;
+    padding: 45px 35px;
+
+    border-top: 2px solid #C8A24A;
+
+    border-bottom: 1px solid #D8D1C5;
+
+    text-align: center;
+  }
+
+
+  .closing-message span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #A8572B;
+
+    font-size: 0.68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+  }
+
+
+  .closing-message p {
+    margin: 0;
+
+    color: #1B1B1B;
+
+    font-size: 1.12rem;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+
+    text-align: center;
+  }
+
+
+  /* =================================
+     VOLVER
+  ================================= */
+
+  .article-back {
+    padding: 55px 20px;
+
+    background: #FFFFFF;
+  }
+
+
+  .article-back a {
+    color: #1B1B1B;
+
+    text-decoration: none;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: 0.2s ease;
+  }
+
+
+  .article-back a:hover {
+    color: #A8572B;
+  }
+
+
+  /* =================================
+     TABLET
+  ================================= */
+
+  @media (max-width: 800px) {
+
+    .article-hero {
+      min-height: 480px;
+
+      padding: 65px 20px 70px;
+    }
+
+    .article-content {
+      padding-top: 65px;
+    }
 
   }
 
-}
+
+  /* =================================
+     MÓVIL
+  ================================= */
+
+  @media (max-width: 600px) {
+
+    .container {
+      width: min(100%, calc(100% - 40px));
+    }
+
+
+    .article-hero {
+      min-height: auto;
+
+      padding: 60px 20px 65px;
+    }
+
+
+    .section-label {
+      margin-bottom: 15px;
+
+      font-size: 0.64rem;
+
+      letter-spacing: 2.5px;
+    }
+
+
+    .article-hero h1 {
+      font-size: clamp(2.2rem, 10vw, 3rem);
+
+      line-height: 1.02;
+
+      letter-spacing: -1.5px;
+    }
+
+
+    .article-hero h1 span {
+      margin-top: 7px;
+    }
+
+
+    .lead {
+      margin-top: 25px;
+
+      font-size: 1rem;
+
+      line-height: 1.7;
+    }
+
+
+    .article-meta {
+      margin-top: 25px;
+
+      font-size: 0.64rem;
+    }
+
+
+    /* Información */
+
+    .article-content {
+      padding: 55px 20px 80px;
+    }
+
+
+    .event-data {
+      grid-template-columns: 1fr;
+
+      margin-bottom: 55px;
+    }
+
+
+    .event-item {
+      min-height: auto;
+
+      padding: 22px;
+    }
+
+
+    .event-item strong {
+      font-size: 0.68rem;
+    }
+
+
+    /* Texto */
+
+    .article-text {
+      max-width: 100%;
+    }
+
+
+    .article-text p {
+      margin-bottom: 25px;
+
+      font-size: 1rem;
+
+      line-height: 1.8;
+
+      text-align: justify;
+    }
+
+
+    .article-text .article-lead {
+      margin-bottom: 38px;
+
+      font-size: 1.08rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* Destacado */
+
+    .highlight {
+      margin: 40px 0;
+
+      padding: 30px 25px;
+    }
+
+
+    .highlight span {
+      margin-bottom: 15px;
+
+      font-size: 0.62rem;
+    }
+
+
+    .highlight h2 {
+      font-size: 1.9rem;
+
+      line-height: 1.08;
+    }
+
+
+    /* Título interno */
+
+    .section-title {
+      margin: 55px 0 22px;
+
+      font-size: 2rem;
+
+      letter-spacing: -0.8px;
+    }
+
+
+    /* Cierre */
+
+    .closing-message {
+      margin-top: 45px;
+
+      padding: 35px 25px;
+    }
+
+
+    .closing-message span {
+      font-size: 0.64rem;
+    }
+
+
+    .closing-message p {
+      font-size: 1.08rem;
+
+      line-height: 1.55;
+    }
+
+
+    /* Volver */
+
+    .article-back {
+      padding: 45px 20px;
+    }
+
+  }
 
 </style>
