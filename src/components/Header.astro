@@ -1,5 +1,9 @@
 ---
 const menuItems = [
+  { name: "Inicio", href: "/" },
+  { name: "Noticias", href: "/#noticias" },
+  { name: "Agenda", href: "/#agenda" },
+  { name: "Nosotros", href: "/quienes-somos" },
   { name: "Actualidad Afro", href: "/actualidad" },
   { name: "Memoria", href: "/memoria" },
   { name: "Comunidad", href: "/comunidad" },
@@ -44,7 +48,7 @@ const currentPath = Astro.url.pathname;
 
 
     <!-- =========================================
-         NAVEGACIÓN PRINCIPAL
+         NAVEGACIÓN PRINCIPAL — PC
     ========================================== -->
 
     <nav
@@ -82,7 +86,7 @@ const currentPath = Astro.url.pathname;
 
 
     <!-- =========================================
-         BOTÓN HAMBURGUESA
+         BOTÓN HAMBURGUESA — CELULAR
     ========================================== -->
 
     <button
@@ -101,7 +105,7 @@ const currentPath = Astro.url.pathname;
 
 
     <!-- =========================================
-         MENÚ LATERAL
+         MENÚ MÓVIL
     ========================================== -->
 
     <nav
@@ -109,19 +113,6 @@ const currentPath = Astro.url.pathname;
       id="main-navigation"
       aria-label="Secciones del sitio"
     >
-
-      <!-- BOTÓN CERRAR -->
-
-      <button
-        class="nav-close"
-        type="button"
-        aria-label="Cerrar menú"
-      >
-        ×
-      </button>
-
-
-      <!-- CABECERA DEL MENÚ -->
 
       <div class="nav-header">
 
@@ -134,15 +125,22 @@ const currentPath = Astro.url.pathname;
       </div>
 
 
-      <!-- ENLACES DEL MENÚ -->
-
       <div class="nav-links">
 
         {
           menuItems.map((item, index) => {
 
+            const isHome =
+              item.href === "/";
+
+            const isAnchor =
+              item.href.startsWith("/#");
+
             const isActive =
-              currentPath.startsWith(item.href);
+              isHome
+                ? currentPath === "/"
+                : !isAnchor &&
+                  currentPath.startsWith(item.href);
 
             return (
               <a
@@ -205,9 +203,6 @@ const currentPath = Astro.url.pathname;
   const backdrop =
     document.querySelector(".menu-backdrop");
 
-  const closeButton =
-    document.querySelector(".nav-close");
-
 
   /* =========================================
      CERRAR MENÚ
@@ -215,7 +210,11 @@ const currentPath = Astro.url.pathname;
 
   function closeMenu() {
 
-    if (!navigation || !menuToggle) {
+    if (
+      !navigation ||
+      !menuToggle ||
+      !backdrop
+    ) {
       return;
     }
 
@@ -223,7 +222,7 @@ const currentPath = Astro.url.pathname;
 
     menuToggle.classList.remove("open");
 
-    backdrop?.classList.remove("open");
+    backdrop.classList.remove("open");
 
     menuToggle.setAttribute(
       "aria-expanded",
@@ -248,7 +247,11 @@ const currentPath = Astro.url.pathname;
 
   function openMenu() {
 
-    if (!navigation || !menuToggle) {
+    if (
+      !navigation ||
+      !menuToggle ||
+      !backdrop
+    ) {
       return;
     }
 
@@ -256,7 +259,7 @@ const currentPath = Astro.url.pathname;
 
     menuToggle.classList.add("open");
 
-    backdrop?.classList.add("open");
+    backdrop.classList.add("open");
 
     menuToggle.setAttribute(
       "aria-expanded",
@@ -279,50 +282,61 @@ const currentPath = Astro.url.pathname;
      BOTÓN HAMBURGUESA
   ========================================== */
 
-  menuToggle?.addEventListener(
-    "click",
-    () => {
+  if (
+    menuToggle &&
+    navigation
+  ) {
 
-      const isOpen =
-        navigation?.classList.contains("open");
+    menuToggle.addEventListener(
+      "click",
+      () => {
 
-      if (isOpen) {
+        const isOpen =
+          navigation.classList.contains(
+            "open"
+          );
 
-        closeMenu();
+        if (isOpen) {
 
-      } else {
+          closeMenu();
 
-        openMenu();
+        } else {
+
+          openMenu();
+
+        }
 
       }
-
-    }
-  );
+    );
 
 
-  /* =========================================
-     BOTÓN X
-  ========================================== */
+    /* =========================================
+       CERRAR AL SELECCIONAR
+    ========================================== */
 
-  closeButton?.addEventListener(
-    "click",
-    () => {
+    navigation
+      .querySelectorAll("a")
+      .forEach((link) => {
 
-      closeMenu();
+        link.addEventListener(
+          "click",
+          () => {
 
-    }
-  );
+            closeMenu();
+
+          }
+        );
+
+      });
 
 
-  /* =========================================
-     ENLACES DEL MENÚ
-  ========================================== */
+    /* =========================================
+       CERRAR AL HACER CLIC AFUERA
+    ========================================== */
 
-  navigation
-    ?.querySelectorAll("a")
-    .forEach((link) => {
+    if (backdrop) {
 
-      link.addEventListener(
+      backdrop.addEventListener(
         "click",
         () => {
 
@@ -331,39 +345,29 @@ const currentPath = Astro.url.pathname;
         }
       );
 
-    });
-
-
-  /* =========================================
-     CLIC EN EL FONDO
-  ========================================== */
-
-  backdrop?.addEventListener(
-    "click",
-    () => {
-
-      closeMenu();
-
     }
-  );
 
 
-  /* =========================================
-     TECLA ESC
-  ========================================== */
+    /* =========================================
+       CERRAR CON ESC
+    ========================================== */
 
-  document.addEventListener(
-    "keydown",
-    (event) => {
+    document.addEventListener(
+      "keydown",
+      (event) => {
 
-      if (event.key === "Escape") {
+        if (
+          event.key === "Escape"
+        ) {
 
-        closeMenu();
+          closeMenu();
+
+        }
 
       }
+    );
 
-    }
-  );
+  }
 
 </script>
 
@@ -507,7 +511,7 @@ const currentPath = Astro.url.pathname;
 
 
 /* ==================================================
-   NAVEGACIÓN PRINCIPAL
+   NAVEGACIÓN PC
 ================================================== */
 
 .desktop-nav {
@@ -606,9 +610,9 @@ const currentPath = Astro.url.pathname;
 
   padding: 0;
 
-  margin-left: 0;
+  margin-left: auto;
 
-  display: flex;
+  display: none;
 
   align-items: center;
 
@@ -635,8 +639,7 @@ const currentPath = Astro.url.pathname;
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
-    transform 0.25s ease,
-    opacity 0.2s ease;
+    transform 0.25s ease;
 }
 
 
@@ -686,63 +689,33 @@ const currentPath = Astro.url.pathname;
 
 
 /* ==================================================
-   OCULTAR HAMBURGUESA AL ABRIR
+   HAMBURGUESA → X
 ================================================== */
 
-.menu-toggle.open {
+.menu-toggle.open span:nth-child(1) {
+
+  transform:
+    translateY(7px)
+    rotate(45deg);
+}
+
+
+.menu-toggle.open span:nth-child(2) {
 
   opacity: 0;
+}
 
-  pointer-events: none;
 
-  transform: none;
+.menu-toggle.open span:nth-child(3) {
+
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
 }
 
 
 /* ==================================================
-   FONDO OSCURO
-================================================== */
-
-.menu-backdrop {
-
-  position: fixed;
-
-  inset: 0;
-
-  z-index: 1300;
-
-  background:
-    rgba(
-      27,
-      27,
-      27,
-      0.35
-    );
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  pointer-events: none;
-
-  transition:
-    opacity 0.25s ease,
-    visibility 0.25s ease;
-}
-
-
-.menu-backdrop.open {
-
-  opacity: 1;
-
-  visibility: visible;
-
-  pointer-events: auto;
-}
-
-
-/* ==================================================
-   MENÚ LATERAL
+   MENÚ MÓVIL
 ================================================== */
 
 .nav {
@@ -753,8 +726,6 @@ const currentPath = Astro.url.pathname;
 
   right: 0;
 
-  z-index: 1450;
-
   width:
     min(
       420px,
@@ -763,10 +734,12 @@ const currentPath = Astro.url.pathname;
 
   height: 100vh;
 
-  box-sizing: border-box;
-
   padding:
     105px 38px 35px;
+
+  display: flex;
+
+  flex-direction: column;
 
   background: #F7F4ED;
 
@@ -789,6 +762,8 @@ const currentPath = Astro.url.pathname;
 
   transform:
     translateX(100%);
+
+  z-index: 1450;
 
   transition:
     opacity 0.3s ease,
@@ -817,77 +792,6 @@ const currentPath = Astro.url.pathname;
 
 
 /* ==================================================
-   BOTÓN CERRAR
-================================================== */
-
-.nav-close {
-
-  position: absolute;
-
-  top: 22px;
-
-  right: 22px;
-
-  z-index: 20;
-
-  width: 48px;
-
-  height: 48px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 0;
-
-  border:
-    1px solid rgba(
-      27,
-      27,
-      27,
-      0.12
-    );
-
-  border-radius: 10px;
-
-  background: #FFFFFF;
-
-  color: #1B1B1B;
-
-  font-family: inherit;
-
-  font-size: 1.8rem;
-
-  font-weight: 300;
-
-  line-height: 1;
-
-  cursor: pointer;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease,
-    border-color 0.25s ease;
-}
-
-
-.nav-close:hover {
-
-  background: #1B1B1B;
-
-  color: #F7F4ED;
-
-  border-color: #1B1B1B;
-
-  transform:
-    rotate(90deg);
-}
-
-
-/* ==================================================
    CABECERA DEL MENÚ
 ================================================== */
 
@@ -897,18 +801,17 @@ const currentPath = Astro.url.pathname;
 
   align-items: center;
 
-  gap: 14px;
+  gap: 15px;
 
   margin-bottom: 25px;
 }
 
 
-.nav-header
-> span:first-child {
+.nav-header > span:first-child {
 
   color: #A8572B;
 
-  font-size: 0.62rem;
+  font-size: 0.65rem;
 
   font-weight: 900;
 
@@ -953,13 +856,13 @@ const currentPath = Astro.url.pathname;
   display: grid;
 
   grid-template-columns:
-    32px 1fr 22px;
+    35px 1fr 25px;
 
   align-items: center;
 
-  min-height: 62px;
+  min-height: 58px;
 
-  padding: 0 4px;
+  padding: 0 5px;
 
   border-bottom:
     1px solid rgba(
@@ -972,8 +875,6 @@ const currentPath = Astro.url.pathname;
   color: #1B1B1B;
 
   text-decoration: none;
-
-  cursor: pointer;
 
   transition:
     color 0.25s ease,
@@ -998,7 +899,7 @@ const currentPath = Astro.url.pathname;
 
   color: #A8572B;
 
-  font-size: 0.56rem;
+  font-size: 0.58rem;
 
   font-weight: 900;
 
@@ -1008,11 +909,11 @@ const currentPath = Astro.url.pathname;
 
 .nav-name {
 
-  font-size: 1rem;
+  font-size: 0.98rem;
 
   font-weight: 700;
 
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
 }
 
 
@@ -1020,7 +921,7 @@ const currentPath = Astro.url.pathname;
 
   color: #999;
 
-  font-size: 1rem;
+  font-size: 1.05rem;
 
   text-align: right;
 
@@ -1050,8 +951,7 @@ const currentPath = Astro.url.pathname;
 }
 
 
-.nav a:hover
-.nav-arrow {
+.nav a:hover .nav-arrow {
 
   color: #A8572B;
 
@@ -1080,13 +980,54 @@ const currentPath = Astro.url.pathname;
 }
 
 
-.nav a.active
-.nav-arrow {
+.nav a.active .nav-arrow {
 
   color: #A8572B;
 
   transform:
     translateX(3px);
+}
+
+
+/* ==================================================
+   FONDO DEL MENÚ
+================================================== */
+
+.menu-backdrop {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1300;
+
+  background:
+    rgba(
+      27,
+      27,
+      27,
+      0.35
+    );
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+
+.menu-backdrop.open {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
 }
 
 
@@ -1133,8 +1074,17 @@ const currentPath = Astro.url.pathname;
 
     width:
       calc(100% - 30px);
+
+    justify-content:
+      space-between;
   }
 
+
+  /* =========================================
+     OCULTAR NAVEGACIÓN PC
+     
+     SOLO EN CELULAR
+  ========================================== */
 
   .desktop-nav {
 
@@ -1142,11 +1092,21 @@ const currentPath = Astro.url.pathname;
   }
 
 
+  /* =========================================
+     MOSTRAR HAMBURGUESA
+  ========================================== */
+
   .menu-toggle {
+
+    display: flex;
 
     margin-left: auto;
   }
 
+
+  /* =========================================
+     LOGO
+  ========================================== */
 
   .logo {
 
@@ -1170,6 +1130,10 @@ const currentPath = Astro.url.pathname;
   }
 
 
+  /* =========================================
+     MENÚ LATERAL
+  ========================================== */
+
   .nav {
 
     width:
@@ -1179,7 +1143,7 @@ const currentPath = Astro.url.pathname;
       );
 
     padding:
-      100px 30px 30px;
+      95px 30px 30px;
   }
 
 }
@@ -1233,38 +1197,26 @@ const currentPath = Astro.url.pathname;
     width: 100%;
 
     padding:
-      92px 22px 25px;
-  }
-
-
-  .nav-close {
-
-    top: 18px;
-
-    right: 18px;
-
-    width: 46px;
-
-    height: 46px;
+      90px 22px 25px;
   }
 
 
   .nav a {
 
-    min-height: 58px;
+    min-height: 56px;
   }
 
 
   .nav-name {
 
-    font-size: 0.98rem;
+    font-size: 0.95rem;
   }
 
 }
 
 
 /* ==================================================
-   BLOQUEAR SCROLL
+   BLOQUEAR SCROLL CON MENÚ ABIERTO
 ================================================== */
 
 :global(body.menu-open) {
