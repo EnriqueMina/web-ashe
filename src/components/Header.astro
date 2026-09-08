@@ -11,6 +11,8 @@ const menuItems = [
   { name: "Oportunidades", href: "/oportunidades" }
 ];
 
+const desktopMenuItems = menuItems.slice(4);
+
 const currentPath = Astro.url.pathname;
 ---
 
@@ -86,7 +88,8 @@ const currentPath = Astro.url.pathname;
 
 
     <!-- =========================================
-         BOTÓN HAMBURGUESA — CELULAR
+         BOTÓN HAMBURGUESA
+         PC + CELULAR
     ========================================== -->
 
     <button
@@ -105,7 +108,7 @@ const currentPath = Astro.url.pathname;
 
 
     <!-- =========================================
-         MENÚ MÓVIL
+         MENÚ LATERAL
     ========================================== -->
 
     <nav
@@ -125,7 +128,60 @@ const currentPath = Astro.url.pathname;
       </div>
 
 
-      <div class="nav-links">
+      <!-- =========================================
+           MENÚ PARA PC
+           SOLO 01 - 05
+           
+           Actualidad
+           Memoria
+           Comunidad
+           Cultura
+           Oportunidades
+      ========================================== -->
+
+      <div class="nav-links nav-links-desktop">
+
+        {
+          desktopMenuItems.map((item, index) => {
+
+            const isActive =
+              currentPath.startsWith(item.href);
+
+            return (
+              <a
+                href={item.href}
+                class:list={{
+                  active: isActive
+                }}
+              >
+
+                <span class="nav-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <span class="nav-name">
+                  {item.name}
+                </span>
+
+                <span class="nav-arrow">
+                  →
+                </span>
+
+              </a>
+            );
+
+          })
+        }
+
+      </div>
+
+
+      <!-- =========================================
+           MENÚ PARA CELULAR
+           TODAS 01 - 09
+      ========================================== -->
+
+      <div class="nav-links nav-links-mobile">
 
         {
           menuItems.map((item, index) => {
@@ -511,7 +567,7 @@ const currentPath = Astro.url.pathname;
 
 
 /* ==================================================
-   NAVEGACIÓN PC
+   NAVEGACIÓN PRINCIPAL PC
 ================================================== */
 
 .desktop-nav {
@@ -596,6 +652,7 @@ const currentPath = Astro.url.pathname;
 
 /* ==================================================
    BOTÓN HAMBURGUESA
+   VISIBLE EN PC Y CELULAR
 ================================================== */
 
 .menu-toggle {
@@ -610,9 +667,9 @@ const currentPath = Astro.url.pathname;
 
   padding: 0;
 
-  margin-left: auto;
+  margin-left: 0;
 
-  display: none;
+  display: flex;
 
   align-items: center;
 
@@ -715,7 +772,7 @@ const currentPath = Astro.url.pathname;
 
 
 /* ==================================================
-   MENÚ MÓVIL
+   MENÚ LATERAL
 ================================================== */
 
 .nav {
@@ -838,7 +895,7 @@ const currentPath = Astro.url.pathname;
 
 
 /* ==================================================
-   ENLACES DEL MENÚ
+   LISTAS DEL MENÚ
 ================================================== */
 
 .nav-links {
@@ -848,6 +905,26 @@ const currentPath = Astro.url.pathname;
   flex-direction: column;
 }
 
+
+/* PC → solamente 01–05 */
+
+.nav-links-desktop {
+
+  display: flex;
+}
+
+
+/* Celular → 01–09 */
+
+.nav-links-mobile {
+
+  display: none;
+}
+
+
+/* ==================================================
+   ENLACES
+================================================== */
 
 .nav a {
 
@@ -1080,11 +1157,7 @@ const currentPath = Astro.url.pathname;
   }
 
 
-  /* =========================================
-     OCULTAR NAVEGACIÓN PC
-     
-     SOLO EN CELULAR
-  ========================================== */
+  /* Ocultar navegación superior */
 
   .desktop-nav {
 
@@ -1092,9 +1165,7 @@ const currentPath = Astro.url.pathname;
   }
 
 
-  /* =========================================
-     MOSTRAR HAMBURGUESA
-  ========================================== */
+  /* Mantener hamburguesa */
 
   .menu-toggle {
 
@@ -1104,9 +1175,25 @@ const currentPath = Astro.url.pathname;
   }
 
 
-  /* =========================================
-     LOGO
-  ========================================== */
+  /* PC → 01–05 */
+
+  .nav-links-desktop {
+
+    display: none;
+  }
+
+
+  /* CELULAR → 01–09 */
+
+  .nav-links-mobile {
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  /* Logo */
 
   .logo {
 
@@ -1130,9 +1217,7 @@ const currentPath = Astro.url.pathname;
   }
 
 
-  /* =========================================
-     MENÚ LATERAL
-  ========================================== */
+  /* Menú lateral */
 
   .nav {
 
