@@ -9,12 +9,17 @@ const {
 } = Astro.props;
 
 const siteName = 'ASHÉ Medio Comunitario Afro';
+const siteURL = 'https://web-ashe.vercel.app';
+
 const fullTitle =
   title === 'Inicio'
     ? siteName
     : `${title} | ${siteName}`;
 
-const canonicalURL = Astro.url.href;
+const canonicalURL = new URL(Astro.url.pathname, siteURL).href;
+const imageURL = new URL(image, siteURL).href;
+
+const isHome = Astro.url.pathname === '/';
 ---
 
 <!DOCTYPE html>
@@ -84,13 +89,11 @@ const canonicalURL = Astro.url.href;
 
   <!-- =================================
        OPEN GRAPH
-       Para compartir en Facebook,
-       WhatsApp y otras plataformas.
   ================================== -->
 
   <meta
     property="og:type"
-    content="website"
+    content={isHome ? 'website' : 'article'}
   />
 
   <meta
@@ -104,8 +107,13 @@ const canonicalURL = Astro.url.href;
   />
 
   <meta
+    property="og:url"
+    content={canonicalURL}
+  />
+
+  <meta
     property="og:image"
-    content={image}
+    content={imageURL}
   />
 
   <meta
@@ -140,8 +148,47 @@ const canonicalURL = Astro.url.href;
 
   <meta
     name="twitter:image"
-    content={image}
+    content={imageURL}
   />
+
+
+  <!-- =================================
+       DATOS ESTRUCTURADOS
+       IDENTIDAD DE ASHÉ
+  ================================== -->
+
+  {isHome && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ASHÉ Medio Comunitario Afro",
+        "url": siteURL,
+        "logo": `${siteURL}/images/logo.jpeg`,
+        "description": "ASHÉ Medio Comunitario Afro: historias, memoria, identidad, cultura y territorio de las comunidades afrodescendientes en Bogotá."
+      })}
+    />
+  )}
+
+
+  <!-- =================================
+       DATOS ESTRUCTURADOS
+       SITIO WEB
+  ================================== -->
+
+  {isHome && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ASHÉ Medio Comunitario Afro",
+        "url": siteURL,
+        "description": "Medio comunitario afro que visibiliza historias, memoria, cultura, identidad y procesos de las comunidades negras y afrocolombianas."
+      })}
+    />
+  )}
 
 </head>
 
