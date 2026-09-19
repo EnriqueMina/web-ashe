@@ -318,6 +318,64 @@ a {
 }
 
 
+/* ==================================================
+   ARTÍCULOS
+   MISMA PROPORCIÓN DEL ARTÍCULO DEL TERREMOTO
+================================================== */
+
+/*
+   Estos estilos hacen que los títulos de los artículos
+   no aparezcan gigantes ni centrados.
+*/
+
+.article-header h1,
+.article-hero h1 {
+  max-width: 850px !important;
+  margin: 0 !important;
+
+  text-align: left !important;
+
+  font-size: clamp(2.7rem, 5vw, 4rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -2px !important;
+  font-weight: 800 !important;
+}
+
+
+/* Primera parte del título */
+
+.article-header h1 .title-main,
+.article-hero h1 .title-main {
+  color: var(--marfil);
+}
+
+
+/* Segunda parte del título */
+
+.article-header h1 .title-highlight,
+.article-hero h1 .title-highlight {
+  color: var(--dorado-ancestral);
+}
+
+
+/* Evita que el título se centre */
+
+.article-header h1 span,
+.article-hero h1 span {
+  text-align: left !important;
+}
+
+
+/* ==========================
+   TEXTO DEL ARTÍCULO
+========================== */
+
+.article-header p,
+.article-hero p {
+  text-align: left;
+}
+
+
 /* ==========================
    RESPONSIVE
 ========================== */
@@ -353,6 +411,17 @@ a {
 
   .container {
     padding: 3rem 1.25rem;
+  }
+
+
+  /* ARTÍCULOS */
+
+  .article-header h1,
+  .article-hero h1 {
+    max-width: 850px !important;
+    font-size: clamp(2.7rem, 5vw, 4rem) !important;
+    line-height: 1.02 !important;
+    text-align: left !important;
   }
 }
 
@@ -449,5 +518,28 @@ a {
   .footer {
     padding: 2rem 1rem;
     margin-top: 2rem;
+  }
+
+
+  /* ==========================
+     ARTÍCULOS EN CELULAR
+  ========================== */
+
+  .article-header h1,
+  .article-hero h1 {
+    max-width: 100% !important;
+
+    font-size: clamp(2.3rem, 10vw, 3rem) !important;
+
+    line-height: 1.03 !important;
+
+    letter-spacing: -1.3px !important;
+
+    text-align: left !important;
+  }
+
+  .article-header h1 span,
+  .article-hero h1 span {
+    text-align: left !important;
   }
 }
