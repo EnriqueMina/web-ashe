@@ -88,7 +88,21 @@ const noticias = [
     imagen: "/images/Tonga-portada.jpeg",
     enlace: "/actualidad/cierre-escuela-saberes",
     tieneImagen: true
+  },
+
+  {
+    numero: "08",
+    categoria: "ACTUALIDAD",
+    etiquetas: "USME · MUJERES · SABERES ANCESTRALES",
+    titulo:
+      "Usme celebra los saberes, la memoria y la fuerza de las mujeres afrocolombianas",
+    resumen:
+      "El cierre de las Escuelas de Saberes Tradicionales Afro reunió a 120 mujeres en una jornada de memoria, identidad, cultura y reconocimiento de los saberes ancestrales.",
+    imagen: "/images/portada-tonga.jpeg",
+    enlace: "/actualidad/cierre-iniciativa-tonga",
+    tieneImagen: true
   }
+];
 ---
 
 <section id="noticias" class="noticias-home">
@@ -391,28 +405,23 @@ const noticias = [
    Se muestra completa porque es vertical
 ================================================== */
 
-.noticia-card:nth-child(7) .noticia-visual img {
+.noticia-card:nth-child(7) .noticia-visual img,
+.noticia-card:nth-child(8) .noticia-visual img {
   object-fit: contain;
-
   background: #F7F4ED;
-
   transform: none;
 }
 
+/* Evita que las imágenes de Tonga hagan zoom */
 
-/* Evita que la imagen vertical haga zoom */
-
-.noticia-card:nth-child(7):hover
-.noticia-visual img {
+.noticia-card:nth-child(7):hover .noticia-visual img,
+.noticia-card:nth-child(8):hover .noticia-visual img {
   transform: none;
 }
 
+/* Zoom para las demás imágenes */
 
-/* ==================================================
-   ZOOM PARA LAS DEMÁS IMÁGENES
-================================================== */
-
-.noticia-card:not(:nth-child(7)):hover
+.noticia-card:not(:nth-child(7)):not(:nth-child(8)):hover
 .noticia-visual img {
   transform: scale(1.04);
 }

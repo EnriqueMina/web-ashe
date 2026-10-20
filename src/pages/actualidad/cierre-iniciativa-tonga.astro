@@ -1,0 +1,402 @@
+---
+const titulo = "Usme celebra los saberes, la memoria y la fuerza de las mujeres afrocolombianas";
+const descripcion =
+  "La Alcaldía Local de Usme realizó el cierre de las Escuelas de Saberes Tradicionales Afro, un proceso de encuentro, aprendizaje y fortalecimiento cultural que reunió a 120 mujeres participantes.";
+
+const portada = "/images/portada-tonga.jpeg";
+const cierre = "/images/cierre-tonga.jpeg";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{titulo} | ASHÉ Medio Comunitario Afro</title>
+    <meta name="description" content={descripcion} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={titulo} />
+    <meta property="og:description" content={descripcion} />
+    <meta property="og:image" content={portada} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={titulo} />
+    <meta name="twitter:description" content={descripcion} />
+    <meta name="twitter:image" content={portada} />
+  </head>
+
+  <body>
+    <main class="pagina-articulo">
+      <nav class="migas" aria-label="Navegación">
+        <a href="/">ASHÉ</a>
+        <span aria-hidden="true">/</span>
+        <a href="/actualidad">Actualidad</a>
+      </nav>
+
+      <article class="articulo">
+        <header class="articulo-cabecera">
+          <p class="etiqueta">ACTUALIDAD <span>·</span> USME</p>
+          <h1>{titulo}</h1>
+          <p class="entradilla">{descripcion}</p>
+
+          <figure class="figura-portada">
+            <img
+              class="imagen-portada"
+              src={portada}
+              alt="Portada de la iniciativa Tonga: Unidas por la libertad y la seguridad de las mujeres afro usmeñas"
+              fetchpriority="high"
+            />
+          </figure>
+        </header>
+
+        <div class="contenido-articulo">
+          <p>
+            Con una jornada dedicada a la ancestralidad, la memoria y el
+            reconocimiento de los saberes de las comunidades negras y
+            afrocolombianas, se realizó el cierre de la iniciativa “Tonga:
+            Unidas por la libertad y la seguridad de las mujeres afro usmeñas”,
+            desarrollada a través de cuatro Escuelas de Saberes Tradicionales.
+          </p>
+
+          <p>
+            La actividad, realizada en el CDC Julio César Sánchez, comenzó con
+            una armonización tradicional afrocolombiana, como un espacio de
+            conexión espiritual y cultural que permitió disponer a las
+            participantes y asistentes para una jornada centrada en la palabra,
+            el encuentro comunitario y la transmisión de saberes ancestrales.
+          </p>
+
+          <p>
+            Posteriormente, las cuatro escuelas realizaron una presentación en
+            formato de feria, en la que sabedoras, guardias cimarronas y
+            participantes compartieron con los asistentes los conocimientos,
+            experiencias y aprendizajes construidos durante el proceso.
+          </p>
+
+          <p>
+            En los diferentes espacios se abordaron saberes relacionados con
+            los juegos tradicionales, la gastronomía afrocolombiana, la medicina
+            ancestral, la salud mental desde la cosmovisión afro, la
+            autoafirmación corporal de las mujeres afro y la música tradicional
+            del Pacífico colombiano.
+          </p>
+
+          <p>
+            La feria permitió que los conocimientos no solo fueran presentados
+            como parte de una muestra, sino que pudieran ser compartidos
+            directamente con la comunidad, resaltando el valor de mantener
+            vigentes prácticas y conocimientos transmitidos de generación en
+            generación.
+          </p>
+
+          <h2>Un proceso que reconoce y fortalece los saberes ancestrales</h2>
+
+          <p>
+            Las Escuelas de Saberes Tradicionales se consolidaron como espacios
+            de encuentro entre generaciones, en los que las mujeres pudieron
+            fortalecer su identidad, reconocer sus cuerpos, compartir
+            experiencias y recuperar prácticas culturales relacionadas con el
+            cuidado, la alimentación, la medicina ancestral, la música y la
+            vida comunitaria, fomentando así la prevención de violencias contra
+            las mujeres desde sus propias costumbres.
+          </p>
+
+          <blockquote>
+            “Son saberes que vienen de nuestros ancestros y queremos mantenerlos
+            vigentes en nuestras familias, con nuestros hijos y nuestros nietos”.
+          </blockquote>
+
+          <p>
+            Durante la jornada también se presentó la cartilla memoria del
+            proceso y un video, materiales que recogen los principales
+            aprendizajes, experiencias y saberes desarrollados a lo largo de
+            las escuelas como herramientas para preservar y continuar
+            transmitiendo este legado cultural.
+          </p>
+
+          <h2>Una graduación para celebrar el camino recorrido</h2>
+
+          <p>
+            Uno de los momentos centrales fue la conmemoración y acto simbólico
+            de graduación de las 120 mujeres participantes, quienes recibieron
+            sus diplomas como reconocimiento a su participación y compromiso
+            durante el proceso.
+          </p>
+
+          <p>
+            Asimismo, se realizó un reconocimiento especial a las sabedoras y
+            guardias cimarronas, a quienes se les entregó un kit de belleza
+            como símbolo de gratitud por su acompañamiento, liderazgo y aporte
+            a la transmisión de los saberes tradicionales.
+          </p>
+
+          <p>
+            Como parte de la jornada, también se entregaron 200 cartillas y
+            240 mochilas a las personas participantes y se puso a disposición
+            de la comunidad la cartilla y un video que recogen la memoria de
+            este proceso, contribuyendo a que los conocimientos construidos
+            puedan permanecer y continuar circulando entre las familias y
+            comunidades afro de Usme.
+          </p>
+
+          <p>
+            Al tratarse de una jornada de todo el día, se garantizó a las
+            personas asistentes refrigerio y almuerzo, como parte de las
+            condiciones necesarias para facilitar su participación y
+            permanencia durante las diferentes actividades programadas.
+          </p>
+
+          <figure class="figura-interior">
+            <img
+              class="imagen-interior"
+              src={cierre}
+              alt="Registro fotográfico del cierre de las Escuelas de Saberes Tradicionales Afro"
+              loading="lazy"
+            />
+            <figcaption>
+              Memoria del cierre de la iniciativa Tonga en Usme.
+            </figcaption>
+          </figure>
+
+          <h2>Memoria, identidad y reconocimiento</h2>
+
+          <p>
+            El cierre de las Escuelas de Saberes Tradicionales estuvo articulado
+            con la conmemoración del Día de la Mujer Negra, Afrolatina,
+            Afrocaribeña y de la Diáspora, una fecha que permitió reconocer el
+            aporte de las mujeres negras y afrocolombianas a la construcción
+            cultural y comunitaria.
+          </p>
+
+          <p>
+            La jornada se convirtió así en un espacio para celebrar la
+            identidad, la resistencia, la ancestralidad y el liderazgo de las
+            mujeres afrocolombianas de Usme, resaltando la importancia de
+            preservar sus conocimientos y garantizar que estos continúen siendo
+            transmitidos a las nuevas generaciones.
+          </p>
+
+          <p>
+            El proceso contó con el acompañamiento de las sabedoras Fulgencia
+            Martínez Pinilla, Ayda Rosini Copete Waldo, Celia Perlaza Hurtado,
+            Marlene Hoyos Mosquera, Dalia Maritza Valencia Aragón, Flora Inés
+            Banguera Filoteo, María Rosa Murillo Mosquera y Claudia Patricia
+            González Perlaza, así como de las guardias cimarronas María Camila
+            Mosquera Quinto, Deycy Amparo Ramos, Ana Yulieth Hernández Torres,
+            Petronila Rodríguez Riascos, Ximena del Carmen González Mendoza,
+            Derling Karina Torres Carabalí, Carol Tatiana Arévalo Hurtado y
+            Luisa Fernanda Torres Perlaza.
+          </p>
+
+          <p>
+            Su participación fue fundamental para acompañar el proceso,
+            proteger los espacios comunitarios y contribuir a que los saberes
+            ancestrales afrocolombianos fueran reconocidos como parte viva de
+            la identidad y del patrimonio cultural de las comunidades.
+          </p>
+
+          <p>
+            Con este cierre, Usme reafirma la importancia de generar espacios
+            de participación, reconocimiento y fortalecimiento cultural para
+            las comunidades negras y afrocolombianas, reconociendo especialmente
+            el papel de las mujeres como guardianas de la memoria, transmisoras
+            de saberes y protagonistas de los procesos comunitarios.
+          </p>
+        </div>
+
+        <footer class="pie-articulo">
+          <a href="/">← Volver a ASHÉ Medio Comunitario Afro</a>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    color: #1b1b1b;
+    background: #f7f4ed;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+  }
+
+  .pagina-articulo {
+    width: min(100% - 36px, 1000px);
+    margin: 0 auto;
+    padding: 28px 0 64px;
+  }
+
+  .migas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    color: #777;
+    font-size: 0.82rem;
+  }
+
+  .migas a,
+  .pie-articulo a {
+    color: #8b4513;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .migas a:hover,
+  .pie-articulo a:hover {
+    text-decoration: underline;
+  }
+
+  .articulo {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 14px 38px rgb(27 27 27 / 8%);
+  }
+
+  .articulo-cabecera {
+    padding: clamp(24px, 5vw, 56px) clamp(20px, 6vw, 68px) 0;
+  }
+
+  .etiqueta {
+    margin: 0 0 14px;
+    color: #a8572b;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .etiqueta span {
+    color: #c8a24a;
+  }
+
+  h1 {
+    max-width: 850px;
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.12;
+  }
+
+  .entradilla {
+    margin: 22px 0 28px;
+    color: #666;
+    font-size: clamp(1rem, 2vw, 1.18rem);
+    line-height: 1.7;
+  }
+
+  .figura-portada,
+  .figura-interior {
+    margin: 0;
+  }
+
+  .imagen-portada {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin: 25px auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+  }
+
+  .imagen-interior {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+  }
+
+  .contenido-articulo {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px clamp(20px, 6vw, 68px) 10px;
+    font-size: 1.02rem;
+  }
+
+  .contenido-articulo p {
+    margin: 0 0 22px;
+  }
+
+  .contenido-articulo h2 {
+    margin: 42px 0 18px;
+    color: #1b1b1b;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+
+  blockquote {
+    margin: 32px 0;
+    padding: 20px 24px;
+    border-left: 4px solid #a8572b;
+    border-radius: 0 10px 10px 0;
+    background: #f7f4ed;
+    color: #4c382b;
+    font-size: 1.08rem;
+    font-style: italic;
+  }
+
+  .figura-interior {
+    margin: 34px 0;
+  }
+
+  .figura-interior figcaption {
+    margin-top: 9px;
+    color: #777;
+    font-size: 0.84rem;
+    text-align: center;
+  }
+
+  .pie-articulo {
+    margin: 20px clamp(20px, 6vw, 68px) 0;
+    padding: 24px 0 34px;
+    border-top: 1px solid #eee7dc;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    .pagina-articulo {
+      width: min(100% - 20px, 1000px);
+      padding-top: 16px;
+    }
+
+    .migas {
+      margin-bottom: 18px;
+    }
+
+    .articulo {
+      border-radius: 12px;
+    }
+
+    h1 {
+      letter-spacing: -0.8px;
+    }
+
+    .contenido-articulo {
+      font-size: 0.98rem;
+    }
+
+    .contenido-articulo h2 {
+      margin-top: 32px;
+    }
+
+    blockquote {
+      padding: 16px 18px;
+    }
+  }
+</style>
