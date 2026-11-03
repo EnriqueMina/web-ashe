@@ -119,13 +119,26 @@ const noticias = [
   {
     numero: "10",
     categoria: "CULTURA",
-    etiquetas: "BOGOTÁ · REBUSKE · MODA · DIGNIDAD RABIA",
+    etiquetas: "BOGOTÁ · REBUSKE · DIGNA RABIA",
     titulo:
       "Rebuske: una pasarela que lleva la calle, la memoria y la resistencia al museo",
     resumen:
-      "El colectivo afro Rebuske llega al Museo de Arte Miguel Urrutia con una propuesta que conecta la moda urbana, la memoria y la resistencia frente a las injusticias sociales.",
+      "El colectivo afro Rebuske llega al Museo de Arte Miguel Urrutia (MAMU) con una propuesta que conecta la estética urbana, la memoria y las realidades sociales en diálogo con la exposición Digna Rabia.",
     imagen: "/images/portada-rebuske.jpeg",
     enlace: "/actualidad/rebuske-digna-rabia",
+    tieneImagen: true
+  },
+
+  {
+    numero: "11",
+    categoria: "CULTURA",
+    etiquetas: "BOGOTÁ · REBUSKE · MODA · RESISTENCIA",
+    titulo:
+      "La moda como expresión de resistencia: Rebuske llevó la pasarela al Museo del MAMU",
+    resumen:
+      "El colectivo afro Rebuske y las marcas Endora, Feel God Concept, Outta y Thomas Alexander llevaron a la pasarela una propuesta que convirtió la moda en una forma de expresión, memoria y resistencia.",
+    imagen: "/images/fotografia1.jpeg.jpg",
+    enlace: "/actualidad/rebuske",
     tieneImagen: true
   }
 ];
@@ -427,8 +440,8 @@ const noticias = [
 
 
 /* ==================================================
-   IMAGEN DE TONGA
-   Se muestra completa porque es vertical
+   IMÁGENES DE TONGA
+   Se muestran completas porque son verticales
 ================================================== */
 
 .noticia-card:nth-child(7) .noticia-visual img,
@@ -438,12 +451,14 @@ const noticias = [
   transform: none;
 }
 
+
 /* Evita que las imágenes de Tonga hagan zoom */
 
 .noticia-card:nth-child(7):hover .noticia-visual img,
 .noticia-card:nth-child(8):hover .noticia-visual img {
   transform: none;
 }
+
 
 /* Zoom para las demás imágenes */
 
