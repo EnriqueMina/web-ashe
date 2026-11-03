@@ -1,168 +1,149 @@
 ---
 import LayoutBase from '../../layouts/LayoutBase.astro';
 
-const title = 'Rebuske: una pasarela que lleva la calle, la memoria y la resistencia al museo';
-const description = 'El colectivo afro Rebuske llega al Museo de Arte Miguel Urrutia con una propuesta que conecta moda urbana, memoria, dignidad y resistencia.';
-const portada = '/images/portada-rebuske.jpeg';
-const foto1 = '/images/foto-1.jpeg';
-const foto2 = '/images/foto-2.jpeg';
-const foto3 = '/images/foto-4.jpeg';
-const poster = '/images/rebuske-poster.jpeg';
+const title = 'La moda como expresión de resistencia: Rebuske llevó la pasarela al Museo del MAMU';
+const description = 'El colectivo afro Rebuske y las marcas Endora, Feel God Concept, Outta y Thomas Alexander llevaron a la pasarela una propuesta que convirtió la moda en una forma de expresión, memoria y resistencia.';
+const portada = '/images/fotografia1.jpeg.jpg';
+const fotos = [
+  { src: '/images/fotografia1.jpeg.jpg', alt: 'Modelo en la pasarela de Rebuske.', credito: 'Francy Velasco · @fran.pic__' },
+  { src: '/images/fotografia2.jpeg.jpg', alt: 'Modelo participante de la pasarela Rebuske.', credito: 'Germán Rodríguez · @Germannn_23' },
+  { src: '/images/fotografia3.jpeg.jpg', alt: 'Propuesta de vestuario presentada en la pasarela.', credito: 'Francy Velasco · @fran.pic__' },
+  { src: '/images/fotografia4.jpeg.jpg', alt: 'Modelo presenta una propuesta escénica.', credito: 'Germán Rodríguez · @Germannn_23' },
+  { src: '/images/fotografia5.jpeg.jpg', alt: 'Modelo con vestuario intervenido.', credito: 'Francy Velasco · @fran.pic__' },
+  { src: '/images/fotografia6.jpeg.jpg', alt: 'Participante de la pasarela con propuesta de moda.', credito: 'Francy Velasco · @fran.pic__' },
+  { src: '/images/fotografia7.jpeg.jpg', alt: 'Modelo afro participa en la pasarela Rebuske.', credito: 'Francy Velasco · @fran.pic__' },
+  { src: '/images/fotografia8.jpeg.jpg', alt: 'Modelo presenta vestuario en el MAMU.', credito: 'Francy Velasco · @fran.pic__' },
+  { src: '/images/fotografia9.jpeg.jpg', alt: 'Participante de la pasarela Rebuske.', credito: 'Francy Velasco · @fran.pic__' },
+];
 ---
 
 <LayoutBase title={title} description={description} image={portada}>
-  <main class="article-page">
-    <header class="article-hero">
-      <div class="container">
-        <a href="/actualidad" class="back-top">← Volver a Actualidad Afro</a>
-        <span class="section-label">ACTUALIDAD · BOGOTÁ · CULTURA AFRO</span>
-        <h1>
-          <span class="title-main">Rebuske: una pasarela que lleva la calle, la memoria y la resistencia al museo</span>
-        </h1>
-        <p class="lead">El colectivo afro Rebuske llega al Museo de Arte Miguel Urrutia con una propuesta que conecta la estética urbana con las realidades sociales de nuestras comunidades.</p>
-        <div class="article-meta">
-          <span>ASHÉ MEDIO COMUNITARIO AFRO</span>
-          <span>EVENTO: 23 DE OCTUBRE DE 2026</span>
-        </div>
-      </div>
-    </header>
+<main>
+  <section class="article-hero"><div class="container">
+      <a href="/actualidad" class="back-top">← Volver a Actualidad Afro</a>
+      <span class="section-label">ACTUALIDAD · BOGOTÁ · CULTURA Y RESISTENCIA</span>
+      <h1>{title}</h1>
+      <p class="lead">El colectivo Rebuske, junto a las marcas Endora, Feel God Concept, Outta y Thomas Alexander, presentó una propuesta que convirtió la moda, los materiales reutilizados y el performance en lenguajes para hablar de las violencias, la discriminación y las realidades sociales que atraviesan a Colombia.</p>
+      <div class="article-meta">ASHÉ MEDIO COMUNITARIO AFRO <span>•</span> 23 DE OCTUBRE DE 2026</div>
+  </div></section>
 
-    <section class="article-content">
-      <div class="container">
-        <article class="article-text">
-          <p class="article-lead">La moda también puede ser una forma de contar historias, cuestionar las injusticias y reivindicar derechos. Este viernes 23 de octubre, el colectivo afro Rebuske llegará al Museo de Arte Miguel Urrutia (MAMU), en Bogotá, con una propuesta que conecta la estética urbana con las realidades sociales que atraviesan nuestras comunidades.</p>
+  <section class="article-content"><div class="container"><article class="article-text">
+    <figure class="article-image cover"><img src={fotos[0].src} alt={fotos[0].alt} /><figcaption>Fotografía: {fotos[0].credito}</figcaption></figure>
+    <p class="intro">La moda puede ser mucho más que una tendencia o una propuesta estética. También puede convertirse en una forma de expresar inconformidades, cuestionar las injusticias y visibilizar realidades que, con el tiempo, parecen haberse vuelto parte de la cotidianidad. Esa fue una de las reflexiones que dejó la pasarela realizada el viernes 23 de octubre en el Museo de Arte Miguel Urrutia (MAMU), del Banco de la República, en Bogotá.</p>
+    <p>El colectivo afro Rebuske, en articulación con las marcas Endora, Feel God Concept, Outta y Thomas Alexander, presentó una propuesta en diálogo con la exposición <em>Digna Rabia</em>. A través de los vestuarios, los accesorios, la música y las intervenciones escénicas, los participantes llevaron a la pasarela diferentes problemáticas sociales, convirtiendo el cuerpo y la indumentaria en herramientas de expresión.</p>
+    <p>La actividad reunió aproximadamente a 24 modelos en una experiencia que buscaba ir más allá de mostrar prendas. Cada salida proponía una lectura sobre las violencias, las desigualdades y las luchas de distintas comunidades, invitando al público a mirar más allá de la apariencia y preguntarse por las historias que había detrás de cada vestuario.</p>
 
-          <figure class="article-image">
-            <img src={portada} alt="Integrantes y modelos vinculados al colectivo afro Rebuske" loading="eager" />
-            <figcaption>Crédito fotográfico: Ronald Estiven Gualdron. Imagen publicada con autorización para ASHÉ – Medio Comunitario Afro.</figcaption>
-          </figure>
+    <h2 class="section-title">Rebuske: una revolución que nace desde la calle</h2>
+    <p>Para Jhon Curí, estudiante de Derecho y uno de los creadores de Rebuske, la calle fue una de las principales motivaciones para construir este proyecto. Desde su perspectiva, la moda puede abrir espacios que históricamente han sido difíciles de alcanzar para personas y comunidades que enfrentan barreras sociales, económicas y culturales.</p>
+    <blockquote class="highlight">«Me gusta entender cómo la calle puede llegar a lugares donde nunca hubiese podido estar», expresó Curí al explicar parte de la visión que impulsa al colectivo.</blockquote>
+    <figure class="article-image"><img src={fotos[1].src} alt={fotos[1].alt} loading="lazy" /><figcaption>Fotografía: {fotos[1].credito}</figcaption></figure>
+    <p>Su reflexión parte de reconocer que la forma de vestir también está relacionada con la identidad, la seguridad personal y la libertad de expresarse. Para él, ninguna persona debería ser estigmatizada por su apariencia, su raza, su género o su orientación sexual.</p>
+    <p>Desde esa mirada, Rebuske propone una forma de cuestionar los modelos establecidos y abrir espacio a otras maneras de habitar la ciudad, construir identidad y participar en los escenarios culturales.</p>
+    <blockquote class="highlight">«La diversidad es Rebuske», afirmó Curí, al relacionar el proyecto con la necesidad de reconocer las diferencias y defender el respeto por todas las personas.</blockquote>
+    <p>La presencia del colectivo en el MAMU representó una oportunidad para llevar las expresiones urbanas y las experiencias de la calle a un espacio dedicado al arte, demostrando que la creatividad también surge de las periferias y de las comunidades que buscan hacerse visibles.</p>
 
-          <p>En diálogo con la exposición <em>Digna Rabia</em>, la pasarela plantea una pregunta que invita a mirar más allá de la ropa: <strong>¿qué hacemos con nuestra rabia frente a las injusticias que vivimos como sociedad?</strong></p>
+    <h2 class="section-title">Cinco problemáticas sociales llevadas a la pasarela</h2>
+    <p>La propuesta se articuló alrededor de diferentes problemáticas sociales, entre ellas el abuso sexual infantil, los feminicidios, el acoso y la violencia contra las personas LGBT, los falsos positivos y otras expresiones de violencia y vulneración de derechos.</p>
+    <figure class="article-image"><img src={fotos[2].src} alt={fotos[2].alt} loading="lazy" /><figcaption>Fotografía: {fotos[2].credito}</figcaption></figure>
+    <p>Estas realidades se representaron mediante prendas intervenidas, accesorios, colores, materiales reutilizados y elementos escénicos que permitían construir diferentes narrativas visuales.</p>
+    <p>Uno de los recursos utilizados fue la transformación de ropa y objetos que podían haber sido descartados, incorporándolos a las propuestas creativas para darles nuevos significados. De esta manera, los materiales no cumplían únicamente una función estética, sino que también contribuían a comunicar los mensajes de cada presentación.</p>
+    <p>En la representación relacionada con los falsos positivos, por ejemplo, se recurrió a elementos asociados a la indumentaria militar. En otras propuestas, el vestuario y los accesorios permitieron abordar la violencia contra las mujeres y las vulneraciones de derechos que afectan a las personas de las comunidades LGBT.</p>
+    <figure class="article-image"><img src={fotos[3].src} alt={fotos[3].alt} loading="lazy" /><figcaption>Fotografía: {fotos[3].credito}</figcaption></figure>
+    <p>Cada salida invitaba a observar cómo la moda puede utilizar símbolos, cuerpos y materiales para hablar de situaciones que requieren memoria, reconocimiento y reflexión colectiva.</p>
 
-          <p>Detrás de esta propuesta están Valentina Góngora y Jhon Curi (JHED), creadores de Rebuske, quienes entienden el arte como una herramienta para expresar las experiencias del territorio, visibilizar las desigualdades y generar reflexiones sobre aquello que muchas veces se normaliza o permanece en silencio.</p>
+    <h2 class="section-title">Feel God Concept: crear desde los sentimientos y las inconformidades</h2>
+    <p>Camilo Plaza, creador de Feel God Concept, explicó que su participación surgió de una conexión entre el concepto de la digna rabia y la manera en que su marca entiende la creación.</p>
+    <blockquote class="highlight">«A nosotros nos encanta hacer conceptos y colecciones con base a los sentimientos. El sentimiento de la rabia es uno que a nosotros como creativos nos atraviesa demasiado», señaló.</blockquote>
+    <figure class="article-image"><img src={fotos[4].src} alt={fotos[4].alt} loading="lazy" /><figcaption>Fotografía: {fotos[4].credito}</figcaption></figure>
+    <p>Para Plaza, crear en medio de un mundo atravesado por conflictos hace necesario encontrar formas de expresar aquello que afecta y preocupa a la sociedad. Por eso, la oportunidad de presentar su trabajo en un museo representó una experiencia significativa.</p>
+    <p>Su colección estuvo compuesta por cinco looks que abordaron problemáticas como el despojo de tierras al campesinado por parte de grupos armados, la exclusión de las personas trans, los peligros que enfrentan las mujeres en la sociedad colombiana, la rabia como origen de movimientos contraculturales como el punk y la represión hacia artistas urbanos, entre ellos grafiteros, raperos y bailarines de breakdance.</p>
+    <p>Cada propuesta buscó llevar estas realidades al lenguaje de la moda, mostrando cómo una colección puede construirse a partir de experiencias sociales y no solamente de tendencias.</p>
 
-          <h2 class="section-title">Rebuske: el arte de sobrevivir, crear y resistir desde la calle</h2>
+    <h2 class="section-title">Endora: vestir también es una forma de protestar</h2>
+    <p>La diseñadora, modelo y estilista Dayri Martínez, creadora de Endora, también encontró en la pasarela una oportunidad para hablar de problemáticas que, según expresó, muchas veces se terminan normalizando.</p>
+    <p>Martínez contó que su marca nació como un proyecto universitario y posteriormente se convirtió en un proyecto de vida. Su encuentro con Rebuske abrió la posibilidad de participar en una propuesta que conectaba la moda con temas sociales que considera necesario mantener en la conversación pública.</p>
+    <blockquote class="highlight">«Escuchar una noticia de un feminicidio, de un falso positivo, de una violación a una niña se vuelve como algo del común y hacemos como si nada», reflexionó.</blockquote>
+    <p>Para la diseñadora, participar significó apropiarse de esas temáticas y transmitirlas desde su trabajo creativo. La experiencia también estuvo atravesada por la carga emocional de representar situaciones que generan dolor e indignación.</p>
+    <blockquote class="highlight">«Fue una experiencia demasiado gratificante porque podemos hablar desde la moda y tener un acto de resistencia ante todo lo que está pasando», manifestó.</blockquote>
+    <figure class="article-image"><img src={fotos[5].src} alt={fotos[5].alt} loading="lazy" /><figcaption>Fotografía: {fotos[5].credito}</figcaption></figure>
+    <p>Su testimonio permite comprender que detrás de los diseños había un proceso que iba más allá de elegir prendas y preparar una salida a la pasarela: se trataba de encontrar una manera de comunicar, mediante el vestuario, aquello que muchas veces cuesta poner en palabras.</p>
 
-          <figure class="article-image">
-            <img src={foto1} alt="Modelos del colectivo Rebuske en una propuesta de moda urbana" loading="lazy" />
-            <figcaption>Crédito fotográfico: Jesus Daniel Rodriguez Muñeton. Imagen publicada con autorización para ASHÉ – Medio Comunitario Afro.</figcaption>
-          </figure>
+    <h2 class="section-title">Ser afro, ocupar espacios y reivindicar la identidad</h2>
+    <p>La participación de modelos afro también aportó una dimensión importante a la propuesta. Para José Wilbert Palacios, estudiante de Contaduría, hacer parte del evento fue una oportunidad para conectar sus propias ideas con las problemáticas sociales representadas.</p>
+    <p>Palacios explicó que su participación también tenía relación con su identidad y con el deseo de mostrar lo que significa ser una persona negra desde el orgullo, la cultura y la expresión.</p>
+    <blockquote class="highlight">«Es como dar a conocer lo que es ser negro, lo que me gusta ser negro», expresó.</blockquote>
+    <p>En una ciudad donde las comunidades afro continúan buscando mayor reconocimiento en distintos escenarios culturales, ocupar una pasarela dentro de un museo también puede convertirse en una forma de visibilización.</p>
+    <figure class="article-image"><img src={fotos[6].src} alt={fotos[6].alt} loading="lazy" /><figcaption>Fotografía: {fotos[6].credito}</figcaption></figure>
+    <p>Carla Murillo, modelo participante, destacó el significado de formar parte de un colectivo afro en el ámbito de la moda. Desde su perspectiva, estos espacios permiten cuestionar los estereotipos que históricamente han limitado la representación de las personas negras.</p>
+    <blockquote class="highlight">«Rebuske quiere que las personas no simplemente vean a las personas afro como gente que no tiene alma, que no tiene sentimientos, emociones», señaló.</blockquote>
+    <p>Para Murillo, la propuesta buscaba expresar la rabia y la impotencia que pueden generar determinadas experiencias en la ciudad, pero también transmitir un mensaje a las nuevas generaciones.</p>
+    <p>Su expectativa es que este tipo de iniciativas llegue a más jóvenes afro y contribuya a que se sientan orgullosos de su identidad, reconozcan sus capacidades y encuentren en el arte una posibilidad de expresión.</p>
+    <p>Por su parte, Gael, estudiante de música y artista, destacó el carácter performativo de la pasarela y la manera en que esta trabajó con los cuerpos, los rostros, el cabello y otros elementos de la cotidianidad para construir una experiencia distinta. Para él, participar también significó formar parte de un espacio donde distintas comunidades e ideologías podían expresarse y recordar que siguen presentes.</p>
 
-          <p>El nombre Rebuske nace de la palabra rebusque, una expresión profundamente presente en la cotidianidad colombiana. Rebuscarse significa encontrar la manera de salir adelante, resolver las necesidades diarias y construir oportunidades incluso cuando las condiciones no son favorables.</p>
+    <h2 class="section-title">La digna rabia: del sentimiento a la expresión colectiva</h2>
+    <p>La exposición <em>Digna Rabia</em> sirvió como punto de referencia conceptual para el encuentro entre las marcas y Rebuske. A partir de esa relación, la pasarela exploró la rabia no solamente como enojo, sino como una respuesta ante las violencias, las desigualdades y las situaciones que generan indignación.</p>
+    <p>En este contexto, la moda aportó un lenguaje propio. Las prendas, los accesorios y los materiales intervenidos permitieron construir imágenes que invitaban a reflexionar sobre las problemáticas representadas, mientras la música y el movimiento ampliaban la experiencia hacia lo escénico.</p>
+    <p>La participación de los modelos también hizo parte de esa construcción. Freddy Acero, ingeniero de sistemas y modelo por afición, describió la experiencia como una oportunidad para acercarse a realidades que, en ocasiones, no reciben suficiente atención.</p>
+    <figure class="article-image"><img src={fotos[7].src} alt={fotos[7].alt} loading="lazy" /><figcaption>Fotografía: {fotos[7].credito}</figcaption></figure>
+    <p>Al referirse al uso del modelaje como forma de protesta, señaló que el arte permite mostrar problemáticas y experiencias de distintas comunidades que pueden quedar distorsionadas o poco visibles en otros espacios.</p>
+    <p>Su reflexión también se relacionó con la representación de las personas LGBT y la importancia de defender la libertad de expresión, el respeto y la posibilidad de vivir sin barreras impuestas por la discriminación.</p>
+    <p>La pasarela encontró así una manera de conectar diferentes experiencias mediante una propuesta artística en la que cada marca aportó su interpretación, manteniendo como punto común la necesidad de comunicar y generar preguntas.</p>
 
-          <p>Pero el rebusque también habla de las desigualdades que atraviesan el país. No todas las personas parten de las mismas condiciones ni tienen las mismas oportunidades. En sectores periféricos de Bogotá, como Bosa, Usme y El Amparo, estas realidades se relacionan con la segregación social, las barreras económicas y las dificultades para acceder a mejores condiciones de vida.</p>
-
-          <p>Para Valentina y Jhon, llevar Rebuske al museo es abrir un espacio para esas experiencias y expresiones que nacen en la calle. Es acercar el territorio a una institución cultural y recordar que el arte también se construye desde las periferias, desde las vivencias cotidianas y desde las comunidades que encuentran en la creatividad una forma de resistir.</p>
-
-          <h2 class="section-title">¿Rabia? Una fuerza para transformar</h2>
-
-          <figure class="article-image">
-            <img src={foto2} alt="Propuesta visual y urbana relacionada con la pasarela Rebuske" loading="lazy" />
-            <figcaption>Crédito fotográfico: Ronald Estiven Gualdron. Imagen publicada con autorización para ASHÉ – Medio Comunitario Afro.</figcaption>
-          </figure>
-
-          <p>La pregunta ¿Rabia? atraviesa la propuesta y recoge la indignación que producen las violencias y las injusticias sociales. La violencia contra las mujeres, el abuso sexual, los falsos positivos, el desplazamiento y la discriminación hacia las personas LGBTIQ+ son algunas de las realidades que nos confrontan como sociedad y que nos obligan a preguntarnos qué lugar ocupan la memoria, la justicia y la dignidad en nuestras vidas.</p>
-
-          <p>En esta propuesta, la rabia no se entiende únicamente como enojo o destrucción. También puede convertirse en una fuerza que impulsa a cuestionar lo establecido, denunciar lo injusto y movilizar acciones para transformar la realidad.</p>
-
-          <p>La historia de las luchas por los derechos civiles de la población negra, los movimientos feministas y las reivindicaciones de las personas LGBTIQ+ demuestra que la indignación colectiva puede convertirse en organización, resistencia y transformación social.</p>
-
-          <p>Desde esta mirada, la moda se convierte en un lenguaje para expresar aquello que duele, recordar a quienes han sido víctimas de la violencia y reivindicar a quienes continúan luchando por sus derechos.</p>
-
-          <h2 class="section-title">Una revolución estética y política</h2>
-
-          <figure class="article-image">
-            <img src={foto3} alt="Modelos y expresiones de moda urbana del colectivo Rebuske" loading="lazy" />
-            <figcaption>Crédito fotográfico: Jesus Daniel Rodriguez Muñeton. Imagen publicada con autorización para ASHÉ – Medio Comunitario Afro.</figcaption>
-          </figure>
-
-          <p>La pasarela reunirá a 25 modelos y jóvenes diseñadores de estéticas urbanas en una intervención de aproximadamente una hora. Más que presentar prendas, la propuesta busca generar una experiencia en la que la moda dialogue con la memoria, las identidades y las realidades sociales.</p>
-
-          <p>Para sus creadores, esta es también una manera de cuestionar las ideas que históricamente han excluido a las comunidades racializadas y diversas de determinados espacios. Su presencia en el museo reivindica que estas comunidades no solo tienen historias de resistencia: también producen arte, construyen conocimiento, se organizan y participan activamente en la transformación de la sociedad.</p>
-
-          <p>Rebuske propone así una revolución estética y política: llevar al centro de la conversación las voces, los cuerpos y las experiencias que muchas veces han sido marginadas, y recordar que defender los derechos también implica reconocer la dignidad de quienes han tenido que luchar por ellos.</p>
-
-          <h2 class="section-title">Agéndate y participa</h2>
-
-          <div class="event-card">
-            <span class="event-kicker">PASARELA REBUSKE · EXPOSICIÓN DIGNA RABIA</span>
-            <h3>Una invitación a mirar la moda desde otra perspectiva</h3>
-            <figure class="event-poster">
-              <img src={poster} alt="Póster oficial de la pasarela Rebuske en diálogo con la exposición Digna Rabia" loading="lazy" />
-              <figcaption>Póster oficial de la pasarela Rebuske.</figcaption>
-            </figure>
-            <ul>
-              <li><strong>Fecha:</strong> viernes 23 de octubre de 2026.</li>
-              <li><strong>Hora:</strong> 4:00 p. m. a 5:30 p. m.</li>
-              <li><strong>Lugar:</strong> Museo de Arte Miguel Urrutia (MAMU), Bogotá.</li>
-              <li><strong>Entrada:</strong> libre y gratuita.</li>
-            </ul>
-            <p>Consulta la información del evento en el <a href="https://ow.ly/vlr450ZYoUk" target="_blank" rel="noopener noreferrer">enlace compartido por la organización</a>.</p>
-          </div>
-
-          <p>La invitación es a encontrarse con la moda desde una perspectiva diferente: como una expresión artística que puede despertar preguntas, conservar la memoria y abrir conversaciones sobre las injusticias que todavía nos atraviesan.</p>
-
-          <p class="article-lead">Porque la rabia también puede convertirse en conciencia, organización y resistencia, queda una pregunta abierta para quienes se encuentren con esta propuesta: <strong>¿qué hacemos con nuestra rabia frente a las injusticias y cómo podemos transformarla en acciones para construir una sociedad más justa?</strong></p>
-
-          <div class="closing-message">
-            <span>ASHÉ</span>
-            <p>Historias, cultura y voces de las comunidades afro en el territorio.</p>
-          </div>
-
-          <div class="article-back"><a href="/actualidad">← Volver a Actualidad Afro</a></div>
-        </article>
-      </div>
-    </section>
-  </main>
+    <h2 class="section-title">Una experiencia que va más allá del desfile</h2>
+    <p>La preparación del evento incluyó ensayos y pruebas de vestuario que permitieron coordinar las propuestas de las marcas y el trabajo de los modelos. Durante la presentación, la música, las prendas y las intervenciones escénicas construyeron una experiencia que se distanció de un desfile centrado exclusivamente en exhibir colecciones.</p>
+    <p>Carla Murillo describió su participación como una de las experiencias más significativas que ha vivido en la pasarela. Aunque reconoció los nervios propios de la presentación, destacó que Rebuske cumplió y superó sus expectativas.</p>
+    <p>Esa experiencia también mostró el valor del trabajo colectivo: diseñadores, modelos y artistas reunidos alrededor de una idea común, utilizando sus conocimientos y expresiones para construir una propuesta con sentido social.</p>
+    <figure class="article-image"><img src={fotos[8].src} alt={fotos[8].alt} loading="lazy" /><figcaption>Fotografía: {fotos[8].credito}</figcaption></figure>
+    <p>La participación de Rebuske, Endora, Feel God Concept, Outta y Thomas Alexander dejó sobre la mesa una reflexión acerca de las posibilidades de la moda dentro de los espacios culturales. Las prendas pueden expresar identidad, pero también narrar experiencias, cuestionar prejuicios y señalar situaciones que no deberían pasar inadvertidas.</p>
+    <p>Con esta pasarela, el encuentro entre la moda y el arte permitió llevar distintas problemáticas sociales a un escenario donde el público podía observarlas desde otra perspectiva.</p>
+    <p class="closing">Porque vestir también puede ser una forma de contar historias. Y cuando esas historias hablan de desigualdad, discriminación, violencia y resistencia, la moda puede abrir una conversación que va más allá de lo estético.</p>
+    <footer class="signature"><strong>ASHÉ – Medio Comunitario Afro</strong><span>La fuerza cultural que mueve el territorio.</span><a href="mailto:ashemedioafro@gmail.com">ashemedioafro@gmail.com</a></footer>
+  </article></div></section>
+</main>
 </LayoutBase>
 
 <style>
-  :global(body) { background: #F7F4ED; }
   .container { width: min(900px, calc(100% - 40px)); margin: 0 auto; }
-  .article-hero { min-height: 400px; display: flex; align-items: center; padding: 70px 20px 75px; background: #1B1B1B; color: #F7F4ED; }
-  .back-top { display: inline-block; margin-bottom: 22px; color: #F7F4ED; font-size: .8rem; text-underline-offset: 4px; }
+  .article-hero { min-height: 510px; display: flex; align-items: center; padding: 75px 20px 80px; background: #1B1B1B; color: #F7F4ED; }
+  .back-top { display: inline-block; margin-bottom: 28px; color: #F7F4ED; text-decoration: none; font-size: .72rem; font-weight: 800; letter-spacing: 1px; }
+  .back-top:hover { color: #C8A24A; }
   .section-label { display: block; margin-bottom: 18px; color: #C8A24A; font-size: .7rem; font-weight: 800; letter-spacing: 3px; }
-  .article-hero h1 { max-width: 850px; margin: 0; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.04; letter-spacing: -1.7px; font-weight: 800; }
-  .title-main { color: #C8A24A; }
-  .lead { max-width: 680px; margin: 25px 0 0; color: rgba(247,244,237,.78); font-size: 1rem; line-height: 1.75; }
-  .article-meta { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: 25px; color: #C8A24A; font-size: .65rem; font-weight: 800; letter-spacing: 1.5px; }
-  .article-content { padding: 70px 20px 90px; background: #F7F4ED; color: #1B1B1B; }
+  .article-hero h1 { max-width: 850px; margin: 0; color: #F7F4ED; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.04; letter-spacing: -2px; font-weight: 700; }
+  .lead { max-width: 680px; margin: 30px 0 0; color: rgba(247,244,237,.76); font-size: 1rem; line-height: 1.75; }
+  .article-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; color: #C8A24A; font-size: .68rem; font-weight: 800; letter-spacing: 2px; }
+  .article-meta span { color: #C8A24A; }
+  .article-content { padding: 75px 20px 100px; background: #F7F4ED; color: #1B1B1B; }
   .article-text { max-width: 680px; margin: 0 auto; }
-  .article-text p { margin: 0 0 26px; color: #383838; font-size: 1rem; line-height: 1.85; text-align: justify; text-justify: inter-word; }
-  .article-text .article-lead { margin-bottom: 35px; color: #1B1B1B; font-size: 1.1rem; font-weight: 500; line-height: 1.75; }
-  .article-image { margin: 34px auto 40px; }
-  .article-image img { display: block; width: 100%; max-width: 560px; max-height: 620px; height: auto; object-fit: contain; object-position: center; margin: 0 auto; border-radius: 8px; }
-  .article-image figcaption { max-width: 560px; margin: 10px auto 0; color: #68645D; font-size: .75rem; line-height: 1.5; }
-  .section-title { margin: 55px 0 22px; color: #1B1B1B; font-size: clamp(1.7rem, 3.5vw, 2.25rem); line-height: 1.12; letter-spacing: -.6px; }
-  .event-card { margin: 28px 0 34px; padding: 24px 26px; background: #EEE8DC; color: #1B1B1B; border: 1px solid #DED4C4; border-left: 3px solid #C8A24A; border-radius: 10px; }
-  .event-kicker { color: #8D6420; font-size: .65rem; font-weight: 800; letter-spacing: 1.3px; }
-  .event-card h3 { margin: 10px 0 16px; font-size: 1.35rem; line-height: 1.25; }
-  .event-poster { margin: 18px auto 20px; max-width: 230px; }
-  .event-poster img { display: block; width: 100%; max-height: 340px; height: auto; object-fit: contain; border-radius: 6px; box-shadow: 0 5px 14px rgba(0,0,0,.12); }
-  .event-poster figcaption { margin-top: 7px; color: #71685B; font-size: .72rem; text-align: center; }
-  .event-card ul { padding-left: 22px; margin: 0 0 20px; }
-  .event-card li { margin: 0 0 9px; line-height: 1.6; }
-  .event-card p { margin-bottom: 0; color: #383838; text-align: left; }
-  .event-card a { color: #8D4D24; text-underline-offset: 3px; }
-  .closing-message { margin-top: 50px; padding: 38px 25px; border-top: 2px solid #C8A24A; border-bottom: 1px solid #D8D1C5; text-align: center; }
-  .closing-message span { display: block; margin-bottom: 14px; color: #A8572B; font-size: .7rem; font-weight: 900; letter-spacing: 4px; }
-  .closing-message p { margin: 0; color: #1B1B1B; font-size: 1.08rem; line-height: 1.6; font-weight: 600; text-align: center; }
-  .article-back { padding: 40px 0 0; }
-  .article-back a { color: #1B1B1B; text-decoration: none; font-size: .72rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
-  .article-back a:hover { color: #A8572B; }
+  .article-text p { margin: 0 0 28px; color: #383838; font-size: 1rem; line-height: 1.8; text-align: justify; text-justify: inter-word; }
+  .article-text .intro { margin-bottom: 38px; color: #1B1B1B; font-size: 1.12rem; font-weight: 500; line-height: 1.75; }
+  .section-title { margin: 65px 0 25px; color: #1B1B1B; font-size: 2.2rem; line-height: 1.1; letter-spacing: -1px; }
+  .highlight { margin: 45px 0; padding: 30px 35px; border-left: 3px solid #C8A24A; background: #1B1B1B; color: #F7F4ED; font-size: 1.08rem; line-height: 1.8; font-style: italic; }
+  .article-image { max-width: 620px; margin: 35px auto 42px; text-align: center; }
+  .article-image img { display: block; width: 100%; height: auto; max-height: 620px; object-fit: contain; border-radius: 8px; }
+  .article-image.cover { max-width: 680px; margin-top: 0; }
+  .article-image.cover img { max-height: 680px; }
+  figcaption { margin-top: 9px; color: #77716A; font-size: .76rem; line-height: 1.5; }
+  .closing { margin-top: 45px !important; padding: 30px 0; border-top: 2px solid #C8A24A; border-bottom: 1px solid #D8D1C5; color: #1B1B1B !important; font-weight: 600; }
+  .signature { display: flex; flex-direction: column; gap: 7px; margin-top: 45px; padding-top: 25px; border-top: 1px solid #D8D1C5; color: #5F574F; font-size: .9rem; }
+  .signature strong { color: #1B1B1B; }
+  .signature a { color: #A8572B; text-decoration: none; }
+  @media (max-width: 800px) { .article-hero { min-height: 480px; padding: 65px 20px 70px; } .article-content { padding-top: 65px; } }
   @media (max-width: 600px) {
-    .container { width: min(100%, calc(100% - 36px)); }
-    .article-hero { min-height: auto; padding: 50px 18px 55px; }
-    .section-label { font-size: .62rem; letter-spacing: 2px; }
-    .article-hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); letter-spacing: -1px; }
-    .lead { font-size: .98rem; }
-    .article-content { padding: 48px 18px 65px; }
-    .article-text p { font-size: .98rem; line-height: 1.8; }
-    .article-text .article-lead { font-size: 1.05rem; }
-    .article-image { margin: 28px auto 32px; }
+    .container { width: min(100%, calc(100% - 40px)); }
+    .article-hero { min-height: auto; padding: 60px 20px 65px; }
+    .back-top { margin-bottom: 24px; }
+    .section-label { margin-bottom: 15px; font-size: .64rem; letter-spacing: 2.5px; }
+    .article-hero h1 { font-size: clamp(2.2rem, 10vw, 3rem); line-height: 1.02; letter-spacing: -1.5px; }
+    .lead { margin-top: 25px; font-size: 1rem; line-height: 1.7; }
+    .article-meta { margin-top: 25px; font-size: .64rem; }
+    .article-content { padding: 55px 20px 80px; }
+    .article-text { max-width: 100%; }
+    .article-text p { margin-bottom: 25px; font-size: 1rem; line-height: 1.8; }
+    .article-text .intro { margin-bottom: 38px; font-size: 1.08rem; line-height: 1.7; }
+    .section-title { margin: 55px 0 22px; font-size: 2rem; letter-spacing: -.8px; }
+    .highlight { margin: 35px 0; padding: 24px 22px; }
+    .article-image { margin: 28px auto 34px; }
     .article-image img { max-height: 520px; }
-    .section-title { margin: 44px 0 18px; }
-    .event-card { padding: 20px 18px; }
-    .event-poster { max-width: 190px; }
+    .closing { margin-top: 35px !important; padding: 25px 0; }
   }
 </style>
